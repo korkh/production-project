@@ -1,0 +1,24 @@
+@import "reset";
+@import "variables/global";
+@import "themes/light";
+@import "themes/dark";
+
+.app {
+    font: var(--font-m);
+
+    background: var(--bg-color);
+    color: var(--primary-color);
+
+    min-height: 100vh;
+}
+
+// for App.tsx
+.content-page {
+    display: flex;
+}
+
+// For pages in router
+.page-wrapper {
+    flex-grow: 1;
+    padding: 20px;
+}
