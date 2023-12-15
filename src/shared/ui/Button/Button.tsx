@@ -1,6 +1,6 @@
 import { classNames } from "shared/lib/classNames/classNames";
-import cls from "./Button.module.scss";
 import { ButtonHTMLAttributes, PropsWithChildren } from "react";
+import cls from "./Button.module.scss";
 
 export enum ThemeButton {
   CLEAR = "clear",
@@ -12,7 +12,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = (props: PropsWithChildren<ButtonProps>) => {
-  const { className, theme, children, ...otherProps } = props;
+  const {
+    className, theme, children, ...otherProps
+  } = props;
   return (
     <button
       className={classNames(cls.button, {}, [className, cls[theme]])}

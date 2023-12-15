@@ -4,7 +4,7 @@ import { BuildOptions } from "./types/config";
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
   const babelLoader = {
-    test: /\.(js|jsx|tsx)$/,
+    test: /\.(js|jsx|ts|tsx)$/,
     exclude: /node_modules/,
     use: {
       loader: "babel-loader",
@@ -12,8 +12,13 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         presets: ["@babel/preset-env"],
         plugins: [
           [
-            "i18next-extract",
-            { locales: ["en", "ru"], keyAsDefaultValue: true },
+            "i18next-extract", // key extracting for translations
+            {
+              locales: ["en", "ru"],
+              keyAsDefaultValue: false,
+              saveMissing: true,
+              outputPath: "public/locales/{{locale}}/{{ns}}.json",
+            },
           ],
         ],
       },
