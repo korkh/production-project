@@ -54,7 +54,8 @@
               "ts-nocheck": true
             }
           ],
-          "i18next/no-literal-string": ["error", {"markupOnly": true}]
+          "i18next/no-literal-string": ["error", {"markupOnly": true, "ignoreAttribute": [""]}],
+          "max-len": ["error", {"ignoreComments": true}]
     },
     "settings": {
         "react": {
