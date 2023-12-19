@@ -1,7 +1,15 @@
 {
-  "About": "",
-  "Language": "ру",
-  "Main page": "",
-  "We": "",
-  "Welcome to About page": ""
+  "About": "About",
+  "Main pagе": "Main page",
+  "Main": "Main",
+  "About us": "About us",
+  "EN": "РУ",
+  "Toggle": "Toggle",
+  "Loading": {
+    "": {
+      "": {
+        "": "Loading..."
+      }
+    }
+  }
 }

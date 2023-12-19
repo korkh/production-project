@@ -54,8 +54,15 @@
               "ts-nocheck": true
             }
           ],
-          "i18next/no-literal-string": ["error", {"markupOnly": true, "ignoreAttribute": [""]}],
-          "max-len": ["error", {"ignoreComments": true}]
+          "i18next/no-literal-string": ["error", {"markupOnly": true, "ignoreAttribute": ["", "to", "className",
+          "styleName",
+          "style",
+          "type",
+          "key",
+          "id",
+          "width",
+          "height"]}],
+          "max-len": ["warn", {"ignoreComments": true, "ignoreUrls": true, "ignorePattern": "^import\\s.+\\sfrom\\s.+;$|^export\\sfunction\\s\\w+\\(.+\\)\\s*:"}]
     },
     "settings": {
         "react": {
