@@ -1,76 +1,100 @@
 {
-    "env": {
-      "browser": true,
-      "es2021": true,
-      "jest": true
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:i18next/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:react/recommended",
-      "plugin:i18next/recommended"
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "react", "i18next"],
+  "rules": {
+    "indent": ["warn", 2],
+    "linebreak-style": ["warn", "windows"],
+    "quotes": "off",
+    "semi": ["error", "always"],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": [
+      "error",
+      { "fixToUnknown": false, "ignoreRestArgs": false }
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 2021,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@typescript-eslint",
-      "react",
-      "i18next"
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "varsIgnorePattern": "^_+$", "argsIgnorePattern": "^_+$" }
     ],
-    "rules": {
-        "indent": ["warn", 2],
-        "linebreak-style": ["warn", "windows"],
-        "quotes": "off",
-        "semi": ["error", "always"],
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-explicit-any": ["error", {"fixToUnknown": false, "ignoreRestArgs": false}],
-        "@typescript-eslint/no-unused-vars": [
-            "warn",
-            { "varsIgnorePattern": "^_+$", "argsIgnorePattern": "^_+$" }
-          ],
-        "react/jsx-uses-react": "off",
-        "react/react-in-jsx-scope": "off", //no need import React from "react"
-        "react/prop-types": "off",
-        "react/jsx-uses-vars": "warn",
-        "react/jsx-indent": ["warn", 2],
-        "react/jsx-indent-props": ["warn", 2],
-        "react/jsx-filename-extension": [
-          "warn",
-          { "extensions": [".js", ".jsx", ".tsx"] }
-        ],
-        "react/jsx-props-no-spreading": "off",
-        "@typescript-eslint/ban-ts-comment": [
-            "warn",
-            {
-              "ts-expect-error": "allow-with-description",
-              "ts-ignore": true,
-              "ts-check": false,
-              "ts-nocheck": true
-            }
-          ],
-          "i18next/no-literal-string": ["error", {"markupOnly": true, "ignoreAttribute": ["", "to", "className",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off", //no need import React from "react"
+    "react/prop-types": "off",
+    "react/jsx-uses-vars": "warn",
+    "react/jsx-indent": ["warn", 2],
+    "react/jsx-indent-props": ["warn", 2],
+    "react/jsx-filename-extension": [
+      "warn",
+      { "extensions": [".js", ".jsx", ".tsx"] }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/ban-ts-comment": [
+      "warn",
+      {
+        "ts-expect-error": "allow-with-description",
+        "ts-ignore": true,
+        "ts-check": false,
+        "ts-nocheck": true
+      }
+    ],
+    "i18next/no-literal-string": [
+      "error",
+      {
+        "markupOnly": true,
+        "ignoreAttribute": [
+          "",
+          "to",
+          "className",
           "styleName",
           "style",
           "type",
           "key",
           "id",
           "width",
-          "height"]}],
-          "max-len": ["warn", {"ignoreComments": true, "ignoreUrls": true, "ignorePattern": "^import\\s.+\\sfrom\\s.+;$|^export\\sfunction\\s\\w+\\(.+\\)\\s*:"}]
-    },
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
-    },
-    "globals": {
-      "__IS_DEV__": true
+          "height"
+        ]
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignorePattern": "^import\\s.+\\sfrom\\s.+;$|^export\\sfunction\\s\\w+\\(.+\\)\\s*:",
+        "code": 100
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     }
-  }
-  
+  },
+  "globals": {
+    "__IS_DEV__": true
+  },
+  "overrides": [
+    {
+      "files": ["**/src/**/*.test.{ts,tsx}"],
+      "rules": {
+        "i18next/no-literal-string": "off"
+      }
+    }
+  ]
+}

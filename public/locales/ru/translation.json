@@ -12,5 +12,11 @@
       }
     }
   },
-  "Page not found": "Страница не найдена"
+  "Page not found": "Страница не найдена",
+  "Throw error": "Бросить ошибку",
+  "Oops": {
+    "": {
+      " Something went wrong": "Ой.. Что-то пошло не так"
+    }
+  }
 }
