@@ -67,7 +67,8 @@
           "key",
           "id",
           "width",
-          "height"
+          "height",
+          "data-testid"
         ]
       }
     ],
