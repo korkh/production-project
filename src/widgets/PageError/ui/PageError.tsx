@@ -1,14 +1,14 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { NavigateFunction } from "react-router";
+import { useLocation, useNavigate } from "react-router-dom";
+import { classNames } from "shared/lib/classNames/classNames";
 import { Button } from "shared/ui/Button/Button";
 import cls from "./PageError.module.scss";
-import { useTranslation } from "react-i18next";
-import { classNames } from "shared/lib/classNames/classNames";
-import { useEffect } from "react";
 
 interface PageErrorProps {
   className?: string;
-  error: Error | null;
+  error?: Error | null;
 }
 
 export const PageError = ({ className, error }: PageErrorProps) => {

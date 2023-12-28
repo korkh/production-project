@@ -2,7 +2,7 @@ import { BugButton } from "app/providers/ErrorBoundary";
 import { useTranslation } from "react-i18next";
 
 interface ErrorProps {
-  errorInfo: Error | null;
+  errorInfo?: Error | null;
 }
 
 const MainPage = ({errorInfo}: ErrorProps) => {
