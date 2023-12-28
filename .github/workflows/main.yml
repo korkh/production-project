@@ -5,8 +5,8 @@ on:
   pull_request:
     branches: [master]
 jobs:
-  pipeline:
-    runs-on: ubuntu-latest
+  pipeline: # our name
+    runs-on: [ubuntu-latest, windows-latest] # windows not require
     strategy:
       matrix:
         node-version: [20.x]
