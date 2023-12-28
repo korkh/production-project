@@ -5,6 +5,7 @@ import ThemeDecorator from "../../src/shared/config/storybook/ThemeDecorator/The
 import React from "react";
 import StyleDecorator from "../../src/shared/config/storybook/StyleDecorator/StyleDecorator";
 import "../../src/app/styles/index.scss";
+import { I18nDecorator } from "shared/config/storybook/i18nDecorator/i18nDecorator";
 
 const preview: Preview = {
   parameters: {
@@ -20,9 +21,11 @@ const preview: Preview = {
     (Story) => (
       <RouterDecorator>
         <ThemeDecorator theme={Theme.LIGHT}>
-          <StyleDecorator>
-            <Story />
-          </StyleDecorator>
+          <I18nDecorator>
+            <StyleDecorator>
+              <Story />
+            </StyleDecorator>
+          </I18nDecorator>
         </ThemeDecorator>
       </RouterDecorator>
     ),
