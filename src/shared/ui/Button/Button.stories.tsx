@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
-import { Button, ThemeButton } from "./Button";
-import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
+import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Button, ButtonSize, ButtonTheme } from "./Button";
 
 const meta = {
   title: "shared/Button",
@@ -11,7 +10,7 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  args: { children: "Text" },
+  args: { children: ">" },
   argTypes: {},
 } satisfies Meta<typeof Button>;
 
@@ -19,23 +18,80 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {};
+export const Primary: Story = {
+  args: { children: "TEXT" },
+};
 
 export const Clear: Story = {
   args: {
-    theme: ThemeButton.CLEAR,
+    children: "TEXT",
+    theme: ButtonTheme.CLEAR,
   },
 };
 
 export const Outline: Story = {
   args: {
-    theme: ThemeButton.OUTLINE,
+    children: "TEXT",
+    theme: ButtonTheme.OUTLINE,
+  },
+};
+
+export const OutlineSizeL: Story = {
+  args: {
+    children: "TEXT",
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.L,
+  },
+};
+
+export const OutlineSizeXL: Story = {
+  args: {
+    children: "TEXT",
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.XL,
+  },
+};
+
+export const BackgroundTheme: Story = {
+  args: {
+    children: "TEXT",
+    theme: ButtonTheme.BACKGROUND,
+  },
+};
+
+export const BackgroundInverted: Story = {
+  args: {
+    children: "TEXT",
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+  },
+};
+
+export const Square: Story = {
+  args: {
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+  },
+};
+
+export const SquareSizeL: Story = {
+  args: {
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.L,
+  },
+};
+
+export const SquareSizeXL: Story = {
+  args: {
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    square: true,
+    size: ButtonSize.XL,
   },
 };
 
 export const OutlineDark: Story = {
   args: {
-    theme: ThemeButton.OUTLINE,
+    theme: ButtonTheme.OUTLINE,
   },
   decorators: [
     (Story) => (
