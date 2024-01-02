@@ -26,7 +26,7 @@ export const PageError = ({ className, error }: PageErrorProps) => {
     if (error != null || undefined) {
       console.log("Error", error);
     }
-  }, []);
+  }, [error]);
 
   return (
     <div role="alert" className={classNames(cls.pageerror, [className], {})}>
