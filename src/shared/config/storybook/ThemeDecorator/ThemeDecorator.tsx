@@ -1,4 +1,4 @@
-import { Theme } from "app/providers/ThemeProvider";
+import { Theme, ThemeProvider } from "app/providers/ThemeProvider";
 import React, { FC } from "react";
 
 interface Props {
@@ -6,11 +6,10 @@ interface Props {
   theme: Theme;
 }
 const ThemeDecorator: FC<Props> = ({ children, theme }) => (
-  <div
-    className={`app ${theme}`}
-    style={{ minWidth: "100vw" }}
-  >
-    {children}
-  </div>
+  <ThemeProvider initialTheme={theme}>
+    <div className={`app ${theme}`} style={{ minWidth: "100vw" }}>
+      {children}
+    </div>
+  </ThemeProvider>
 );
 export default ThemeDecorator;

@@ -36,6 +36,13 @@ export const Outline: Story = {
   },
 };
 
+export const ClearInverted: Story = {
+  args: {
+    children: "TEXT",
+    theme: ButtonTheme.CLEAR_INVERTED,
+  },
+};
+
 export const OutlineSizeL: Story = {
   args: {
     children: "TEXT",
@@ -92,6 +99,19 @@ export const SquareSizeXL: Story = {
 export const OutlineDark: Story = {
   args: {
     theme: ButtonTheme.OUTLINE,
+  },
+  decorators: [
+    (Story) => (
+      <ThemeDecorator theme={Theme.DARK}>
+        <Story />
+      </ThemeDecorator>
+    ),
+  ],
+};
+
+export const ClearInvertedDark: Story = {
+  args: {
+    theme: ButtonTheme.CLEAR_INVERTED,
   },
   decorators: [
     (Story) => (
