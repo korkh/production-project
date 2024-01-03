@@ -1,5 +1,4 @@
 import { BugButton } from "app/providers/ErrorBoundary";
-import { Counter } from "entities/Counter";
 import { useTranslation } from "react-i18next";
 
 interface ErrorProps {
@@ -13,8 +12,6 @@ const MainPage = ({ errorInfo }: ErrorProps) => {
     <div>
       <BugButton errorInfo={errorInfo} />
       {t("Main pagе")}
-      <br />
-      <Counter />
     </div>
   );
 };
