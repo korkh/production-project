@@ -18,5 +18,7 @@
   "Oops": {
     "": {}
   },
-  "Sign in": "Sign in"
+  "Sign in": "Sign in",
+  "Enter password": "Password",
+  "Enter username": "Username"
 }

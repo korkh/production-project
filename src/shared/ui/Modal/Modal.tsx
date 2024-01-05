@@ -9,12 +9,14 @@ interface ModalProps {
   className?: string;
   isOpen?: boolean;
   onClose?: () => void;
+  lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: PropsWithChildren<ModalProps>) => {
-  const { className, children, isOpen, onClose } = props;
+  const { className, children, isOpen, onClose, lazy } = props;
+  const [isMounted, setIsMounted] = useState(false); // controls mounting in DOM tree
   const [isClosing, setIsClosing] = useState(false);
 
   // timerRef holds our timer to close Modal
@@ -24,6 +26,12 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   const { theme } = useTheme(); //false decision and futher will be changed
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true);
+    }
+  }, [isOpen]);
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -68,9 +76,16 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
     [cls.isClosing]: isClosing,
   };
 
+  // Modal not rendering if flag Lazy and not mounted
+  if (lazy && !isMounted) {
+    return null;
+  }
+
   return (
     <Portal>
-      <div className={classNames(cls.modal, [className, theme, 'app_modal'], mods)}>
+      <div
+        className={classNames(cls.modal, [className, theme, "app_modal"], mods)}
+      >
         <div className={cls.overlay} onClick={closeHandler}>
           <div className={cls.content} onClick={onContentClick}>
             {children}
