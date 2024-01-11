@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { BrowserRouter } from "react-router-dom";
-import React from 'react';
 
 interface Props {
   children?: React.ReactNode;

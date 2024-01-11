@@ -121,3 +121,10 @@ export const ClearInvertedDark: Story = {
     ),
   ],
 };
+
+export const Disabled: Story = {
+  args: {
+    theme: ButtonTheme.OUTLINE,
+    disabled: true,
+  },
+};

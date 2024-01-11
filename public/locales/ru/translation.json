@@ -21,6 +21,9 @@
     }
   },
   "Sign in": "Войти",
-  "Enter password": "Пароль",
-  "Enter username": "Имя пользователя"
+  "Password": "Пароль",
+  "Username": "Имя пользователя",
+  "Incorrect login or password": "Неправильное имя пользователя или пароль",
+  "Authorization form": "Форма авторизации",
+  "Sign out": "Выйти"
 }

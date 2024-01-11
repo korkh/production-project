@@ -19,6 +19,9 @@
     "": {}
   },
   "Sign in": "Sign in",
-  "Enter password": "Password",
-  "Enter username": "Username"
+  "Password": "Password",
+  "Username": "Username",
+  "Incorrect login or password": "Incorrect login or password",
+  "Authorization form": "Authorization form",
+  "Sign out": "Sign out"
 }

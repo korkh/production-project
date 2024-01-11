@@ -33,6 +33,7 @@ server.post("/login", (req, res) => {
     );
 
     if (userFromBd) {
+      console.log("Signed in successfully!");
       return res.json(userFromBd);
     }
 

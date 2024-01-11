@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
-import { Sidebar } from "./Sidebar";
-import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
+import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Sidebar } from "./Sidebar";
 
 const meta = {
   title: "widget/Sidebar",
@@ -19,10 +18,13 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Light: Story = {};
+export const Light: Story = {
+  args: {},
+};
 
 export const Dark: Story = {
-  args: {},decorators: [
+  args: {},
+  decorators: [
     (Story) => (
       <ThemeDecorator theme={Theme.DARK}>
         <Story />
