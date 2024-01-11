@@ -10,6 +10,7 @@
     "build:dev": "webpack  --env mode=development",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:typecheck": "tsc --project ./tsconfig.json --noEmit",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
@@ -19,7 +20,8 @@
     "test:ui:rep": "reg-cli ./.loki/current ./.loki/reference ./.loki/difference -R ./.loki/report.html && move .\\reg.json .\\.loki\\reg.json",
     "test:ui:update": "loki update --reactUri file:./storybook-static",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "storybook:build": "storybook build -c ./config/storybook"
+    "storybook:build": "storybook build -c ./config/storybook",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -65,7 +67,7 @@
     "eslint-plugin-storybook": "^0.6.15",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^7.0.0",
+    "husky": "^8.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "json-server": "^0.17.4",
