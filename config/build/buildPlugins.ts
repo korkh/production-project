@@ -27,7 +27,8 @@ export function buildPlugins({
     plugins.push(new webpack.HotModuleReplacementPlugin());
     plugins.push(
       new BundleAnalyzerPlugin({
-        openAnalyzer: false,
+        openAnalyzer: true,
+        //can be false and opened from the link after build
       })
     );
   }
