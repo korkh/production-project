@@ -21,6 +21,7 @@ export default {
   moduleNameMapper: {
     "\\.s?css$": "identity-obj-proxy",
     "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+    "^axios$": "axios/dist/node/axios.cjs", //problem with import axios from "axios"
   },
   globals: { __IS_DEV__: true },
 };
