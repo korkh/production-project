@@ -2,33 +2,37 @@
   "posts": [
     {
       "id": "1",
-      "title": "Hello world",
+      "title": "json-server",
       "userId": "1"
     },
     {
       "id": "2",
-      "title": "Some comment",
+      "title": "json-server",
       "userId": "2"
     }
   ],
   "comments": [
     {
       "id": "1",
-      "body": "Peter",
+      "body": "some comment",
       "postId": "1"
     }
   ],
   "users": [
     {
-      "id": "2",
+      "id": "1",
       "username": "admin",
-      "password": "123"
-    },
-    {
-      "id": "2",
-      "username": "Bob",
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Peter",
+    "lastname": "Hansen",
+    "age": 44,
+    "currency": "NOK",
+    "country": "Norway",
+    "city": "Bergen",
+    "username": "admin",
+    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+  }
 }

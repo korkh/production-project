@@ -1,5 +1,5 @@
 import { classNames } from "shared/lib/classNames/classNames";
-import { ButtonHTMLAttributes, FC } from "react";
+import { ButtonHTMLAttributes, FC, memo } from "react";
 import cls from "./Button.module.scss";
 
 export enum ButtonTheme {
@@ -24,7 +24,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
 }
 
-export const Button: FC<ButtonProps> = (props) => {
+// Due to the children in button in our case is a string - we can use memo 
+// If we are going to use {} in CHILDREN - BAD PRACSIS! Better do not use due to refs to memory
+export const Button: FC<ButtonProps> = memo(function Button(props) {
   const {
     className,
     children,
@@ -51,4 +53,4 @@ export const Button: FC<ButtonProps> = (props) => {
       {children}
     </button>
   );
-};
+});

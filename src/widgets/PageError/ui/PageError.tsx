@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { NavigateFunction } from "react-router";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -11,7 +11,10 @@ interface PageErrorProps {
   error?: Error | null;
 }
 
-export const PageError = ({ className, error }: PageErrorProps) => {
+export const PageError = memo(function PageError({
+  className,
+  error,
+}: PageErrorProps) {
   const navigate: NavigateFunction = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -42,4 +45,4 @@ export const PageError = ({ className, error }: PageErrorProps) => {
       </Button>
     </div>
   );
-};
+});

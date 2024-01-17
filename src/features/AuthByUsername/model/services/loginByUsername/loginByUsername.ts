@@ -9,7 +9,7 @@ interface LoginByUsernameProps {
 }
 
 export const loginByUsername = createAsyncThunk<
-  User,                 //expected on exit
+  User, //expected on exit
   LoginByUsernameProps, //expected args on enter
   { rejectValue: string }
 >("login/loginByUsername", async (authData, thunkAPI) => {

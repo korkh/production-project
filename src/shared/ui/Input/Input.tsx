@@ -21,7 +21,7 @@ interface InputProps extends HTMLInputProps {
   autofocus?: boolean;
 }
 
-export const Input = memo((props: InputProps) => {
+export const Input = memo(function Input(props: InputProps) {
   const {
     className,
     value,
@@ -88,7 +88,5 @@ export const Input = memo((props: InputProps) => {
     </div>
   );
 });
-
-Input.displayName = "Input";
 
 // memo is a higher-order component (HOC) that we wrap around a functional component to optimize performance by preventing unnecessary re-renders.
