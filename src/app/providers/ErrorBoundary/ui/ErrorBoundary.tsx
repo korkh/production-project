@@ -22,15 +22,20 @@ class ErrorBoundary extends React.Component<
 
   static getDerivedStateFromError(error: Error | null) {
     // Update state so the next render will show the fallback UI.
-    if (error != null || undefined)
+    if (error != null) {
       return { hasError: true, errorMessage: error.toString() || "" };
+    }
+
+    return null; // No error
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to an error reporting service like Sentry
-    console.log("ErrorBoundary catched error", { error, errorInfo });
-    this.setState({ error });
-    // if to API logErrorToMyService(error, errorInfo);
+  componentDidCatch(error: Error | null, errorInfo: ErrorInfo) {
+    if (error != null) {
+      // Log error to an error reporting service like Sentry
+      console.log("ErrorBoundary caught error", { error, errorInfo });
+      this.setState({ error });
+      // if to API logErrorToMyService(error, errorInfo);
+    }
   }
 
   render() {

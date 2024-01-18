@@ -1,4 +1,4 @@
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames, Mods } from "shared/lib/classNames/classNames";
 import { ButtonHTMLAttributes, FC, memo } from "react";
 import cls from "./Button.module.scss";
 
@@ -24,20 +24,20 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
 }
 
-// Due to the children in button in our case is a string - we can use memo 
+// Due to the children in button in our case is a string - we can use memo
 // If we are going to use {} in CHILDREN - BAD PRACSIS! Better do not use due to refs to memory
 export const Button: FC<ButtonProps> = memo(function Button(props) {
   const {
     className,
     children,
-    theme,
+    theme = ButtonTheme.OUTLINE,
     square,
     disabled,
     size = ButtonSize.M,
     ...otherProps
   } = props;
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [cls[theme]]: true,
     [cls.square]: square,
     [cls[size]]: true,

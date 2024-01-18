@@ -4,7 +4,7 @@ import { Button } from "shared/ui/Button/Button";
 import { PageError } from "widgets/PageError";
 
 interface ErrorProps {
-  errorInfo: Error | null;
+  errorInfo: Error | null | undefined;
 }
 // Компонент для тестирования ErrorBoundary
 export const BugButton = ({ errorInfo }: ErrorProps) => {

@@ -23,7 +23,7 @@ export const Normal: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator state={undefined}>
+      <StoreDecorator state={{}}>
         <Story />
       </StoreDecorator>
     ),
@@ -34,7 +34,7 @@ export const DARK: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator state={undefined}>
+      <StoreDecorator state={{}}>
         <ThemeDecorator theme={Theme.DARK}>
           <Story />
         </ThemeDecorator>

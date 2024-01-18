@@ -23,7 +23,7 @@ export const Light: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator state={undefined}>
+      <StoreDecorator state={{}}>
         <Story />
       </StoreDecorator>
     ),
@@ -34,7 +34,7 @@ export const Dark: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator state={undefined}>
+      <StoreDecorator state={{}}>
         <ThemeDecorator theme={Theme.DARK}>
           <Story />
         </ThemeDecorator>
@@ -47,7 +47,7 @@ export const AuthData: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator state={{ user: { authData: {} } }}>
+      <StoreDecorator state={{ user: { authData: undefined } }}>
         <ThemeDecorator theme={Theme.LIGHT}>
           <Story />
         </ThemeDecorator>

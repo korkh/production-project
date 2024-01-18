@@ -10,52 +10,57 @@ export default ({ config }: { config: webpack.Configuration }) => {
     entry: "",
     src: path.resolve(__dirname, "..", "..", "src"), //for absolute path
   };
-  config.resolve.modules = [paths.src, "node_modules"];
-  config.resolve.extensions.push(".ts", ".tsx");
+  if (config.resolve && config.resolve.extensions) {
+    config.resolve.modules = [paths.src, "node_modules"];
+    config.resolve.extensions.push(".ts", ".tsx");
+  }
 
-  // eslint-disable-next-line no-param-reassign
-  config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
-    if (/svg/.test(rule.test as string)) {
-      return { ...rule, exclude: /\.svg$/i };
-    }
+  if (config.module && Array.isArray(config.module.rules)) {
+    config.module.rules = (config.module.rules as RuleSetRule[]).map((rule) => {
+      if (/svg/.test(rule.test as string)) {
+        return { ...rule, exclude: /\.svg$/i };
+      }
+      return rule;
+    });
 
-    return rule;
-  });
-
-  // no need import React from 'react'
-  config.module.rules.push({
-    test: /\.(ts|tsx)$/,
-    loader: require.resolve("babel-loader"),
-    options: {
-      babelrc: false,
-      presets: [
-        "@babel/preset-typescript",
-        [
-          "@babel/preset-react",
-          {
-            runtime: "automatic",
-          },
+    // no need import React from 'react'
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      loader: require.resolve("babel-loader"),
+      options: {
+        babelrc: false,
+        presets: [
+          "@babel/preset-typescript",
+          [
+            "@babel/preset-react",
+            {
+              runtime: "automatic",
+            },
+          ],
         ],
-      ],
-      plugins: [],
-    },
-  });
+        plugins: [],
+      },
+    });
 
-  config.module.rules.push({
-    test: /\.svg$/,
-    use: ["@svgr/webpack"],
-  });
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
 
-  //Check analogy in buildWebpackConfig.ts module: {
-  //    rules: buildLoaders(options),
-  // },  => module.rules
-  config.module.rules.push(buildCssLoader(true)); // isDev: true (story book just in dev mode)
+    //Check analogy in buildWebpackConfig.ts module: {
+    //    rules: buildLoaders(options),
+    // },  => module.rules
+    config.module.rules.push(buildCssLoader(true)); // isDev: true (story book just in dev mode)
+  }
 
-  config.plugins.push(
-    new DefinePlugin({
-      __IS_DEV__: true,
-    })
-  ); // Here we can use global field, __IS__DEV__ using during store creation do define dev mode
+  if (config.plugins) {
+    config.plugins.push(
+      new DefinePlugin({
+        __IS_DEV__: JSON.stringify(true),
+        __API__: JSON.stringify(""),
+      })
+    ); // Here we can use global field, __IS__DEV__ using during store creation do define dev mode
+  }
 
   return config;
 };

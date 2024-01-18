@@ -21,6 +21,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     test: /\.tsx?$/,
     use: "ts-loader",
     exclude: /node_modules/,
+    // options: { transpileOnly: true }, // ts errors will not ruin build
   };
 
   const svgLoader = {

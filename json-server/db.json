@@ -26,8 +26,8 @@
     }
   ],
   "profile": {
-    "first": "Peter",
-    "lastname": "Hansen",
+    "firstName": "Peter",
+    "lastName": "Hansen",
     "age": 44,
     "currency": "NOK",
     "country": "Norway",

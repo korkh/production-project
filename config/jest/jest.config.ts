@@ -23,7 +23,7 @@ export default {
     "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
     "^axios$": "axios/dist/node/axios.cjs", //problem with import axios from "axios"
   },
-  globals: { __IS_DEV__: true },
+  globals: { __IS_DEV__: true, __API__: "" },
 };
 // Indicates whether the coverage information should be collected while executing the test
 // collectCoverage: false,

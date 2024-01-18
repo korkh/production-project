@@ -1,7 +1,7 @@
 import { useTheme } from "app/providers/ThemeProvider";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { MutableRefObject, useCallback, useEffect, useRef, useState } from "react";
 import { PropsWithChildren } from "react";
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames, Mods } from "shared/lib/classNames/classNames";
 import { Portal } from "../Portal/Portal";
 import cls from "./Modal.module.scss";
 
@@ -23,7 +23,7 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
   // by ReturnType we can extract type from setTimeout
   // if we are not using useRef() it can arise error if by
   // some reason Modal will be removed from DOM tree
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
   const { theme } = useTheme(); //false decision and futher will be changed
 
@@ -71,7 +71,7 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
     };
   }, [isOpen, onKeyDown]);
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing,
   };
