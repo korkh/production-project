@@ -1,6 +1,25 @@
 {
   "Profile": "Profile",
   "Edit": "Edit",
-  "Your name": "Your name",
-  "Your lastName": "Your lastname"
+  "Your name": "First name",
+  "Your lastname": "Lastname",
+  "Your age": "Age",
+  "Try to refresh your page": "Try to refresh your page",
+  "City": "City",
+  "Enter username": "Username",
+  "Enter link to your avatar": "Link to avatar",
+  "Profile loading error": "Profile loading error",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Choose currency": "Currency",
+  "Choose country": "Country",
+  "Server error on saving": "Server error on saving",
+  "Incorrect user age": "Incorrect user age",
+  "Incorrect avatar link": "Incorrect city",
+  "Incorrect country": "Incorrect currency",
+  "Name and Lastname are required": "Name and lastname are required",
+  "Missing data": "Missing data",
+  "Incorrect city": "Incorrect city",
+  "Incorrect currency": "Incorrect currency",
+  "Incorrect username": "Incorrect username"
 }

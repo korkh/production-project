@@ -6,22 +6,22 @@ interface LoaderProps {
   className?: string;
 }
 
-export const Loader = (props: PropsWithChildren<LoaderProps>) => {
+export function Loader(props: PropsWithChildren<LoaderProps>) {
   const { className, ...otherProps } = props;
   return (
     <div className={classNames(cls.lds, [className], {})} {...otherProps}>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
+      <div />
     </div>
   );
-};
+}

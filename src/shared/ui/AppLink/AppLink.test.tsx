@@ -1,4 +1,6 @@
-import { fireEvent, getByText, render, screen } from "@testing-library/react";
+import {
+  fireEvent, getByText, render, screen,
+} from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { AppLink, AppLinkTheme } from "./AppLink";
 
@@ -6,8 +8,8 @@ describe("AppLink", () => {
   test("AppLink render", () => {
     render(
       <MemoryRouter>
-        <AppLink to={"/example"}>Test</AppLink>
-      </MemoryRouter>
+        <AppLink to="/example">Test</AppLink>
+      </MemoryRouter>,
     );
     const link = screen.getByText("Test");
     expect(link).toBeInTheDocument();
@@ -16,10 +18,10 @@ describe("AppLink", () => {
   test("CustomClassName and Theme test for AppLink", () => {
     render(
       <MemoryRouter>
-        <AppLink to={"/"} theme={AppLinkTheme.PRIMARY} className="customClass">
+        <AppLink to="/" theme={AppLinkTheme.PRIMARY} className="customClass">
           Test
         </AppLink>
-      </MemoryRouter>
+      </MemoryRouter>,
     );
     const link = screen.getByText("Test");
     expect(link).toHaveClass("primary");
@@ -29,8 +31,8 @@ describe("AppLink", () => {
   test("Navigate correctly on Click", () => {
     const { container } = render(
       <MemoryRouter>
-        <AppLink to={"/example"}>Test</AppLink>
-      </MemoryRouter>
+        <AppLink to="/example">Test</AppLink>
+      </MemoryRouter>,
     );
     const link = getByText(container, "Test");
     expect(link).toBeInTheDocument();

@@ -7,7 +7,7 @@ interface ErrorProps {
   errorInfo: Error | null | undefined;
 }
 // Компонент для тестирования ErrorBoundary
-export const BugButton = ({ errorInfo }: ErrorProps) => {
+export function BugButton({ errorInfo }: ErrorProps) {
   const [error, setError] = useState(false);
   const { t } = useTranslation();
 
@@ -18,4 +18,4 @@ export const BugButton = ({ errorInfo }: ErrorProps) => {
   ) : (
     <Button onClick={onThrow}>{t("Throw error")}</Button>
   );
-};
+}

@@ -16,8 +16,10 @@ declare module "*.svg" {
   export default SVG;
 }
 
-declare const __IS_DEV__: boolean; // webpack plugin
-declare const __API__: string; // webpack plugin
+//webpack buildPluguins
+declare const __IS_DEV__: boolean;
+declare const __API__: string;
+declare const __PROJECT__: "storybook" | "jest" | "frontend";
 
 type DeepPartial<T> = T extends object
   ? { [P in keyof T]?: DeepPartial<T[P]> }

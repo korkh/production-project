@@ -9,7 +9,7 @@ import { NavigateToFunction, StateSchema, ThunkExtraArg } from "./StateSchema";
 export function createReduxStore(
   initialState?: StateSchema,
   asyncReducers?: ReducersMapObject<StateSchema>,
-  navigate?: NavigateToFunction
+  navigate?: NavigateToFunction,
 ) {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
@@ -28,12 +28,11 @@ export function createReduxStore(
     reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
     devTools: __IS_DEV__,
     preloadedState: initialState,
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        thunk: {
-          extraArgument: extraArg,
-        },
-      }),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+      thunk: {
+        extraArgument: extraArg,
+      },
+    }),
   });
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

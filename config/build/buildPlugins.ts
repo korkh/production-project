@@ -8,6 +8,7 @@ export function buildPlugins({
   paths,
   isDev,
   apiUrl,
+  project,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
   const plugins = [
     new HtmlWebpackPlugin({
@@ -21,16 +22,17 @@ export function buildPlugins({
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
       __API__: JSON.stringify(apiUrl),
+      __PROJECT__: JSON.stringify(project),
     }),
   ];
 
   // following plugins only for dev
   if (isDev) {
-    plugins.push(new webpack.HotModuleReplacementPlugin());
+    // plugins.push(new webpack.HotModuleReplacementPlugin()); // no need if have hot: true in buildDevServer.ts
     plugins.push(
       new BundleAnalyzerPlugin({
         openAnalyzer: false,
-        //can be false and opened from the link after build
+        // can be false and opened from the link after build
       })
     );
   }

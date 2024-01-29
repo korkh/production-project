@@ -9,7 +9,7 @@ interface ThemeSwitcherProps {
   className?: string;
 }
 
-export const ThemeSwitcher = (props: PropsWithChildren<ThemeSwitcherProps>) => {
+export function ThemeSwitcher(props: PropsWithChildren<ThemeSwitcherProps>) {
   const { className, ...otherProps } = props;
   const { theme, toggleTheme } = useTheme();
   return (
@@ -22,4 +22,4 @@ export const ThemeSwitcher = (props: PropsWithChildren<ThemeSwitcherProps>) => {
       {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
     </Button>
   );
-};
+}

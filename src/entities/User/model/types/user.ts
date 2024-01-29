@@ -3,7 +3,7 @@ export interface User {
   username: string;
 }
 
-//interface for state
+// interface for state
 export interface UserSchema {
   authData?: User;
 }

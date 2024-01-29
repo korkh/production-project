@@ -10,15 +10,15 @@ interface StoreProviderProps {
   asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>;
 }
 
-export const StoreProvider = (props: StoreProviderProps) => {
+export function StoreProvider(props: StoreProviderProps) {
   const { children, initialState, asyncReducers } = props;
 
   const store = createReduxStore(
     initialState as StateSchema,
-    asyncReducers as ReducersMapObject<StateSchema>
+    asyncReducers as ReducersMapObject<StateSchema>,
   );
 
   return <Provider store={store}>{children}</Provider>;
-};
+}
 
-//using "as" not good practice but in some configuration files it can be nessesarry
+// using "as" not good practice but in some configuration files it can be nessesarry

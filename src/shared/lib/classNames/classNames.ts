@@ -3,7 +3,7 @@ export type Mods = Record<string, boolean | string | undefined>;
 export function classNames(
   cls: string,
   additional: Array<string | undefined> = [],
-  mods: Mods = {}
+  mods: Mods = {},
 ): string {
   // Комбинируем различные классы и модификаторы в одну строку с пробелами
   return [

@@ -8,7 +8,7 @@ import { Modal } from "shared/ui/Modal/Modal";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar";
 
-const App = () => {
+function App() {
   const { theme } = useTheme();
   const dispatch = useDispatch();
 
@@ -28,6 +28,6 @@ const App = () => {
       </Suspense>
     </div>
   );
-};
+}
 
 export default App;

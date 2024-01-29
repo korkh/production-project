@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { classNames } from "shared/lib/classNames/classNames";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
 import { Input } from "shared/ui/Input/Input";
-import cls from "./LoginForm.module.scss";
 
 import {
   DynamicModuleLoader,
@@ -12,6 +11,7 @@ import {
 } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { Text, TextTheme } from "shared/ui/Text/Text";
+import cls from "./LoginForm.module.scss";
 import { getLoginError } from "../../model/selectors/getLoginError/getLoginError";
 import { getLoginLoading } from "../../model/selectors/getLoginLoading/getLoginLoading";
 import { getLoginPassword } from "../../model/selectors/getLoginPassword/getLoginPassword";

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { counterActions } from "../model/slice/counterSlice";
 import { getCounterValue } from "../model/selectors/getCounterValue/getCounterValue";
 
-export const Counter = () => {
+export function Counter() {
   const dispatch = useDispatch();
   const counterValue = useSelector(getCounterValue);
 
@@ -29,4 +29,4 @@ export const Counter = () => {
       </Button>
     </div>
   );
-};
+}

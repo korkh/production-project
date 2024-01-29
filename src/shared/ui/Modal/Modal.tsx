@@ -1,6 +1,9 @@
 import { useTheme } from "app/providers/ThemeProvider";
-import { MutableRefObject, useCallback, useEffect, useRef, useState } from "react";
-import { PropsWithChildren } from "react";
+import {
+  MutableRefObject, useCallback, useEffect, useRef, useState,
+  PropsWithChildren,
+} from "react";
+
 import { classNames, Mods } from "shared/lib/classNames/classNames";
 import { Portal } from "../Portal/Portal";
 import cls from "./Modal.module.scss";
@@ -14,8 +17,10 @@ interface ModalProps {
 
 const ANIMATION_DELAY = 300;
 
-export const Modal = (props: PropsWithChildren<ModalProps>) => {
-  const { className, children, isOpen, onClose, lazy } = props;
+export function Modal(props: PropsWithChildren<ModalProps>) {
+  const {
+    className, children, isOpen, onClose, lazy,
+  } = props;
   const [isMounted, setIsMounted] = useState(false); // controls mounting in DOM tree
   const [isClosing, setIsClosing] = useState(false);
 
@@ -25,7 +30,7 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
   // some reason Modal will be removed from DOM tree
   const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
-  const { theme } = useTheme(); //false decision and futher will be changed
+  const { theme } = useTheme(); // false decision and futher will be changed
 
   useEffect(() => {
     if (isOpen) {
@@ -53,11 +58,11 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
         closeHandler();
       }
     },
-    [closeHandler]
+    [closeHandler],
   );
 
   const onContentClick = (e: React.MouseEvent) => {
-    e.stopPropagation(); //it will prevent to close modal by clicking on content part
+    e.stopPropagation(); // it will prevent to close modal by clicking on content part
   };
 
   useEffect(() => {
@@ -94,4 +99,4 @@ export const Modal = (props: PropsWithChildren<ModalProps>) => {
       </div>
     </Portal>
   );
-};
+}

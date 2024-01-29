@@ -77,7 +77,7 @@
       {
         "ignoreComments": true,
         "ignoreUrls": true,
-        "ignorePattern": "^import\\s.+\\sfrom\\s.+;$|^export\\sfunction\\s\\w+\\(.+\\)\\s*:",
+        "ignorePattern": "^(\\s*import\\s.+\\sfrom\\s.+;|\\s*export\\s\\{.+\\}\\sfrom\\s.+;|\\s*export\\s(?:function\\s\\w+\\(.+\\)\\s*|.+\\sfrom\\s.+;)\\s*)$",
         "code": 100
       }
     ],
@@ -91,7 +91,8 @@
   },
   "globals": {
     "__IS_DEV__": true,
-    "__API__": true
+    "__API__": true,
+    "__PROJECT__": true
   },
   "overrides": [
     {

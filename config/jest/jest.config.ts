@@ -11,7 +11,7 @@ export default {
   coveragePathIgnorePatterns: ["\\\\node_modules\\\\"],
   moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json", "node"],
   moduleDirectories: ["node_modules"],
-  modulePaths: ["<rootDir>src"], //accept absolute links
+  modulePaths: ["<rootDir>src"], // accept absolute links
   testMatch: [
     // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
     "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)",
@@ -21,9 +21,9 @@ export default {
   moduleNameMapper: {
     "\\.s?css$": "identity-obj-proxy",
     "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
-    "^axios$": "axios/dist/node/axios.cjs", //problem with import axios from "axios"
+    "^axios$": "axios/dist/node/axios.cjs", // problem with import axios from "axios"
   },
-  globals: { __IS_DEV__: true, __API__: "" },
+  globals: { __IS_DEV__: true, __API__: "", __PROJECT__: "jest" },
 };
 // Indicates whether the coverage information should be collected while executing the test
 // collectCoverage: false,

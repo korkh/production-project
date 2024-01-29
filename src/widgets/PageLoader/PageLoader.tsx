@@ -7,7 +7,7 @@ interface PageLoaderProps {
   className?: string;
 }
 
-export const PageLoader = (props: PropsWithChildren<PageLoaderProps>) => {
+export function PageLoader(props: PropsWithChildren<PageLoaderProps>) {
   const { className, ...otherProps } = props;
   return (
     <div
@@ -17,4 +17,4 @@ export const PageLoader = (props: PropsWithChildren<PageLoaderProps>) => {
       <Loader />
     </div>
   );
-};
+}

@@ -3,8 +3,8 @@
   "Main pagе": "Main page",
   "Main": "Main",
   "About us": "About us",
-  "Short language": "РУ",
-  "Long language": "Русский",
+  "Short language": "NO",
+  "Long language": "Norsk",
   "Toggle": "Toggle",
   "Loading": {
     "": {
@@ -23,5 +23,6 @@
   "Username": "Username",
   "Incorrect login or password": "Incorrect login or password",
   "Authorization form": "Authorization form",
-  "Sign out": "Sign out"
+  "Sign out": "Sign out",
+  "Profile": "Profile"
 }

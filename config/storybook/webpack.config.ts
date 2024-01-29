@@ -8,7 +8,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
     build: "",
     html: "",
     entry: "",
-    src: path.resolve(__dirname, "..", "..", "src"), //for absolute path
+    src: path.resolve(__dirname, "..", "..", "src"), // for absolute path
   };
   if (config.resolve && config.resolve.extensions) {
     config.resolve.modules = [paths.src, "node_modules"];
@@ -47,7 +47,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
       use: ["@svgr/webpack"],
     });
 
-    //Check analogy in buildWebpackConfig.ts module: {
+    // Check analogy in buildWebpackConfig.ts module: {
     //    rules: buildLoaders(options),
     // },  => module.rules
     config.module.rules.push(buildCssLoader(true)); // isDev: true (story book just in dev mode)
@@ -58,6 +58,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
       new DefinePlugin({
         __IS_DEV__: JSON.stringify(true),
         __API__: JSON.stringify(""),
+        __PROJECT__: JSON.stringify("storybook"),
       })
     ); // Here we can use global field, __IS__DEV__ using during store creation do define dev mode
   }
