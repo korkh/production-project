@@ -6,4 +6,5 @@ export interface User {
 // interface for state
 export interface UserSchema {
   authData?: User;
+  _inited: boolean;
 }
