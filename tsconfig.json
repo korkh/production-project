@@ -39,5 +39,5 @@
       "module": "CommonJS"
     }
   },
-  "include": ["./**/*", "./config/jest/setupTests.ts", ".lokirc.jspon"]
+  "include": ["./**/*", "./config/jest/setupTests.ts"]
 }

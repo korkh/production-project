@@ -2,6 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # DO NOT DO HEAVY TEST & BUILDS FOR REAL PROD, USE ONLY LINT:TS, LINT:SCSS
-npm run build:prod
 npm run lint:ts
 npm run lint:scss
