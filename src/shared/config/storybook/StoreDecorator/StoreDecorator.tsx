@@ -1,4 +1,5 @@
 import { StateSchema, StoreProvider } from "app/providers/StoreProvider";
+import { articleDetailsReducer } from "entities/Article/model/slice/articleDetailsSlice";
 import { profileReducer } from "entities/Profile";
 import { loginReducer } from "features/AuthByUsername/model/slice/loginSlice";
 import React, { ReactNode } from "react";
@@ -13,6 +14,7 @@ interface StoreDecoratorProps {
 const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,
   profile: profileReducer,
+  articleDetails: articleDetailsReducer,
 };
 
 const StoreDecorator: React.FC<StoreDecoratorProps> = ({

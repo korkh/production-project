@@ -5,7 +5,9 @@ import { buildPlugins } from "./buildPlugins";
 import { buildResolvers } from "./buildResolvers";
 import { BuildOptions } from "./types/config";
 
-export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
+export function buildWebpackConfig(
+  options: BuildOptions
+): webpack.Configuration {
   const { paths, mode, isDev } = options;
 
   return {
@@ -15,6 +17,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
       filename: "[name].[contenthash].js",
       path: paths.build,
       clean: true,
+      publicPath: "/", //for correct chuncks loading if have ../articles/1  
     },
     plugins: buildPlugins(options),
     module: {

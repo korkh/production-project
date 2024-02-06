@@ -1,19 +1,22 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './[FTName].module.scss';
-import { PropsWithChildren } from 'react';
+import { useTranslation } from "react-i18next";
+import {memo} from "react";
 		
-interface [FTName]Props {
+interface <FTName>Props {
   className?: string;
 }
 
-export const [FTName] = (props: PropsWithChildren<[FTName]Props>) => {
-	const { className, children, ...otherProps } = props;
+const <FTName> = memo(function <FTName>(props: <FTName>Props) {
+	const { className } = props;
+	const { t } = useTranslation();
 		return (
 			<div 
-				  	className={classNames(cls.[FTName | camelcase], [className], {})} 
-				  	{...otherProps}
-				  >
-			     {children}
-			   </div>			    
-			 );
-      };
+				className={classNames(cls.[FTName | camelcase], [className], {})}				  
+			>
+			{t("<FTName>")}
+			</div>			    
+		);
+});
+
+export default <FTName>;

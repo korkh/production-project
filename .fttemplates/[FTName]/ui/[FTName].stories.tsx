@@ -4,15 +4,15 @@ import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorato
 import [FTName] from "./[FTName]";
 
 const meta = {
-  title: "shared/[FTName]",
-  component: [FTName],
+  title: "shared/<FTName>",
+  component: <FTName>,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   args: {},
   argTypes: {},
-} satisfies Meta<typeof [FTName]>;
+} satisfies Meta<typeof <FTName>>;
 
 export default meta;
 

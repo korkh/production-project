@@ -20,7 +20,7 @@
   },
   "plugins": ["@typescript-eslint", "react", "i18next", "react-hooks"],
   "rules": {
-    "indent": ["warn", 2],
+    "indent": ["warn", 2, { "SwitchCase": 1 }],
     "linebreak-style": ["warn", "windows"],
     "quotes": "off",
     "semi": ["error", "always"],
