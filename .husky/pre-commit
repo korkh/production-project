@@ -1,10 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# DO NOT DO THIS FOR REAL PROD, USE ONLY LINT:TS, LINT:SCSS
+# DO NOT DO HEAVY TEST & BUILDS FOR REAL PROD, USE ONLY LINT:TS, LINT:SCSS
 npm run build:prod
 npm run lint:ts
 npm run lint:scss
-npm run test:unit
-npm run storybook:build
-npm run test:ui:ci
