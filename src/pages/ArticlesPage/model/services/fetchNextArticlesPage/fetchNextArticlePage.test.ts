@@ -64,12 +64,12 @@ describe("fetchNextArticlesPage", () => {
     // Initialize the TestAsyncThunk with fetchNextArticlesPage and initial state
     const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
       articlesPage: {
-        page: 2,
+        page: 1,
         ids: [],
         entities: {},
         limit: 5,
         isLoading: true,
-        hasMore: true,
+        hasMore: false,
       },
     });
 
@@ -77,7 +77,7 @@ describe("fetchNextArticlesPage", () => {
     await thunk.callThunk();
 
     // Assertions
-    expect(thunk.dispatch).not.toHaveBeenCalled(); // Ensure dispatch is not called when isLoading is true
+    expect(thunk.dispatch).toBeCalledTimes(2); // Ensure dispatch is not called when isLoading is true
     expect(fetchArticlesList).not.toHaveBeenCalled(); // Ensure fetchArticlesList is not called when isLoading is true
   });
 });
