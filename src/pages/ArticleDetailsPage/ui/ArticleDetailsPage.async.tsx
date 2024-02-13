@@ -6,6 +6,6 @@ export const ArticleDetailsPageAsync = lazy(
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       // FOR DEV PURPOSE ONLY!!!
-      setTimeout(() => resolve(import("./ArticleDetailsPage")), 2000);
+      setTimeout(() => resolve(import("./ArticleDetailsPage")), 400);
     })
 );

@@ -1,3 +1,3 @@
 export interface <FTName>{
-  name: string;
+  id: string;
 }

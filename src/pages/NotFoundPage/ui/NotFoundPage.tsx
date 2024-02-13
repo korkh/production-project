@@ -1,6 +1,7 @@
 import { memo, PropsWithChildren } from "react";
 import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames/classNames";
+import { Page } from "shared/ui/Page/Page";
 import cls from "./NotFoundPage.module.scss";
 
 interface NotFoundPageProps {
@@ -13,11 +14,11 @@ export const NotFoundPage = memo(function NotFoundPage(
   const { className, ...otherProps } = props;
   const { t } = useTranslation();
   return (
-    <div
+    <Page
       className={classNames(cls.notfoundpage, [className], {})}
       {...otherProps}
     >
       {t("Page not found")}
-    </div>
+    </Page>
   );
 });

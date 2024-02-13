@@ -20,11 +20,9 @@
       " Something went wrong": "Oops.. Noe gikk galt."
     }
   },
-  "Sign in": "Logg inn",
   "Password": "Passord",
   "Username": "Brukernavn",
   "Incorrect login or password": "Feil brukernavn eller passord",
   "Authorization form": "Autorisasjonsskjema",
-  "Sign out": "Logg ut",
   "Profile": "Profil"
 }

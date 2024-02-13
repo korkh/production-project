@@ -1,34 +1,52 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "app/providers/ThemeProvider";
-import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Article, ArticleView } from "entities/Article";
+import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
+import { ARTICLES } from "shared/const/storyiesConsts";
 import ArticlesPage from "./ArticlesPage";
 
 const meta = {
   title: "pages/ArticlesPage",
   component: ArticlesPage,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},
   argTypes: {},
-} satisfies Meta<typeof ArticlesPage>;
+} as Meta<typeof ArticlesPage>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
-  args: {},
-};
+interface ArticleEntity {
+  [id: string]: Article;
+}
 
-export const Dark: Story = {
+export const Primary: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <ThemeDecorator theme={Theme.DARK}>
+      <StoreDecorator
+        state={{
+          articlesPage: {
+            isLoading: false,
+            error: undefined,
+            view: ArticleView.BIG,
+            ids: ARTICLES.map((article) => article.id),
+            entities: ARTICLES.reduce((acc, article) => {
+              acc[article.id] = article;
+              return acc;
+            }, {} as ArticleEntity),
+            //pagination
+            page: 1,
+            limit: 4,
+            hasMore: true,
+          },
+        }}
+      >
         <Story />
-      </ThemeDecorator>
+      </StoreDecorator>
     ),
   ],
 };

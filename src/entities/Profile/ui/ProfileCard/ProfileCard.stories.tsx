@@ -7,7 +7,7 @@ import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorato
 import { ProfileCard } from "./ProfileCard";
 
 const meta = {
-  title: "entitites/ProfileCard",
+  title: "entities/ProfileCard",
   component: ProfileCard,
   parameters: {
     layout: "centered",

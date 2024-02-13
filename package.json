@@ -96,6 +96,7 @@
     "@jest/types": "^29.6.3",
     "@loki/integration-react": "^0.34.0",
     "@reduxjs/toolkit": "^1.9.7",
+    "@storybook/addon-actions": "^7.6.13",
     "axios": "^1.6.5",
     "i18next": "^23.7.11",
     "i18next-browser-languagedetector": "^6.1.3",

@@ -12,7 +12,7 @@ interface NavbarProps {
 }
 
 export const Navbar = memo(function Navbar({ className }: NavbarProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation("navbar");
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useSelector(getUserAuthData);
   const dispatch = useDispatch();
@@ -31,7 +31,7 @@ export const Navbar = memo(function Navbar({ className }: NavbarProps) {
 
   if (authData) {
     return (
-      <div className={classNames(cls.navbar, [className], {})}>
+      <nav className={classNames(cls.navbar, [className], {})}>
         <Button
           theme={ButtonTheme.CLEAR_INVERTED}
           className={cls.links}
@@ -39,12 +39,12 @@ export const Navbar = memo(function Navbar({ className }: NavbarProps) {
         >
           {t("Sign out")}
         </Button>
-      </div>
+      </nav>
     );
   }
 
   return (
-    <div className={classNames(cls.navbar, [className], {})}>
+    <nav className={classNames(cls.navbar, [className], {})}>
       <Button
         theme={ButtonTheme.CLEAR_INVERTED}
         className={cls.links}
@@ -55,6 +55,6 @@ export const Navbar = memo(function Navbar({ className }: NavbarProps) {
       {isAuthModal && (
         <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
       )}
-    </div>
+    </nav>
   );
 });
