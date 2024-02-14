@@ -14,7 +14,7 @@ import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEf
 import { AddCommentForm } from "features/addCommentForm";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
-import { Page } from "shared/ui/Page/Page";
+import { Page } from "widgets/Page/Page";
 import cls from "./ArticleDetailsPage.module.scss";
 import {
   articleDetailsCommentsReducer,
@@ -53,8 +53,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   );
 
   useInitialEffect(() => {
-    if (__PROJECT__ !== "storybook")
-      dispatch(fetchCommentsByArticleId(id));
+    if (__PROJECT__ !== "storybook") dispatch(fetchCommentsByArticleId(id));
   });
 
   if (!id) {
