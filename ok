@@ -1,5 +1,0 @@
-
-> production-project@1.0.0 test:ui
-> npx loki test --config .lokirc.json
-
-Terminate batch job (Y/N)? 

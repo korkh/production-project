@@ -18,8 +18,8 @@ import {
   getArticlesPageIsLoading,
   getArticlesPageView,
 } from "../model/selectors/articlePageSelectors";
-import { fetchArticlesList } from "../model/services/fetchArticlesList/fetchArticlesList";
 import { fetchNextArticlesPage } from "../model/services/fetchNextArticlesPage/fetchNextArticlesPage";
+import { initArticlesPage } from "../model/services/initArticlesPage/initArticlesPage";
 import {
   articlesPageActions,
   articlesPageReducer,
@@ -58,8 +58,8 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   }, [dispatch]);
 
   useInitialEffect(() => {
-    dispatch(articlesPageActions.initState());
-    dispatch(fetchArticlesList({ page: 1 }));
+    dispatch(initArticlesPage());
+    console.log(articles);
   });
 
   if (error) {
@@ -67,7 +67,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   }
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.articlesPage, [className], {})}

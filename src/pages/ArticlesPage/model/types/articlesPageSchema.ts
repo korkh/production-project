@@ -9,4 +9,7 @@ export interface ArticlesPageSchema extends EntityState<Article> {
   page: number;
   limit?: number;
   hasMore: boolean;
+
+  //avoid extra renders
+  _inited?: boolean;
 }
