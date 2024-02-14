@@ -21,7 +21,7 @@
     "test:ui:report": "reg-cli ./.loki/current ./.loki/reference ./.loki/difference -R ./.loki/report.html && move reg.json .\\.loki\\reg.json",
     "test:ui:update": "loki update --reactUri file:./storybook-static",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "storybook:build": "storybook build -c ./config/storybook",
+    "storybook:build": "storybook build --test -c ./config/storybook",
     "prepare": "husky install"
   },
   "keywords": [],
