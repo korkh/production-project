@@ -8,14 +8,14 @@ import { useCallback, useRef } from "react";
  * @param {number} delay - The time interval (in milliseconds) within which the function should be throttled.
  * @returns - The throttled function.
  */
-export function useThrottle(
-  callback: (...args: never[]) => void,
+export function useThrottle<T>(
+  callback: (...args: T[]) => void,
   delay: number
 ) {
   const throttleRef = useRef(false);
 
   return useCallback(
-    (...args: never[]) => {
+    (...args: T[]) => {
       if (!throttleRef.current) {
         callback(...args);
         throttleRef.current = true;
