@@ -9,14 +9,14 @@ export default (env: BuildEnv) => {
     build: path.resolve(__dirname, "build"),
     html: path.resolve(__dirname, "public", "index.html"),
     src: path.resolve(__dirname, "src"),
-    locales: path.resolve(__dirname, "public", "locales"),     //add  for locales
-    buildLocales: path.resolve(__dirname, "build", "locales"), //add for locales
+    locales: path.resolve(__dirname, "public", "locales"), // Add for locales
+    buildLocales: path.resolve(__dirname, "build", "locales"), // Add for locales
   };
 
-  const mode = env?.mode || "development";
+  const mode = env?.mode ?? "development";
   const isDev = mode === "development";
-  const PORT = env?.port || 3000;
-  const apiUrl = env?.apiUrl || "http://localhost:8000";
+  const PORT = env?.port ?? 3000;
+  const apiUrl = env?.apiUrl ?? "http://localhost:8000";
 
   const config: webpack.Configuration = buildWebpackConfig({
     mode,

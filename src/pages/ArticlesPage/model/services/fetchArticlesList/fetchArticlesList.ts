@@ -43,7 +43,7 @@ export const fetchArticlesList = createAsyncThunk<
         _sort: sort,
         _order: order,
         q: search,
-        type: type === ArticleType.ALL ? undefined : type, //if .ALL we need from server all articles, so nothing to be sent to server
+        type: type === ArticleType.ALL ? undefined : type,
       },
     });
 
@@ -56,5 +56,3 @@ export const fetchArticlesList = createAsyncThunk<
     return rejectWithValue("error");
   }
 });
-
-// https://github.com/typicode/json-server/tree/v0?tab=readme-ov-file#getting-started
