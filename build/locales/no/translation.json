@@ -1,0 +1,31 @@
+{
+  "About": "Om oss",
+  "Main": "Hovedside",
+  "About us": "Om oss",
+  "Articles": "Artikler",
+  "Short language": "EN",
+  "Long language": "English",
+  "Toggle": "Åpne",
+  "Loading": {
+    "": {
+      "": {
+        "": "Lasting..."
+      }
+    }
+  },
+  "Page not found": "Side ikke funnet",
+  "Throw error": "Å kaste ut en feil",
+  "Oops": {
+    "": {
+      " Something went wrong": "Oops.. Noe gikk galt."
+    }
+  },
+  "Password": "Passord",
+  "Username": "Brukernavn",
+  "Incorrect login or password": "Feil brukernavn eller passord",
+  "Authorization form": "Autorisasjonsskjema",
+  "Profile": "Profil",
+  "Main page": "Hovedside",
+  "Oops.. Something went wrong": "Oops.. Noe gikk galt",
+  "Refresh page": "Oppdater siden"
+}

@@ -1,0 +1,29 @@
+{
+  "About": "About",
+  "Main": "Main",
+  "About us": "About us",
+  "Articles": "Articles",
+  "Short language": "NO",
+  "Long language": "Norsk",
+  "Toggle": "Toggle",
+  "Loading": {
+    "": {
+      "": {
+        "": "Loading..."
+      }
+    }
+  },
+  "Page not found": "Page not found",
+  "Throw error": "Throw error",
+  "Oops": {
+    "": {}
+  },
+  "Password": "Password",
+  "Username": "Username",
+  "Incorrect login or password": "Incorrect login or password",
+  "Authorization form": "Authorization form",
+  "Profile": "Profile",
+  "Main page": "Main page",
+  "Oops.. Something went wrong": "Oops.. Something went wrong",
+  "Refresh page": "Refresh page"
+}
