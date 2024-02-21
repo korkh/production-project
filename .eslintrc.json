@@ -53,6 +53,7 @@
         "ts-nocheck": true
       }
     ],
+    // "arrow-body-style": "off",
     "i18next/no-literal-string": [
       "error",
       {
@@ -68,7 +69,8 @@
           "id",
           "width",
           "height",
-          "data-testid"
+          "data-testid",
+          "target"
         ]
       }
     ],

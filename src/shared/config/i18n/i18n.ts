@@ -21,7 +21,8 @@ i18n
         cache: "no-store",
       },
     },
-    ns: ["translation", "profile"],
+    supportedLngs: ["en", "no"],
+    ns: ["translation", "article", "navbar", "profile"],
   });
 
 export default i18n;

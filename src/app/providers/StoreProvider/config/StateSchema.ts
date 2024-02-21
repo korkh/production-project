@@ -2,7 +2,7 @@ import {
   AnyAction,
   EnhancedStore,
   Reducer,
-  ReducersMapObject,
+  ReducersMapObject
 } from "@reduxjs/toolkit";
 import { AxiosInstance } from "axios";
 import { ArticleDetailsSchema } from "entities/Article";
@@ -11,8 +11,10 @@ import { ProfileSchema } from "entities/Profile";
 import { UserSchema } from "entities/User";
 import { AddCommentFormSchema } from "features/addCommentForm";
 import { LoginSchema } from "features/AuthByUsername";
-import { UISchema } from "features/UI/ScrollRestoration/model/types/UISchema";
-import { ArticleDetailsCommentsSchema } from "pages/ArticleDetailsPage";
+import { UISchema } from "features/UI";
+import {
+  ArticleDetailsPageSchema
+} from "pages/ArticleDetailsPage";
 import { ArticlesPageSchema } from "pages/ArticlesPage";
 import { CombinedState } from "redux";
 
@@ -25,19 +27,21 @@ export interface StateSchema {
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
-  articleDetailsComments?: ArticleDetailsCommentsSchema;
   addCommentForm?: AddCommentFormSchema;
   articlesPage?: ArticlesPageSchema;
+  articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
-// reducer's name (as a key)
 export type StateSchemaKey = keyof StateSchema;
+export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;
 
 export interface ReducerManager {
   getReducerMap: () => ReducersMapObject<StateSchema>;
   reduce: (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>;
   add: (key: StateSchemaKey, reducer: Reducer) => void;
   remove: (key: StateSchemaKey) => void;
+  // true - вмонтирован, false - демонтирован
+  getMountedReducers: () => MountedReducers;
 }
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {

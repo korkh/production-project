@@ -1,5 +1,7 @@
-import { memo } from "react";
+import { HTMLAttributeAnchorTarget, memo } from "react";
+import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames/classNames";
+import { Text, TextSize } from "shared/ui/Text/Text";
 import { Article, ArticleView } from "../../model/types/Article";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { ArticleListItemSkeleton } from "../ArticleListItem/ArticleListItemSkeleton";
@@ -9,18 +11,26 @@ interface ArticleListProps {
   className?: string;
   articles: Article[];
   isLoading?: boolean;
+  target?: HTMLAttributeAnchorTarget; //open in new tab of browser
   view?: ArticleView;
 }
 
 const getSkeletons = (view: ArticleView) =>
-  new Array(view === ArticleView.SMALL ? 10 : 4)
+  new Array(view === ArticleView.SMALL ? 9 : 3)
     .fill(0)
     .map((item, index) => (
       <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
     ));
 
 export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
-  const { className, articles, view = ArticleView.SMALL, isLoading } = props;
+  const {
+    className,
+    articles,
+    view = ArticleView.SMALL,
+    isLoading,
+    target,
+  } = props;
+  const { t } = useTranslation("article");
 
   const renderArticle = (article: Article) => (
     <ArticleListItem
@@ -28,12 +38,21 @@ export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
       view={view}
       className={cls.card}
       key={article.id}
+      target={target}
     />
   );
 
+  if (!isLoading && !articles.length) {
+    return (
+      <div className={classNames(cls.articleList, [className, cls[view]], {})}>
+        <Text size={TextSize.L} title={t("Articles not found")} />
+      </div>
+    );
+  }
+
   return (
     <div className={classNames(cls.articleList, [className, cls[view]], {})}>
-      {articles.length > 0 ? articles.map(renderArticle) : "No articles found"}
+      {articles.length > 0 ? articles.map(renderArticle) : null}
       {isLoading && getSkeletons(view)}
     </div>
   );

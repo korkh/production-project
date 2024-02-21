@@ -4,6 +4,7 @@ import cls from "./Text.module.scss";
 
 export enum TextTheme {
   PRIMARY = "primary",
+  INVERTED = "inverted",
   ERROR = "error",
 }
 
@@ -26,7 +27,6 @@ interface TextProps {
   align?: TextAlign;
   size?: TextSize;
 }
-
 export const Text = memo(function Text(props: TextProps) {
   const {
     className,

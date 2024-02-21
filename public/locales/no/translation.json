@@ -1,8 +1,8 @@
 {
   "About": "Om oss",
-  "Main page": "Hovedside",
   "Main": "Hovedside",
   "About us": "Om oss",
+  "Articles": "Artikler",
   "Short language": "EN",
   "Long language": "English",
   "Toggle": "Åpne",
@@ -24,5 +24,8 @@
   "Username": "Brukernavn",
   "Incorrect login or password": "Feil brukernavn eller passord",
   "Authorization form": "Autorisasjonsskjema",
-  "Profile": "Profil"
+  "Profile": "Profil",
+  "Main page": "Hovedside",
+  "Oops.. Something went wrong": "Oops.. Noe gikk galt",
+  "Refresh page": "Oppdater siden"
 }

@@ -11,8 +11,10 @@ const MainPage = memo(function MainPage({ errorInfo }: ErrorProps) {
 
   return (
     <div>
-      <BugButton errorInfo={errorInfo} />
-      {t("Main pagе")}
+      {t("Main page")}
+      <div>
+        <BugButton errorInfo={errorInfo} />
+      </div>
     </div>
   );
 });

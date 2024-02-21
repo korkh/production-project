@@ -16,7 +16,7 @@ const commentsAdapter = createEntityAdapter<IComment>({
 
 // selector from adapter by that we will get comments
 export const getArticleComments = commentsAdapter.getSelectors<StateSchema>(
-  (state) => state.articleDetailsComments || commentsAdapter.getInitialState()
+  (state) => state.articleDetailsPage?.comments || commentsAdapter.getInitialState()
   // getInitialState returns default state
 );
 

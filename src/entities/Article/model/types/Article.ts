@@ -34,6 +34,7 @@ export type ArticleBlock =
   | ArticleTextBlock;
 
 export enum ArticleType {
+  ALL = "ALL",
   IT = "IT",
   SCIENCE = "SCIENCE",
   ECONOMICS = "ECONOMICS",
@@ -61,4 +62,10 @@ export interface ArticleListSchema {
   isLoading?: boolean;
   view?: ArticleView;
   error?: Error;
+}
+
+export enum ArticleSortField {
+  VIEWS = "views",
+  TITLE = "title",
+  CREATED = "createdAt",
 }

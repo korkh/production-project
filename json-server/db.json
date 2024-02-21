@@ -17,10 +17,10 @@
       "title": "Javascript news",
       "subtitle": "What's new in JS for 2022?",
       "img": "https://th.bing.com/th/id/R.6a9c7d455f77c63ff00de26b609f9ec5?rik=OGeZ1fBlwJqC3w&pid=ImgRaw&r=0",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 345,
+      "createdAt": "14.01.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -88,9 +88,9 @@
       "subtitle": "What's new in Python for 2022?",
       "img": "https://th.bing.com/th/id/OIP.EDJ9xoErBbZqK2tExVoJfAAAAA?rs=1&pid=ImgDetMain",
       "views": 102,
-      "createdAt": "27.02.2022",
+      "createdAt": "02.11.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -157,10 +157,10 @@
       "title": "Kotlin news",
       "subtitle": "What's new in Kotlin for 2022?",
       "img": "https://2.bp.blogspot.com/-4WB1cZOxNU0/WsveVXVJ7WI/AAAAAAAAKso/RyVoLWoPbJ0-FIpXGlnCGCn09m5bAPJcQCLcBGAs/s320/480px-Kotlin-logo.svg.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 567,
+      "createdAt": "01.04.2021",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -224,13 +224,13 @@
     },
     {
       "id": "4",
-      "title": "Javascript news",
-      "subtitle": "What's new in JS for 2022?",
+      "title": "Javascript news Fresh",
+      "subtitle": "What's new in JS for 2023?",
       "img": "https://th.bing.com/th/id/R.6a9c7d455f77c63ff00de26b609f9ec5?rik=OGeZ1fBlwJqC3w&pid=ImgRaw&r=0",
-      "views": 1022,
-      "createdAt": "27.02.2022",
+      "views": 3444,
+      "createdAt": "12.09.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "ECONOMICS", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -294,11 +294,11 @@
     },
     {
       "id": "5",
-      "title": "Python news",
-      "subtitle": "What's new in Python for 2022?",
+      "title": "Python news Fresh",
+      "subtitle": "What's new in Python for 2024?",
       "img": "https://th.bing.com/th/id/OIP.EDJ9xoErBbZqK2tExVoJfAAAAA?rs=1&pid=ImgDetMain",
-      "views": 102,
-      "createdAt": "28.02.2022",
+      "views": 10222,
+      "createdAt": "11.01.2024",
       "userId": "1",
       "type": ["IT"],
       "blocks": [
@@ -364,13 +364,13 @@
     },
     {
       "id": "6",
-      "title": "Kotlin news",
-      "subtitle": "What's new in Kotlin for 2022?",
+      "title": "Kotlin news 2",
+      "subtitle": "What's new in Kotlin for 2023?",
       "img": "https://2.bp.blogspot.com/-4WB1cZOxNU0/WsveVXVJ7WI/AAAAAAAAKso/RyVoLWoPbJ0-FIpXGlnCGCn09m5bAPJcQCLcBGAs/s320/480px-Kotlin-logo.svg.png",
-      "views": 1022,
-      "createdAt": "25.02.2022",
+      "views": 111,
+      "createdAt": "03.06.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -434,13 +434,13 @@
     },
     {
       "id": "7",
-      "title": "Javascript news",
-      "subtitle": "What's new in JS for 2022?",
+      "title": "Javascript news 3",
+      "subtitle": "What's new in JS for 2023?",
       "img": "https://th.bing.com/th/id/R.6a9c7d455f77c63ff00de26b609f9ec5?rik=OGeZ1fBlwJqC3w&pid=ImgRaw&r=0",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 122,
+      "createdAt": "22.07.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -504,13 +504,13 @@
     },
     {
       "id": "8",
-      "title": "Python news",
-      "subtitle": "What's new in Python for 2022?",
+      "title": "Python news 3",
+      "subtitle": "What's new in Python for 2023?",
       "img": "https://th.bing.com/th/id/OIP.EDJ9xoErBbZqK2tExVoJfAAAAA?rs=1&pid=ImgDetMain",
       "views": 102,
-      "createdAt": "27.02.2022",
+      "createdAt": "21.09.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -574,13 +574,13 @@
     },
     {
       "id": "9",
-      "title": "Kotlin news",
-      "subtitle": "What's new in Kotlin for 2022?",
+      "title": "Kotlin news 3",
+      "subtitle": "What's new in Kotlin for 2023?",
       "img": "https://2.bp.blogspot.com/-4WB1cZOxNU0/WsveVXVJ7WI/AAAAAAAAKso/RyVoLWoPbJ0-FIpXGlnCGCn09m5bAPJcQCLcBGAs/s320/480px-Kotlin-logo.svg.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 444,
+      "createdAt": "23.02.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "ECONOMICS", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -643,14 +643,14 @@
       ]
     },
     {
-      "id": "9",
-      "title": "Kotlin news",
+      "id": "10",
+      "title": "Kotlin news 5",
       "subtitle": "What's new in Kotlin for 2022?",
       "img": "https://2.bp.blogspot.com/-4WB1cZOxNU0/WsveVXVJ7WI/AAAAAAAAKso/RyVoLWoPbJ0-FIpXGlnCGCn09m5bAPJcQCLcBGAs/s320/480px-Kotlin-logo.svg.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 555,
+      "createdAt": "14.06.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "ECONOMICS", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -679,41 +679,14 @@
       ]
     },
     {
-      "id": "10",
-      "title": "Kotlin news",
-      "subtitle": "What's new in Kotlin for 2022?",
-      "img": "https://2.bp.blogspot.com/-4WB1cZOxNU0/WsveVXVJ7WI/AAAAAAAAKso/RyVoLWoPbJ0-FIpXGlnCGCn09m5bAPJcQCLcBGAs/s320/480px-Kotlin-logo.svg.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
-      "userId": "1",
-      "type": ["IT"],
-      "blocks": [
-        {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Blog title",
-          "paragraphs": [
-            "The program, which is traditionally called 'Hello, world!', is very simple. It outputs somewhere the phrase 'Hello, world!', or another similar one, by means of a certain language.",
-            "JavaScript is a language in which programs can be executed in different environments. In our case, we are talking about browsers and the server platform Node.js . If you haven't written a single line of code in JS so far and are reading this text in a browser on a desktop computer, it means that you are literally seconds away from your first JavaScript program.",
-            "There are other ways to run JS code in the browser. So, if we talk about the usual use of JavaScript programs, they are loaded into the browser to ensure the operation of web pages. As a rule, the code is formatted as separate files with an extension.js that connect to web pages, but the program code can also be included directly in the page code. All this is done using the <script> tag. When the browser detects such code, it executes it. Details about the script tag can be found on the website w3school.com . In particular, let's look at an example demonstrating how to work with a web page using JavaScript, given on this resource. This example can also be run using this resource (look for the Try it Yourself button), but we will do it a little differently. Namely, we will create a new file in some text editor (for example, in VS Code or in Notepad++), which we will call hello.html , and add the following code to it:"
-          ]
-        },
-        {
-          "id": "4",
-          "type": "CODE",
-          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
-        }
-      ]
-    },
-    {
       "id": "11",
-      "title": "Java news",
-      "subtitle": "What's new in Java for 2022?",
-      "img": "https://th.bing.com/th/id/OIP._Lm_T3scKhVEVFC54gcRxwHaE8?rs=1&pid=ImgDetMain",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Economical news",
+      "subtitle": "What's new in ECONOMICS for 2021?",
+      "img": "https://edurev.gumlet.io/AllImages/original/ApplicationImages/CourseImages/81f5ea47-435b-4693-b7a9-3dcf8d7ee5c0_CI.png",
+      "views": 666,
+      "createdAt": "17.02.2021",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -734,13 +707,13 @@
     },
     {
       "id": "12",
-      "title": "Redux news",
-      "subtitle": "What's new in Redux for 2022?",
-      "img": "https://th.bing.com/th/id/OIP.fFX2gafo9PEYiCkimNnwXAHaG6?rs=1&pid=ImgDetMain",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Science news",
+      "subtitle": "What's new in Science in 2021?",
+      "img": "https://th.bing.com/th/id/R.a29aa16fd39bfd9f33e31bcd9ee57db0?rik=XOdwlHOC9bB%2fHA&riu=http%3a%2f%2fwww.therunningmate.run%2fwp-content%2fuploads%2f2016%2f12%2fscience_small.png&ehk=qaZQF%2b4sUASmF5mJjGbXGonQ3STBY%2btTVR%2bCGPFsvf0%3d&risl=&pid=ImgRaw&r=0",
+      "views": 9999,
+      "createdAt": "10.10.2021",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -761,13 +734,13 @@
     },
     {
       "id": "13",
-      "title": "ASP.NET news",
-      "subtitle": "What's new in ASP.NET for 2022?",
-      "img": "https://th.bing.com/th/id/OIP.EFQL47h2gfjKxiLv6UbfRQAAAA?rs=1&pid=ImgDetMain",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "title": "Redux news",
+      "subtitle": "What's new in Redux for 2022?",
+      "img": "https://th.bing.com/th/id/OIP.fFX2gafo9PEYiCkimNnwXAHaG6?rs=1&pid=ImgDetMain",
+      "views": 888,
+      "createdAt": "23.03.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -788,13 +761,13 @@
     },
     {
       "id": "14",
-      "title": "MongoDB news",
-      "subtitle": "What's new in MongoDB for 2022?",
-      "img": "https://th.bing.com/th/id/OIP.NudVvrRpz5DTK_861m0jeQHaHa?rs=1&pid=ImgDetMain",
+      "title": "ASP.NET news",
+      "subtitle": "What's new in ASP.NET for 2022?",
+      "img": "https://th.bing.com/th/id/OIP.EFQL47h2gfjKxiLv6UbfRQAAAA?rs=1&pid=ImgDetMain",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "12.12.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "SCIENCE", "ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -815,13 +788,40 @@
     },
     {
       "id": "15",
+      "title": "MongoDB news",
+      "subtitle": "What's new in MongoDB for 2022?",
+      "img": "https://th.bing.com/th/id/OIP.NudVvrRpz5DTK_861m0jeQHaHa?rs=1&pid=ImgDetMain",
+      "views": 777,
+      "createdAt": "05.06.2022",
+      "userId": "1",
+      "type": ["ECONOMICS"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Blog title",
+          "paragraphs": [
+            "The program, which is traditionally called 'Hello, world!', is very simple. It outputs somewhere the phrase 'Hello, world!', or another similar one, by means of a certain language.",
+            "JavaScript is a language in which programs can be executed in different environments. In our case, we are talking about browsers and the server platform Node.js . If you haven't written a single line of code in JS so far and are reading this text in a browser on a desktop computer, it means that you are literally seconds away from your first JavaScript program.",
+            "There are other ways to run JS code in the browser. So, if we talk about the usual use of JavaScript programs, they are loaded into the browser to ensure the operation of web pages. As a rule, the code is formatted as separate files with an extension.js that connect to web pages, but the program code can also be included directly in the page code. All this is done using the <script> tag. When the browser detects such code, it executes it. Details about the script tag can be found on the website w3school.com . In particular, let's look at an example demonstrating how to work with a web page using JavaScript, given on this resource. This example can also be run using this resource (look for the Try it Yourself button), but we will do it a little differently. Namely, we will create a new file in some text editor (for example, in VS Code or in Notepad++), which we will call hello.html , and add the following code to it:"
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "<!DOCTYPE html>\n<html>\n  <body>\n    <p id=\"hello\"></p>\n\n    <script>\n      document.getElementById(\"hello\").innerHTML = \"Hello, world!\";\n    </script>\n  </body>\n</html>;"
+        }
+      ]
+    },
+    {
+      "id": "16",
       "title": "Docker news",
       "subtitle": "What's new in Docker for 2022?",
       "img": "https://th.bing.com/th/id/OIP.UHYQ2-dQ9lL9km3R7XKpnQHaFe?rs=1&pid=ImgDetMain",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "12.12.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": ["IT", "ECONOMICS", "SCIENCE"],
       "blocks": [
         {
           "id": "1",

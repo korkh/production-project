@@ -3,8 +3,11 @@ import { LoginModal } from "features/AuthByUsername";
 import { memo, useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
+import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import { classNames } from "shared/lib/classNames/classNames";
+import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
+import { Text, TextTheme } from "shared/ui/Text/Text";
 import cls from "./Navbar.module.scss";
 
 interface NavbarProps {
@@ -32,6 +35,18 @@ export const Navbar = memo(function Navbar({ className }: NavbarProps) {
   if (authData) {
     return (
       <nav className={classNames(cls.navbar, [className], {})}>
+        <Text
+          className={cls.appName}
+          title={t("MyApp")}
+          theme={TextTheme.INVERTED}
+        />
+        <AppLink
+          to={RoutePath.article_create}
+          theme={AppLinkTheme.SECONDARY}
+          className={cls.createBtn}
+        >
+          {t("Create article")}
+        </AppLink>
         <Button
           theme={ButtonTheme.CLEAR_INVERTED}
           className={cls.links}

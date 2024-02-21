@@ -1,8 +1,8 @@
 {
   "About": "About",
-  "Main pagе": "Main page",
   "Main": "Main",
   "About us": "About us",
+  "Articles": "Articles",
   "Short language": "NO",
   "Long language": "Norsk",
   "Toggle": "Toggle",
@@ -22,5 +22,8 @@
   "Username": "Username",
   "Incorrect login or password": "Incorrect login or password",
   "Authorization form": "Authorization form",
-  "Profile": "Profile"
+  "Profile": "Profile",
+  "Main page": "Main page",
+  "Oops.. Something went wrong": "Oops.. Something went wrong",
+  "Refresh page": "Refresh page"
 }
