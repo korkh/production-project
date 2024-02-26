@@ -1,7 +1,7 @@
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
-import { ArticleSortField } from "entities/Article/model/types/Article";
+import { ArticleSortField } from "../../model/types/article";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { ArticleSortSelector } from "./ArticleSortSelector";
 

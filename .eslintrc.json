@@ -18,7 +18,13 @@
     "ecmaVersion": 2021,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react", "i18next", "react-hooks"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "i18next",
+    "react-hooks",
+    "fsd-by-korkh"
+  ],
   "rules": {
     "indent": ["warn", 2, { "SwitchCase": 1 }],
     "linebreak-style": ["warn", "windows"],
@@ -70,7 +76,11 @@
           "width",
           "height",
           "data-testid",
-          "target"
+          "target",
+          "direction",
+          "justify",
+          "align",
+          "gap"
         ]
       }
     ],
@@ -84,7 +94,8 @@
       }
     ],
     "react-hooks/rules-of-hooks": "error", // checks rules for hooks
-    "react-hooks/exhaustive-deps": "error" // checks effect dependencies
+    "react-hooks/exhaustive-deps": "error", // checks effect dependencies
+    "fsd-by-korkh/path-checker": "error"
   },
   "settings": {
     "react": {

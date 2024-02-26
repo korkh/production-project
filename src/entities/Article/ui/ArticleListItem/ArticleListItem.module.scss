@@ -34,10 +34,8 @@
   }
 
   .textBlock {
-    max-height: 210px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    max-height: 200px;
+    overflow-y: hidden;
   }
 }
 

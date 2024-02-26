@@ -5,8 +5,8 @@ const initialState: UISchema = {
   scroll: {},
 };
 
-export const scrollRestorationSlice = createSlice({
-  name: "scrollRestoration",
+export const uiSlice = createSlice({
+  name: "ui",
   initialState,
   reducers: {
     setScrollPosition: (
@@ -19,5 +19,5 @@ export const scrollRestorationSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { actions: scrollRestorationActions } = scrollRestorationSlice;
-export const { reducer: scrollRestorationReducer } = scrollRestorationSlice;
+export const { actions: uiActions } = uiSlice;
+export const { reducer: uiReducer } = uiSlice;

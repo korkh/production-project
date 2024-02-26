@@ -1,7 +1,7 @@
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
-import { ArticleView } from "entities/Article/model/types/Article";
+import { ArticleView } from "../../model/types/article";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { ArticleViewSelector } from "./ArticleViewSelector";
 

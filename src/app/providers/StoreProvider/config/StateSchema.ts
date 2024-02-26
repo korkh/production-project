@@ -2,7 +2,7 @@ import {
   AnyAction,
   EnhancedStore,
   Reducer,
-  ReducersMapObject
+  ReducersMapObject,
 } from "@reduxjs/toolkit";
 import { AxiosInstance } from "axios";
 import { ArticleDetailsSchema } from "entities/Article";
@@ -12,16 +12,14 @@ import { UserSchema } from "entities/User";
 import { AddCommentFormSchema } from "features/addCommentForm";
 import { LoginSchema } from "features/AuthByUsername";
 import { UISchema } from "features/UI";
-import {
-  ArticleDetailsPageSchema
-} from "pages/ArticleDetailsPage";
+import { ArticleDetailsPageSchema } from "pages/ArticleDetailsPage";
 import { ArticlesPageSchema } from "pages/ArticlesPage";
 import { CombinedState } from "redux";
 
 export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
-  scrollRestoration: UISchema;
+  ui: UISchema;
 
   // Асинхронные редюсеры
   loginForm?: LoginSchema;

@@ -6,21 +6,21 @@ import { useSearchParams } from "react-router-dom";
 import { classNames } from "shared/lib/classNames/classNames";
 import {
   DynamicModuleLoader,
-  ReducersList,
+  ReducersList
 } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { useInitialLayoutEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { Page } from "widgets/Page/Page";
+
 import {
-  getArticlesPageError,
   getArticlesPageIsLoading,
-  getArticlesPageView,
+  getArticlesPageView
 } from "../model/selectors/articlePageSelectors";
 import { fetchNextArticlesPage } from "../model/services/fetchNextArticlesPage/fetchNextArticlesPage";
 import { initArticlesPage } from "../model/services/initArticlesPage/initArticlesPage";
 import {
   articlesPageReducer,
-  getArticles,
+  getArticles
 } from "../model/slices/articlesPageSlice";
 import cls from "./ArticlesPage.module.scss";
 
@@ -38,26 +38,22 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   const articles = useSelector(getArticles.selectAll);
   const isLoading = useSelector(getArticlesPageIsLoading);
   const view = useSelector(getArticlesPageView);
-  const error = useSelector(getArticlesPageError);
+  // const error = useSelector(getArticlesPageError);
   const [searchParams] = useSearchParams();
 
   const onLoadNextPart = useCallback(() => {
     dispatch(fetchNextArticlesPage());
   }, [dispatch]);
 
-  useInitialEffect(() => {
+  useInitialLayoutEffect(() => {
     dispatch(initArticlesPage(searchParams));
   });
-
-  if (error && !isLoading) {
-    return <p>{error}</p>;
-  }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
         onScrollEnd={onLoadNextPart}
-        className={classNames(cls.articlesPage, [className], {})}
+        className={classNames(cls.ArticlesPage, [className], {})}
       >
         <PageFilters />
         <ArticleList

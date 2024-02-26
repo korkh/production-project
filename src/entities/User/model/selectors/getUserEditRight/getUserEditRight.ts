@@ -1,8 +1,8 @@
 import { createDraftSafeSelector } from "@reduxjs/toolkit";
 import { StateSchema } from "app/providers/StoreProvider";
 import { getProfileData } from "entities/Profile";
-import { getUserAuthData } from "entities/User";
 import { useSelector } from "react-redux";
+import { getUserAuthData } from "../getUserAuthData/getUserAuthData";
 
 // Selector functions
 const selectAuthData = (state: StateSchema) => getUserAuthData(state);

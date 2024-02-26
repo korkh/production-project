@@ -1,7 +1,4 @@
-export { UISchema } from "./ScrollRestoration/model/types/UISchema";
+export { UISchema } from './model/types/UISchema';
 
-export { getUIScrollByPath } from "./ScrollRestoration/model/selectors/ui";
-export {
-  scrollRestorationReducer,
-  scrollRestorationActions,
-} from "./ScrollRestoration/model/slices/ScrollRestorationSlice";
+export { getUIScrollByPath } from './model/selectors/ui';
+export { uiReducer, uiActions } from './model/slices/UISlice';

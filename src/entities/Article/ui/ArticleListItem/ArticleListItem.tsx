@@ -14,7 +14,7 @@ import {
   ArticleBlockType,
   ArticleTextBlock,
   ArticleView,
-} from "../../model/types/Article";
+} from "../../model/types/article";
 import ArticleTextBlockComponent from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 import cls from "./ArticleListItem.module.scss";
 
@@ -22,7 +22,7 @@ interface ArticleListItemProps {
   className?: string;
   article: Article;
   view: ArticleView;
-  target?: HTMLAttributeAnchorTarget; //open in new tab of browser
+  target?: HTMLAttributeAnchorTarget;
 }
 
 export const ArticleListItem = memo(function ArticleListItem(
@@ -46,7 +46,7 @@ export const ArticleListItem = memo(function ArticleListItem(
 
     return (
       <div
-        className={classNames(cls.articleListItem, [className, cls[view]], {})}
+        className={classNames(cls.ArticleListItem, [className, cls[view]], {})}
       >
         <Card className={cls.card}>
           <div className={cls.header}>
@@ -81,7 +81,7 @@ export const ArticleListItem = memo(function ArticleListItem(
     <AppLink
       target={target}
       to={RoutePath.article_details + article.id}
-      className={classNames(cls.articleListItem, [className, cls[view]], {})}
+      className={classNames(cls.ArticleListItem, [className, cls[view]], {})}
     >
       <Card className={cls.card}>
         <div className={cls.imageWrapper}>

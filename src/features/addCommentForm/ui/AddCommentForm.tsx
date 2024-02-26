@@ -18,6 +18,7 @@ import {
   getAddCommentFormError,
   getAddCommentFormText,
 } from "../model/selectors/addCommentFormSelectors";
+import { HStack } from "shared/ui/Stack";
 
 export interface AddCommentFormProps {
   className?: string;
@@ -51,7 +52,11 @@ const AddCommentForm = memo(function AddCommentForm(
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.addCommentForm, [className], {})}>
+      <HStack
+        justify="between"
+        max
+        className={classNames(cls.addCommentForm, [className], {})}
+      >
         {error && <span className={cls.error}>{error}</span>}
         <Input
           className={cls.input}
@@ -62,7 +67,7 @@ const AddCommentForm = memo(function AddCommentForm(
         <Button theme={ButtonTheme.OUTLINE} onClick={onSendHandler}>
           {t("Send")}
         </Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   );
 });

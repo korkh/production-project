@@ -4,7 +4,7 @@ import { Article } from "entities/Article";
 import {
   ArticleType,
   ArticleBlockType,
-} from "entities/Article/model/types/Article";
+} from "entities/Article/model/types/article";
 
 /* eslint-disable max-len */
 export const ARTICLE: Article = {

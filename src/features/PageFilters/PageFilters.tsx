@@ -10,7 +10,7 @@ import {
 import {
   ArticleSortField,
   ArticleType,
-} from "entities/Article/model/types/Article";
+} from "entities/Article/model/types/article";
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,

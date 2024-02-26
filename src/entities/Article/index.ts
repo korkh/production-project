@@ -5,7 +5,7 @@ export {
   ArticleView,
   ArticleSortField,
   ArticleType,
-} from "./model/types/Article";
+} from "./model/types/article";
 export type { ArticleDetailsSchema } from "./model/types/ArticleDetailsSchema";
 
 export { ArticleList } from "./ui/ArticleList/ArticleList";
