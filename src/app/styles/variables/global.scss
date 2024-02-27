@@ -3,6 +3,11 @@
   // do not use $, due to after compilation to css will give var()
   --font-family-main: consolas, "Times New Roman", serif;
 
+  // small size
+  --font-size-s: 12px;
+  --font-line-s: 20px;
+  --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+
   // medium size
   --font-size-m: 16px;
   --font-line-m: 24px;

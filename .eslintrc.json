@@ -80,7 +80,8 @@
           "direction",
           "justify",
           "align",
-          "gap"
+          "gap",
+          "component"
         ]
       }
     ],

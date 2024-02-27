@@ -6,17 +6,6 @@ export type FlexJustify = "start" | "center" | "end" | "between";
 export type FlexAlign = "start" | "center" | "end";
 export type FlexDirection = "row" | "column";
 export type FlexGap = "4" | "8" | "16" | "32";
-export type Width =
-  | "10"
-  | "20"
-  | "30"
-  | "40"
-  | "50"
-  | "60"
-  | "70"
-  | "80"
-  | "90"
-  | "100";
 
 const justifyClasses: Record<FlexJustify, string> = {
   start: cls.justifyStart,
@@ -51,7 +40,7 @@ export interface FlexProps {
   direction?: FlexDirection;
   gap?: FlexGap;
   max?: boolean;
-  width?: Width | (string | number) | "fit-content";
+  width?: (string | number) | "fit-content";
   component?: keyof HTMLElementTagNameMap;
 }
 

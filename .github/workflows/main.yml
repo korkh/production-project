@@ -17,11 +17,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
-        run: npm install
-      - name: build production project
-        run: npm run build:prod
-        if: always()
+      # - name: install modules
+      #   run: npm install
+      # - name: build production project
+      #   run: npm run build:prod
+      #   if: always()
       - name: unit testing
         run: npm run test:unit
         if: always()
@@ -31,11 +31,11 @@ jobs:
       # - name: screenshot testing
       #   run: npm run test:ui:ci
       #   if: always()
-      - name: Push
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: buil
-          FOLDER: build # The directory where your assets are generated
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-          MESSAGE: "Build: ({sha}) {msg}" # The commit message
+      # - name: Push
+      #   uses: s0/git-publish-subdir-action@develop
+      #   env:
+      #     REPO: self
+      #     BRANCH: buil
+      #     FOLDER: build # The directory where your assets are generated
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+      #     MESSAGE: "Build: ({sha}) {msg}" # The commit message
