@@ -2,11 +2,19 @@
 
 import { Article } from "entities/Article";
 import {
-  ArticleType,
   ArticleBlockType,
+  ArticleType,
 } from "entities/Article/model/types/article";
 
 /* eslint-disable max-len */
+export const LIST_ITEMS = {
+  value: "Custom List",
+  items: [
+    { content: "first", value: "First" },
+    { content: "second", value: "Second" },
+    { content: "third", value: "Third" },
+  ],
+};
 export const ARTICLE: Article = {
   id: "1",
   title: "Javascript news",

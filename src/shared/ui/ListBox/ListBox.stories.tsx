@@ -1,17 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
-import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { LIST_ITEMS } from "shared/const/storyiesConsts";
 import { ListBox } from "./ListBox";
 
 const meta = {
   title: "shared/ListBox",
   component: ListBox,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
-  args: {},
+  args: { value: LIST_ITEMS.value, items: LIST_ITEMS.items },
+  decorators: [
+    (Story) => (
+      <div style={{ padding: 100 }}>
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {},
 } satisfies Meta<typeof ListBox>;
 
@@ -23,15 +30,46 @@ export const Primary: Story = {
   args: {},
 };
 
-export const Dark: Story = {
+export const TopLeft: Story = {
+  args: { direction: "top left" },
+};
+
+export const TopRight: Story = {
+  args: {
+    direction: "top right",
+  },
+};
+
+export const BottomLeft: Story = {
+  args: {
+    direction: "bottom left",
+  },
+};
+
+export const BottomRight: Story = {
+  args: {
+    direction: "bottom right",
+  },
+};
+
+export const PrimaryDark: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator state={{}}>
-        <ThemeDecorator theme={Theme.DARK}>
-          <Story />
-        </ThemeDecorator>
-      </StoreDecorator>
+      <ThemeDecorator theme={Theme.DARK}>
+        <Story />
+      </ThemeDecorator>
+    ),
+  ],
+};
+
+export const PrimaryOrange: Story = {
+  args: {},
+  decorators: [
+    (Story) => (
+      <ThemeDecorator theme={Theme.ORANGE}>
+        <Story />
+      </ThemeDecorator>
     ),
   ],
 };
