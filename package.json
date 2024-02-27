@@ -95,6 +95,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "@jest/types": "^29.6.3",
     "@loki/integration-react": "^0.34.0",
     "@reduxjs/toolkit": "^1.9.7",

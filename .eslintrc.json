@@ -81,7 +81,9 @@
           "justify",
           "align",
           "gap",
-          "component"
+          "component",
+          "as",
+          "aria-disabled"
         ]
       }
     ],

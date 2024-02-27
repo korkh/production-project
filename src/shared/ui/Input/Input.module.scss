@@ -9,13 +9,13 @@
 .input {
   background: transparent;
   border: none;
-  outline: none;
+  outline-color: transparent;
   width: 100%;
   color: transparent;
   text-shadow: 0 0 0 var(--secondary-color);
 
   &:focus {
-    outline: none;
+    outline-color: transparent;
   }
 }
 
