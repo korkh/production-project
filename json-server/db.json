@@ -20,7 +20,10 @@
       "views": 345,
       "createdAt": "14.01.2022",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -90,7 +93,10 @@
       "views": 102,
       "createdAt": "02.11.2023",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -160,7 +166,10 @@
       "views": 567,
       "createdAt": "01.04.2021",
       "userId": "1",
-      "type": ["IT", "ECONOMICS"],
+      "type": [
+        "IT",
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -230,7 +239,11 @@
       "views": 3444,
       "createdAt": "12.09.2023",
       "userId": "1",
-      "type": ["IT", "ECONOMICS", "SCIENCE"],
+      "type": [
+        "IT",
+        "ECONOMICS",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -300,7 +313,9 @@
       "views": 10222,
       "createdAt": "11.01.2024",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -370,7 +385,10 @@
       "views": 111,
       "createdAt": "03.06.2023",
       "userId": "1",
-      "type": ["IT", "ECONOMICS"],
+      "type": [
+        "IT",
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -440,7 +458,10 @@
       "views": 122,
       "createdAt": "22.07.2023",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -510,7 +531,10 @@
       "views": 102,
       "createdAt": "21.09.2023",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -580,7 +604,11 @@
       "views": 444,
       "createdAt": "23.02.2023",
       "userId": "1",
-      "type": ["IT", "ECONOMICS", "SCIENCE"],
+      "type": [
+        "IT",
+        "ECONOMICS",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -650,7 +678,11 @@
       "views": 555,
       "createdAt": "14.06.2022",
       "userId": "1",
-      "type": ["IT", "ECONOMICS", "SCIENCE"],
+      "type": [
+        "IT",
+        "ECONOMICS",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -686,7 +718,9 @@
       "views": 666,
       "createdAt": "17.02.2021",
       "userId": "1",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -713,7 +747,9 @@
       "views": 9999,
       "createdAt": "10.10.2021",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -740,7 +776,10 @@
       "views": 888,
       "createdAt": "23.03.2022",
       "userId": "1",
-      "type": ["IT", "ECONOMICS"],
+      "type": [
+        "IT",
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -767,7 +806,11 @@
       "views": 1022,
       "createdAt": "12.12.2022",
       "userId": "1",
-      "type": ["IT", "SCIENCE", "ECONOMICS"],
+      "type": [
+        "IT",
+        "SCIENCE",
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -794,7 +837,9 @@
       "views": 777,
       "createdAt": "05.06.2022",
       "userId": "1",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -821,7 +866,11 @@
       "views": 1022,
       "createdAt": "12.12.2022",
       "userId": "1",
-      "type": ["IT", "ECONOMICS", "SCIENCE"],
+      "type": [
+        "IT",
+        "ECONOMICS",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -904,8 +953,8 @@
   "profile": [
     {
       "id": "1",
-      "firstName": "Darth",
-      "lastName": "Vader",
+      "firstName": "Darthas",
+      "lastName": "Vaderis",
       "age": 123,
       "currency": "USD",
       "country": "Poland",

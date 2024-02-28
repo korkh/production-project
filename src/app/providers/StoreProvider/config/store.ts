@@ -4,6 +4,7 @@ import { userReducer } from "entities/User";
 import { uiReducer } from "features/UI";
 import { CombinedState, Reducer } from "redux";
 import { $api } from "shared/api/api";
+import { rtkApi } from "shared/api/rtkApi";
 import { createReducerManager } from "./reducerManager";
 import { StateSchema, ThunkExtraArg } from "./StateSchema";
 
@@ -16,6 +17,7 @@ export function createReduxStore(
     counter: counterReducer,
     user: userReducer,
     ui: uiReducer,
+    [rtkApi.reducerPath]: rtkApi.reducer,
   };
 
   const reducerManager = createReducerManager(rootReducers);
@@ -33,7 +35,7 @@ export function createReduxStore(
         thunk: {
           extraArgument: extraArg,
         },
-      }),
+      }).concat(rtkApi.middleware),
   });
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

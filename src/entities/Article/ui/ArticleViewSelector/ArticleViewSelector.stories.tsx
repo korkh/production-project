@@ -6,7 +6,7 @@ import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorato
 import { ArticleViewSelector } from "./ArticleViewSelector";
 
 const meta = {
-  title: "entities/ArticleViewSelector",
+  title: "entities/Article/ArticleViewSelector",
   component: ArticleViewSelector,
   parameters: {
     layout: "fullscreen",

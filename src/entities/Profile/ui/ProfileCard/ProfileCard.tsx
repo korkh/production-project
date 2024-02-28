@@ -89,7 +89,7 @@ export function ProfileCard(props: ProfileCardProps) {
     >
       {data?.avatar && (
         <HStack justify="center" max className={cls.avatarWrapper}>
-          <Avatar src={data?.avatar} />
+          <Avatar src={data?.avatar} size={200} />
         </HStack>
       )}
       <Input

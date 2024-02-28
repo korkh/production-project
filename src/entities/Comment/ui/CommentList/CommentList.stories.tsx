@@ -4,10 +4,10 @@ import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorato
 import { CommentList } from "./CommentList";
 
 const meta = {
-  title: "entities/CommentList",
+  title: "entities/Comment/CommentList",
   component: CommentList,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},

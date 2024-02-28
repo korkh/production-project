@@ -6,7 +6,7 @@ import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorato
 import { ArticleTypeTabs } from "./ArticleTypeTabs";
 
 const meta = {
-  title: "entities/ArticleTypeTabs",
+  title: "entities/Article/ArticleTypeTabs",
   component: ArticleTypeTabs,
   parameters: {
     layout: "fullscreen",

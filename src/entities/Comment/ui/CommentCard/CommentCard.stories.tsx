@@ -4,10 +4,10 @@ import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorato
 import { CommentCard } from "./CommentCard";
 
 const meta = {
-  title: "entities/CommentCard",
+  title: "entities/Comment/CommentCard",
   component: CommentCard,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},

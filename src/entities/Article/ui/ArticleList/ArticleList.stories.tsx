@@ -7,7 +7,7 @@ import { ARTICLES } from "shared/const/storyiesConsts";
 import { ArticleList } from "./ArticleList";
 
 const meta = {
-  title: "entities/ArticleList",
+  title: "entities/Article/ArticleList",
   component: ArticleList,
   parameters: {
     layout: "fullscreen",
