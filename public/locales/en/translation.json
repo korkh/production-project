@@ -25,5 +25,7 @@
   "Profile": "Profile",
   "Main page": "Main page",
   "Oops.. Something went wrong": "Oops.. Something went wrong",
-  "Refresh page": "Refresh page"
+  "Refresh page": "Refresh page",
+  "Forbidden Page": "Forbidden page",
+  "You have no access to the following source": "You have no access to the following source"
 }

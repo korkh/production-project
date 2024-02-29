@@ -27,5 +27,7 @@
   "Profile": "Profil",
   "Main page": "Hovedside",
   "Oops.. Something went wrong": "Oops.. Noe gikk galt",
-  "Refresh page": "Oppdater siden"
+  "Refresh page": "Oppdater siden",
+  "Forbidden Page": "Forbudt side",
+  "You have no access to the following source": "Du har ikke tilgang til følgende kilder"
 }

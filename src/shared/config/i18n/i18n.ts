@@ -22,7 +22,7 @@ i18n
       },
     },
     supportedLngs: ["en", "no"],
-    ns: ["translation", "article", "navbar", "profile"],
+    ns: ["translation", "article", "navbar", "profile", "admin"],
   });
 
 export default i18n;

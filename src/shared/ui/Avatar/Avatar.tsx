@@ -1,5 +1,5 @@
+import { CSSProperties, forwardRef, useMemo } from "react";
 import { classNames, Mods } from "shared/lib/classNames/classNames";
-import { CSSProperties, useMemo } from "react";
 import cls from "./Avatar.module.scss";
 
 interface AvatarProps {
@@ -9,9 +9,10 @@ interface AvatarProps {
   alt?: string;
 }
 
-export function Avatar({
-  className, src, size, alt = "avatar",
-}: AvatarProps) {
+const Avatar = forwardRef<HTMLImageElement, AvatarProps>(function Avatar(
+  { className, src, size, alt = "avatar" }: AvatarProps,
+  ref
+) {
   const mods: Mods = {};
 
   const styles = useMemo<CSSProperties>(
@@ -19,15 +20,19 @@ export function Avatar({
       width: size || 100,
       height: size || 100,
     }),
-    [size],
+    [size]
   );
 
   return (
     <img
+      ref={ref}
       src={src}
       alt={alt}
       style={styles}
       className={classNames(cls.avatar, [className], mods)}
     />
   );
-}
+});
+
+export { Avatar };
+

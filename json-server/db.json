@@ -932,6 +932,18 @@
       "userId": "1",
       "text": "Thanks",
       "id": "FjzuULp"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "asdasdasd",
+      "id": "nnpbGA0"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "asda",
+      "id": "6CSN7Zu"
     }
   ],
   "users": [
@@ -939,15 +951,28 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://th.bing.com/th/id/R.f7eda381cc37bb2ca8128da457efac66?rik=qUMeA6GL4Yw7bg&riu=http%3a%2f%2faux4.iconspalace.com%2fuploads%2f9341264991688564557.png&ehk=IurLG1gXxD2koP6dXLbUg0RIuf%2fgs8eU09MC%2bzH4mw0%3d&risl=&pid=ImgRaw&r=0"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": "https://th.bing.com/th/id/OIP.2dkkfi3yqJkXIhgG-J5wnwHaHa?rs=1&pid=ImgDetMain"
     }
   ],
   "profile": [
@@ -960,7 +985,7 @@
       "country": "Poland",
       "city": "Death Star",
       "username": "admin",
-      "avatar": "https://th.bing.com/th/id/R.f7eda381cc37bb2ca8128da457efac66?rik=qUMeA6GL4Yw7bg&riu=http%3a%2f%2faux4.iconspalace.com%2fuploads%2f9341264991688564557.png&ehk=IurLG1gXxD2koP6dXLbUg0RIuf%2fgs8eU09MC%2bzH4mw0%3d&risl=&pid=ImgRaw&r=0"
+      "avatar": "https://th.bing.com/th/id/OIP.HXYlAgE-7TWmJ9FoOANLQAHaHa?rs=1&pid=ImgDetMain"
     },
     {
       "id": "2",
