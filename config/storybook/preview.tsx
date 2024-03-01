@@ -6,7 +6,7 @@ import ThemeDecorator from "../../src/shared/config/storybook/ThemeDecorator/The
 import StyleDecorator from "../../src/shared/config/storybook/StyleDecorator/StyleDecorator";
 import "../../src/app/styles/index.scss";
 import { I18nDecorator } from "../../src/shared/config/storybook/i18nDecorator/i18nDecorator";
-import { SuspenseDecorator } from "shared/config/storybook/SuspenseDecorator/SuspenseDecorator";
+import { SuspenseDecorator } from "../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator";
 
 const preview: Preview = {
   parameters: {

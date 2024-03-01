@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { LIST_ITEMS } from "shared/const/storyiesConsts";
 import { ListBox } from "./ListBox";
 
 const meta = {
