@@ -3,7 +3,7 @@ import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorato
 import { Page } from "./Page";
 
 const meta = {
-  title: "widget/Page",
+  title: "widgets/Page",
   component: Page,
   parameters: {
     layout: "fulscreen",

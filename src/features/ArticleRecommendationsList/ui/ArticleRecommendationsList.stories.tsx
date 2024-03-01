@@ -2,17 +2,33 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import {ArticleRecommendationsList} from "./ArticleRecommendationsList";
+import { ARTICLES } from "shared/const/storyiesConsts";
+import { ArticleRecommendationsList } from "./ArticleRecommendationsList";
 
 const meta = {
   title: "features/ArticleRecommendationsList",
   component: ArticleRecommendationsList,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
+    mockData: [
+      {
+        url: `${__API__}/articles?_limit=3`,
+        method: "GET",
+        status: 200,
+        response: [...ARTICLES],
+      },
+    ],
   },
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof ArticleRecommendationsList>;
 
 export default meta;
@@ -27,11 +43,9 @@ export const Dark: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator state={{}}>
-        <ThemeDecorator theme={Theme.DARK}>
-          <Story />
-        </ThemeDecorator>
-      </StoreDecorator>
+      <ThemeDecorator theme={Theme.DARK}>
+        <Story />
+      </ThemeDecorator>
     ),
   ],
 };

@@ -4,7 +4,7 @@ import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorato
 import { PageError } from "./PageError";
 
 const meta = {
-  title: "widget/PageError",
+  title: "widgets/PageError",
   component: PageError,
   parameters: {
     layout: "centered",

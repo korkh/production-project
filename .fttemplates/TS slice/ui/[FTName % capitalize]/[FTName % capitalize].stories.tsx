@@ -5,10 +5,10 @@ import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorato
 import [FTName % capitalize] from "./[FTName % capitalize]";
 
 const meta = {
-  title: "shared/<FTName % capitalize>",
+  title: "features/<FTName % capitalize>",
   component: <FTName % capitalize>,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},

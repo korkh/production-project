@@ -13,6 +13,21 @@ const meta = {
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator
+        state={{
+          user: {
+            authData: {
+              id: "1",
+            },
+          },
+        }}
+      >
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof ArticleEditPage>;
 
 export default meta;
@@ -27,19 +42,9 @@ export const Dark: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator
-        state={{
-          user: {
-            authData: {
-              id: "1",
-            },
-          },
-        }}
-      >
-        <ThemeDecorator theme={Theme.DARK}>
-          <Story />
-        </ThemeDecorator>
-      </StoreDecorator>
+      <ThemeDecorator theme={Theme.DARK}>
+        <Story />
+      </ThemeDecorator>
     ),
   ],
 };

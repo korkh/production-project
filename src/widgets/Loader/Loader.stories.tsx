@@ -5,7 +5,7 @@ import { Theme } from "app/providers/ThemeProvider";
 import { Loader } from "./Loader";
 
 const meta = {
-  title: "widget/Loader",
+  title: "widgets/Loader",
   component: Loader,
   parameters: {
     layout: "centered",

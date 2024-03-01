@@ -59,7 +59,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
     config.plugins.push(
       new DefinePlugin({
         __IS_DEV__: JSON.stringify(true),
-        __API__: JSON.stringify(""),
+        __API__: JSON.stringify("https://testapi.com"),
         __PROJECT__: JSON.stringify("storybook"),
       })
     ); // Here we can use global field, __IS__DEV__ using during store creation do define dev mode

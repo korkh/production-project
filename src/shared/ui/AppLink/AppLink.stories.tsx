@@ -5,7 +5,7 @@ import React from "react";
 import { AppLink, AppLinkTheme } from "./AppLink";
 
 const meta = {
-  title: "widget/AppLink",
+  title: "shared/AppLink",
   component: AppLink,
   parameters: {
     layout: "centered",

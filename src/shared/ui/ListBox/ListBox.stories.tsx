@@ -11,7 +11,14 @@ const meta = {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
-  args: { value: LIST_ITEMS.value, items: LIST_ITEMS.items },
+  args: {
+    value: "Custom List",
+    items: [
+      { content: "first", value: "First" },
+      { content: "second", value: "Second" },
+      { content: "third", value: "Third" },
+    ],
+  },
   decorators: [
     (Story) => (
       <div style={{ padding: 100 }}>
@@ -27,7 +34,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {},
+  args: { },
 };
 
 export const TopLeft: Story = {

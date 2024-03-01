@@ -8,7 +8,7 @@ const meta = {
   title: "shared/<FTName>",
   component: <FTName>,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},

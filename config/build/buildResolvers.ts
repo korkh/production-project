@@ -8,8 +8,8 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
     modules: [options.paths.src, "node_modules"],
     mainFiles: ["index"],
     alias: {
-      "react/jsx-runtime": require.resolve("react/jsx-runtime"),
-      "react-dom": require.resolve("react-dom"),
+      // "react/jsx-runtime": require.resolve("react/jsx-runtime"),
+      // "react-dom": require.resolve("react-dom"),
     },
   };
 }
