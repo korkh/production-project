@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ArticleBlockType } from "../../model/types/article";
+import { ArticleBlockType } from "../../model/consts/consts";
 import ArticleCodeBlockComponent from "./ArticleCodeBlockComponent";
 
 const meta = {

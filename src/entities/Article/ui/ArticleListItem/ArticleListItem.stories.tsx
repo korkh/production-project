@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
-import { ArticleView } from "../../model/types/article";
+import { ArticleView } from "../../model/consts/consts";
 import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { ARTICLES } from "shared/const/storyiesConsts";

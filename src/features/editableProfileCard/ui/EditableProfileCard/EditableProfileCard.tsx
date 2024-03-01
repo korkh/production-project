@@ -21,7 +21,7 @@ import { profileActions, profileReducer } from "../../model/slice/profileSlice";
 import { EditableProfileCardHeader } from "../EditableProfileCardHeader/EditableProfileCardHeader";
 import { getProfileValidateErrors } from "../../model/selectors/getProfileValidateError/getProfileValidateErrors";
 import { ProfileCard } from "entities/Profile";
-import { ValidateProfileError } from "../../model/types/EditableProfileCard";
+import { ValidateProfileError } from "../../model/consts/ValidateProfileError";
 
 interface EditableProfileCardProps {
   className?: string;

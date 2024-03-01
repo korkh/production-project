@@ -1,10 +1,7 @@
+import { ArticleType, ArticleBlockType } from "entities/Article";
 //** Folloving mocks are used for Stories */
 
 import { Article } from "entities/Article";
-import {
-  ArticleBlockType,
-  ArticleType,
-} from "entities/Article/model/types/article";
 
 /* eslint-disable max-len */
 export const LIST_ITEMS = {

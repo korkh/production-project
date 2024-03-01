@@ -12,7 +12,8 @@ import { List, ListRowProps, WindowScroller } from "react-virtualized";
 import { classNames } from "shared/lib/classNames/classNames";
 import { Text, TextSize } from "shared/ui/Text/Text";
 import { PAGE_ID } from "widgets/Page/Page";
-import { Article, ArticleView } from "../../model/types/article";
+import { Article } from "../../model/types/article";
+import { ArticleView } from "../../model/consts/consts";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import cls from "./ArticleList.module.scss";
 

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ArticleBlockType } from "../../model/types/article";
+import { ArticleBlockType } from "../../model/consts/consts";
 import ArticleTextBlockComponent from "./ArticleTextBlockComponent";
 
 const meta = {
@@ -23,7 +23,11 @@ export const Primary: Story = {
       id: "1",
       type: ArticleBlockType.TEXT,
       title: "TEXT BLOCKS",
-      paragraphs: ["TESTING TEXT BLOCK HERE 1", "TESTING TEXT BLOCK HERE 2", "TESTING TEXT BLOCK HERE 3"]
+      paragraphs: [
+        "TESTING TEXT BLOCK HERE 1",
+        "TESTING TEXT BLOCK HERE 2",
+        "TESTING TEXT BLOCK HERE 3",
+      ],
     },
   },
 };

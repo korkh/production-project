@@ -6,11 +6,9 @@ import {
   ArticleSortSelector,
   ArticleView,
   ArticleViewSelector,
-} from "entities/Article";
-import {
   ArticleSortField,
-  ArticleType,
-} from "entities/Article/model/types/article";
+  ArticleType
+} from "entities/Article";
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,
