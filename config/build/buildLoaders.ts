@@ -5,22 +5,23 @@ import { BuildOptions } from "./types/config";
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const { isDev } = options;
-  const babelLoader = buildBabelLoader(options);
-
-  const cssLoader = buildCssLoader(isDev);
-
-  // Если не используем тайпскрипт - нужен babel-loader
-  const typescriptLoader = {
-    test: /\.tsx?$/,
-    use: "ts-loader",
-    exclude: /node_modules/,
-    // options: { transpileOnly: true }, // ts errors will not ruin build
-  };
 
   const svgLoader = {
     test: /\.svg$/,
     use: ["@svgr/webpack"],
   };
+
+  const codeBabelLoader = buildBabelLoader({ ...options, isTSX: false }); 
+  const tsxCodeBabelLoader = buildBabelLoader({ ...options, isTSX: true }); //now babel loader responsible for TSX compilation 
+
+  // Если не используем тайпскрипт - нужен babel-loader
+  // const typescriptLoader = {
+  //     test: /\.tsx?$/,
+  //     use: 'ts-loader',
+  //     exclude: /node_modules/,
+  // };
+
+  const cssLoader = buildCssLoader(isDev);
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff2|woff)$/i,
@@ -31,5 +32,12 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
-  return [fileLoader, babelLoader, svgLoader, typescriptLoader, cssLoader];
+  return [
+    fileLoader,
+    svgLoader,
+    codeBabelLoader,
+    tsxCodeBabelLoader,
+    // typescriptLoader,
+    cssLoader,
+  ];
 }

@@ -5,7 +5,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
   return {
     port: options.port,
     open: true,
-    client: { overlay: false },
+    // client: { overlay: false },
     historyApiFallback: true, // holds location history after refresh
     hot: true,
   };

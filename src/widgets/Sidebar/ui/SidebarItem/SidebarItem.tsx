@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import cls from "./SidebarItem.module.scss";
 import { SidebarItemType } from "../../model/types/Sidebar";
 
+
 interface SidebarItemProps {
   item: SidebarItemType;
   collapsed: boolean;
