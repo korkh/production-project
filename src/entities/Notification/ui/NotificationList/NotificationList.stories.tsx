@@ -2,13 +2,22 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import [FTName % capitalize] from "./[FTName % capitalize]";
+import { NOTIFICATIONS } from "shared/const/storyiesConsts";
+import NotificationList from "./NotificationList";
 
 const meta = {
-  title: "pages/<FTName % capitalize>",
-  component: <FTName % capitalize>,
+  title: "entities/Notification/NotificationList",
+  component: NotificationList,
   parameters: {
     layout: "fullscreen",
+    mockData: [
+      {
+        url: `${__API__}/notifications`,
+        method: "GET",
+        status: 200,
+        response: [...NOTIFICATIONS],
+      },
+    ],
   },
   tags: ["autodocs"],
   args: {},
@@ -20,7 +29,7 @@ const meta = {
       </StoreDecorator>
     ),
   ],
-} satisfies Meta<typeof <FTName % capitalize>>;
+} satisfies Meta<typeof NotificationList>;
 
 export default meta;
 

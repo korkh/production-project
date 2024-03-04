@@ -2,16 +2,23 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import [FTName % capitalize] from "./[FTName % capitalize]";
+import NotificationItem from "./NotificationItem";
 
 const meta = {
-  title: "pages/<FTName % capitalize>",
-  component: <FTName % capitalize>,
+  title: "entities/Notification/NotificationItem",
+  component: NotificationItem,
   parameters: {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
-  args: {},
+  args: {
+    item: {
+      id: "string",
+      title: "string",
+      description: "string",
+      href: "string",
+    },
+  },
   argTypes: {},
   decorators: [
     (Story) => (
@@ -20,7 +27,7 @@ const meta = {
       </StoreDecorator>
     ),
   ],
-} satisfies Meta<typeof <FTName % capitalize>>;
+} satisfies Meta<typeof NotificationItem>;
 
 export default meta;
 

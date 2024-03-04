@@ -13,6 +13,15 @@ const meta = {
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator
+        state={{}}
+      >
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof <FTName % capitalize>>;
 
 export default meta;
@@ -27,13 +36,9 @@ export const Dark: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator
-        state={{}}
-      >
-        <ThemeDecorator theme={Theme.DARK}>
-          <Story />
-        </ThemeDecorator>
-      </StoreDecorator>
+      <ThemeDecorator theme={Theme.DARK}>
+        <Story />
+      </ThemeDecorator>
     ),
   ],
 };

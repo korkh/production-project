@@ -8,11 +8,18 @@ const meta = {
   title: "widgets/Navbar",
   component: Navbar,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Navbar>;
 
 export default meta;
@@ -21,24 +28,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
   args: {},
-  decorators: [
-    (Story) => (
-      <StoreDecorator state={{}}>
-        <Story />
-      </StoreDecorator>
-    ),
-  ],
 };
 
 export const Dark: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator state={{}}>
-        <ThemeDecorator theme={Theme.DARK}>
-          <Story />
-        </ThemeDecorator>
-      </StoreDecorator>
+      <ThemeDecorator theme={Theme.DARK}>
+        <Story />
+      </ThemeDecorator>
     ),
   ],
 };
@@ -48,9 +46,7 @@ export const AuthData: Story = {
   decorators: [
     (Story) => (
       <StoreDecorator state={{ user: { authData: undefined } }}>
-        <ThemeDecorator theme={Theme.LIGHT}>
-          <Story />
-        </ThemeDecorator>
+        <Story />
       </StoreDecorator>
     ),
   ],

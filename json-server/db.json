@@ -1,13 +1,35 @@
 {
-  "posts": [
+  "notifications": [
     {
       "id": "1",
-      "title": "json-server",
+      "title": "Notification 1",
+      "description": "There is something occured",
       "userId": "1"
     },
     {
       "id": "2",
-      "title": "json-server",
+      "title": "Notification 2",
+      "description": "There is something occured",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Notification 3",
+      "description": "There is something occured",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Notification 4",
+      "description": "There is something occured",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Notification 1",
+      "description": "There is something occured",
       "userId": "2"
     }
   ],
@@ -20,10 +42,7 @@
       "views": 345,
       "createdAt": "14.01.2022",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -93,10 +112,7 @@
       "views": 102,
       "createdAt": "02.11.2023",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -166,10 +182,7 @@
       "views": 567,
       "createdAt": "01.04.2021",
       "userId": "1",
-      "type": [
-        "IT",
-        "ECONOMICS"
-      ],
+      "type": ["IT", "ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -239,11 +252,7 @@
       "views": 3444,
       "createdAt": "12.09.2023",
       "userId": "1",
-      "type": [
-        "IT",
-        "ECONOMICS",
-        "SCIENCE"
-      ],
+      "type": ["IT", "ECONOMICS", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -313,9 +322,7 @@
       "views": 10222,
       "createdAt": "11.01.2024",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -385,10 +392,7 @@
       "views": 111,
       "createdAt": "03.06.2023",
       "userId": "1",
-      "type": [
-        "IT",
-        "ECONOMICS"
-      ],
+      "type": ["IT", "ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -458,10 +462,7 @@
       "views": 122,
       "createdAt": "22.07.2023",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -531,10 +532,7 @@
       "views": 102,
       "createdAt": "21.09.2023",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE"
-      ],
+      "type": ["IT", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -604,11 +602,7 @@
       "views": 444,
       "createdAt": "23.02.2023",
       "userId": "1",
-      "type": [
-        "IT",
-        "ECONOMICS",
-        "SCIENCE"
-      ],
+      "type": ["IT", "ECONOMICS", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -678,11 +672,7 @@
       "views": 555,
       "createdAt": "14.06.2022",
       "userId": "1",
-      "type": [
-        "IT",
-        "ECONOMICS",
-        "SCIENCE"
-      ],
+      "type": ["IT", "ECONOMICS", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -718,9 +708,7 @@
       "views": 666,
       "createdAt": "17.02.2021",
       "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
+      "type": ["ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -747,9 +735,7 @@
       "views": 9999,
       "createdAt": "10.10.2021",
       "userId": "1",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -776,10 +762,7 @@
       "views": 888,
       "createdAt": "23.03.2022",
       "userId": "1",
-      "type": [
-        "IT",
-        "ECONOMICS"
-      ],
+      "type": ["IT", "ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -806,11 +789,7 @@
       "views": 1022,
       "createdAt": "12.12.2022",
       "userId": "1",
-      "type": [
-        "IT",
-        "SCIENCE",
-        "ECONOMICS"
-      ],
+      "type": ["IT", "SCIENCE", "ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -837,9 +816,7 @@
       "views": 777,
       "createdAt": "05.06.2022",
       "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
+      "type": ["ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -866,11 +843,7 @@
       "views": 1022,
       "createdAt": "12.12.2022",
       "userId": "1",
-      "type": [
-        "IT",
-        "ECONOMICS",
-        "SCIENCE"
-      ],
+      "type": ["IT", "ECONOMICS", "SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -969,27 +942,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://th.bing.com/th/id/R.f7eda381cc37bb2ca8128da457efac66?rik=qUMeA6GL4Yw7bg&riu=http%3a%2f%2faux4.iconspalace.com%2fuploads%2f9341264991688564557.png&ehk=IurLG1gXxD2koP6dXLbUg0RIuf%2fgs8eU09MC%2bzH4mw0%3d&risl=&pid=ImgRaw&r=0"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": [
-        "MANAGER"
-      ],
+      "roles": ["MANAGER"],
       "avatar": "https://th.bing.com/th/id/OIP.2dkkfi3yqJkXIhgG-J5wnwHaHa?rs=1&pid=ImgDetMain"
     }
   ],

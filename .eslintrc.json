@@ -84,7 +84,8 @@
           "gap",
           "component",
           "as",
-          "aria-disabled"
+          "aria-disabled",
+          "border"
         ]
       }
     ],

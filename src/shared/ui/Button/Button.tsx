@@ -1,14 +1,14 @@
+import { ButtonHTMLAttributes, memo, ReactNode } from "react";
 import { classNames, Mods } from "shared/lib/classNames/classNames";
-import { ButtonHTMLAttributes, FC, memo } from "react";
 import cls from "./Button.module.scss";
 
 export enum ButtonTheme {
   CLEAR = "clear",
+  CLEAR_INVERTED = "clearInverted",
   OUTLINE = "outline",
+  OUTLINE_RED = "outline_red",
   BACKGROUND = "background",
   BACKGROUND_INVERTED = "backgroundInverted",
-  CLEAR_INVERTED = "clearInverted",
-  OUTLINE_RED = "outlineRed",
 }
 
 export enum ButtonSize {
@@ -23,11 +23,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   square?: boolean;
   size?: ButtonSize;
   disabled?: boolean;
+  children?: ReactNode;
 }
 
-// Due to the children in button in our case is a string - we can use memo
-// If we are going to use {} in CHILDREN - BAD PRACSIS! Better do not use due to refs to memory
-export const Button: FC<ButtonProps> = memo(function Button(props) {
+export const Button = memo(function Button(props: ButtonProps) {
   const {
     className,
     children,
@@ -48,7 +47,8 @@ export const Button: FC<ButtonProps> = memo(function Button(props) {
   return (
     <button
       type="button"
-      className={classNames(cls.button, [className], mods)}
+      className={classNames(cls.Button, [className], mods)}
+      disabled={disabled}
       {...otherProps}
     >
       {children}

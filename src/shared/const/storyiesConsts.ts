@@ -1,9 +1,42 @@
 import { ArticleType, ArticleBlockType } from "entities/Article";
+import {Notification} from "entities/Notification";
 //** Folloving mocks are used for Stories */
+/* eslint-disable max-len */
 
 import { Article } from "entities/Article";
 
-/* eslint-disable max-len */
+
+
+export const NOTIFICATIONS: Notification[] = [
+  {
+    id: "1",
+    title: "Notification 1",
+    description: "There is something occured",
+  },
+  {
+    id: "2",
+    title: "Notification 2",
+    description: "There is something occured",
+    href: "asdasdad",
+  },
+  {
+    id: "3",
+    title: "Notification 3",
+    description: "There is something occured",
+    href: "asdasd",
+  },
+  {
+    id: "4",
+    title: "Notification 4",
+    description: "There is something occured",
+  },
+  {
+    id: "5",
+    title: "Notification 1",
+    description: "There is something occured",
+  },
+];
+
 export const LIST_ITEMS = {
   value: "Custom List",
   items: [

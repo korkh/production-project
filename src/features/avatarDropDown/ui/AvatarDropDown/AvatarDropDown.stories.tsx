@@ -1,24 +1,26 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
+import AvatarDropDown from "./AvatarDropDown";
 import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { LIST_ITEMS } from "shared/const/storyiesConsts";
-import { Button } from "../Button/Button";
-import { Dropdown } from "./Dropdown";
 
 const meta = {
-  title: "shared/Dropdown",
-  component: Dropdown,
+  title: "pages/AvatarDropDown",
+  component: AvatarDropDown,
   parameters: {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
-  args: {
-    items: LIST_ITEMS.items,
-    trigger: <Button>Open</Button>,
-  },
+  args: {},
   argTypes: {},
-} satisfies Meta<typeof Dropdown>;
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
+} satisfies Meta<typeof AvatarDropDown>;
 
 export default meta;
 
@@ -32,11 +34,9 @@ export const Dark: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator state={{}}>
-        <ThemeDecorator theme={Theme.DARK}>
-          <Story />
-        </ThemeDecorator>
-      </StoreDecorator>
+      <ThemeDecorator theme={Theme.DARK}>
+        <Story />
+      </ThemeDecorator>
     ),
   ],
 };

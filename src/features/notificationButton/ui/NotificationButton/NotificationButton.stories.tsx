@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import [FTName % capitalize] from "./[FTName % capitalize]";
+import { NotificationButton } from "./NotificationButton";
 
 const meta = {
-  title: "pages/<FTName % capitalize>",
-  component: <FTName % capitalize>,
+  title: "pages/NotificationButton",
+  component: NotificationButton,
   parameters: {
     layout: "fullscreen",
   },
@@ -20,7 +20,7 @@ const meta = {
       </StoreDecorator>
     ),
   ],
-} satisfies Meta<typeof <FTName % capitalize>>;
+} satisfies Meta<typeof NotificationButton>;
 
 export default meta;
 
