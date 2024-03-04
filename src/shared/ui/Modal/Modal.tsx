@@ -1,10 +1,15 @@
 import { useTheme } from "app/providers/ThemeProvider";
 import {
-  MutableRefObject, useCallback, useEffect, useRef, useState,
+  MutableRefObject,
   PropsWithChildren,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
 } from "react";
 
 import { classNames, Mods } from "shared/lib/classNames/classNames";
+import { Overlay } from "../Overlay/Overlay";
 import { Portal } from "../Portal/Portal";
 import cls from "./Modal.module.scss";
 
@@ -18,9 +23,7 @@ interface ModalProps {
 const ANIMATION_DELAY = 300;
 
 export function Modal(props: PropsWithChildren<ModalProps>) {
-  const {
-    className, children, isOpen, onClose, lazy,
-  } = props;
+  const { className, children, isOpen, onClose, lazy } = props;
   const [isMounted, setIsMounted] = useState(false); // controls mounting in DOM tree
   const [isClosing, setIsClosing] = useState(false);
 
@@ -58,12 +61,8 @@ export function Modal(props: PropsWithChildren<ModalProps>) {
         closeHandler();
       }
     },
-    [closeHandler],
+    [closeHandler]
   );
-
-  const onContentClick = (e: React.MouseEvent) => {
-    e.stopPropagation(); // it will prevent to close modal by clicking on content part
-  };
 
   useEffect(() => {
     if (isOpen) {
@@ -91,11 +90,8 @@ export function Modal(props: PropsWithChildren<ModalProps>) {
       <div
         className={classNames(cls.modal, [className, theme, "app_modal"], mods)}
       >
-        <div className={cls.overlay} onClick={closeHandler}>
-          <div className={cls.content} onClick={onContentClick}>
-            {children}
-          </div>
-        </div>
+        <Overlay onClick={closeHandler} />
+        <div className={cls.content}>{children}</div>
       </div>
     </Portal>
   );

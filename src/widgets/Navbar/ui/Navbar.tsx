@@ -1,4 +1,4 @@
-import { getUserAuthData, isUserAdmin, isUserManager } from "entities/User";
+import { getUserAuthData } from "entities/User";
 import { LoginModal } from "features/AuthByUsername";
 import { AvatarDropdown } from "features/avatarDropDown";
 import { NotificationButton } from "features/notificationButton";
@@ -21,8 +21,6 @@ export const Navbar = memo(function Navbar({ className }: NavbarProps) {
   const { t } = useTranslation("navbar");
   const [isAuthModal, setIsAuthModal] = useState(false);
   const authData = useSelector(getUserAuthData);
-  const isAdmin = useSelector(isUserAdmin);
-  const isManager = useSelector(isUserManager);
 
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
@@ -31,9 +29,6 @@ export const Navbar = memo(function Navbar({ className }: NavbarProps) {
   const onShowModal = useCallback(() => {
     setIsAuthModal(true);
   }, []);
-
-  const accessGranted = isAdmin || isManager;
-  console.log(accessGranted);
 
   if (authData) {
     return (
