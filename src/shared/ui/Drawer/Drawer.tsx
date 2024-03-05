@@ -1,7 +1,7 @@
-import { useTheme } from "app/providers/ThemeProvider";
+import { useTheme } from "@/app/providers/ThemeProvider";
 import { memo, ReactNode, useCallback, useEffect } from "react";
-import { classNames } from "shared/lib/classNames/classNames";
-import { useAnimationLibs } from "shared/lib/components";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { useAnimationLibs } from "@/shared/lib/components";
 import { Overlay } from "../Overlay/Overlay";
 import { Portal } from "../Portal/Portal";
 import cls from "./Drawer.module.scss";
@@ -34,12 +34,14 @@ export const DrawerContent = memo(function DrawerContent(props: DrawerProps) {
   }, [api, isOpen, openDrawer]);
 
   const close = (velocity = 0) => {
-    api.start({
-      y: height,
-      immediate: false,
-      config: { ...Spring.config.stiff, velocity },
-      onResolve: onClose,
-    }); //start animation
+    if (!isNaN(height)) {
+      api.start({
+        y: height,
+        immediate: false,
+        config: { ...Spring.config.stiff, velocity },
+        onResolve: onClose,
+      });
+    } //start animation
   };
 
   //return handler for drag & drop

@@ -22,6 +22,7 @@ export default {
     "\\.s?css$": "identity-obj-proxy",
     "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
     "^axios$": "axios/dist/node/axios.cjs", // problem with import axios from "axios"
+    '^@/(.*)$': '<rootDir>src/$1', //add for @ alias
   },
   globals: { __IS_DEV__: true, __API__: "", __PROJECT__: "jest" },
   reporters: [

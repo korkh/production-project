@@ -35,6 +35,17 @@ export function buildPlugins({
     new CircularDependencyPlugin({
       exclude: /node_modules/,
       failOnError: true,
+      onDetected({ module: webpackModuleRecord, paths, compilation }) {
+        // Log detailed information about the circular dependency
+        const moduleChain = paths.join(" -> ");
+        const issuerPath =
+          compilation.moduleGraph.getIssuer(webpackModuleRecord);
+        console.error(
+          `Circular dependency found: ${moduleChain} in ${
+            issuerPath || "unknown module"
+          }`
+        );
+      },
     }),
     new ForkTsCheckerWebpackPlugin({
       typescript: {
