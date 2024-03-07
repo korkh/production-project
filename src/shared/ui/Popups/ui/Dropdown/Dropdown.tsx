@@ -1,7 +1,7 @@
 import { Menu } from "@headlessui/react";
-import { classNames } from "@/shared/lib/classNames/classNames";
+import { classNames } from "shared/lib/classNames/classNames";
 import { Fragment, ReactNode } from "react";
-import { DropdownDirection } from "@/shared/types/ui";
+import { DropdownDirection } from "shared/types/ui";
 import { AppLink } from "../../../AppLink/AppLink";
 import cls from "./Dropdown.module.scss";
 import { mapDirectionClass } from "../../styles/consts";
@@ -36,7 +36,7 @@ export function Dropdown(props: DropdownProps) {
         {items.map((item, index) => {
           const content = ({ active }: { active: boolean }) => (
             <button
-              key={index}
+              key={`dropdown-button-key-${index}`}
               type="button"
               disabled={item.disabled}
               onClick={item.onClick}
@@ -51,7 +51,7 @@ export function Dropdown(props: DropdownProps) {
           if (item.href) {
             return (
               <Menu.Item
-                key={item.href}
+                key={`dropdown-key-${index}`}
                 as={AppLink}
                 to={item.href}
                 disabled={item.disabled}
@@ -63,7 +63,7 @@ export function Dropdown(props: DropdownProps) {
 
           return (
             <Menu.Item
-              key={index * index}
+              key={`dropdown-key-${index}`}
               as={Fragment}
               disabled={item.disabled}
             >

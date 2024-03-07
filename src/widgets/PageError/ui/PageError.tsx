@@ -2,8 +2,8 @@ import { memo, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { NavigateFunction } from "react-router";
 import { useLocation, useNavigate } from "react-router-dom";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { Button } from "@/shared/ui/Button/Button";
+import { classNames } from "shared/lib/classNames/classNames";
+import { Button } from "shared/ui/Button/Button";
 import cls from "./PageError.module.scss";
 
 interface PageErrorProps {
@@ -18,7 +18,7 @@ export const PageError = memo(function PageError({
   const navigate: NavigateFunction = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  const { t } = useTranslation();
+  const { t } = useTranslation("translation");
 
   const handleBack = () => {
     navigate(from, { replace: true });

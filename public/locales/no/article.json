@@ -2,7 +2,7 @@
   "Comments": "Commentarer",
   "No comments yet": "Ingen kommentarer ennå",
   "New comment": "ny kommentar",
-  "Send": "Send",
+  "Send": "Sende",
   "Read more": "Les mer",
   "Back to articles": "Tilbake til artikler",
   "ascending": "stigende",
@@ -20,5 +20,7 @@
   "Articles not found": "Artikler ble ikke funnet",
   "Recommended": "Anbefalt",
   "Edit": "Redigere",
-  "Articles loading error": "Feil ved lasting av artikler"
+  "Articles loading error": "Feil ved lasting av artikler",
+  "Your feedback": "Din tilbakemelding",
+  "Close": "Lukke"
 }

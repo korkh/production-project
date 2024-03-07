@@ -12,12 +12,13 @@ export function buildWebpackConfig(
 
   return {
     mode,
+    cache: true,
     entry: paths.entry,
     output: {
       filename: "[name].[contenthash].js",
       path: paths.build,
       clean: true,
-      publicPath: "/", //for correct chuncks loading if have ../articles/1  
+      publicPath: "/", //for correct chuncks loading if have ../articles/1
     },
     plugins: buildPlugins(options),
     module: {
