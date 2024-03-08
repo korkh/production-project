@@ -1,16 +1,14 @@
-import { useTranslation } from "react-i18next";
 import { memo, useCallback, useState } from "react";
-import cls from "./RatingCard.module.scss";
-import { classNames } from "shared/lib/classNames/classNames";
-import { Button, ButtonTheme, ButtonSize } from "shared/ui/Button/Button";
-import { Text } from "shared/ui/Text/Text";
+import { useTranslation } from "react-i18next";
+import { useDeviceDetection } from "shared/lib/hooks/useDeviceDetection/useDeviceDetection";
+import { Button, ButtonSize, ButtonTheme } from "shared/ui/Button/Button";
 import { Card } from "shared/ui/Card/Card";
 import { Drawer } from "shared/ui/Drawer/Drawer";
 import { Input } from "shared/ui/Input/Input";
 import { Modal } from "shared/ui/Modal/Modal";
-import { VStack, HStack } from "shared/ui/Stack";
+import { HStack, VStack } from "shared/ui/Stack";
 import { StarRating } from "shared/ui/StarRating/StarRating";
-import { useDeviceDetection } from "shared/lib/hooks/useDeviceDetection/useDeviceDetection";
+import { Text } from "shared/ui/Text/Text";
 
 interface RatingCardProps {
   className?: string;
@@ -19,14 +17,22 @@ interface RatingCardProps {
   hasFeedback?: boolean;
   onCancel?: (starsCount: number) => void;
   onAccept?: (starsCount: number, feedback?: string) => void;
+  rate?: number;
 }
 
 export const RatingCard = memo(function RatingCard(props: RatingCardProps) {
-  const { className, onAccept, feedbackTitle, hasFeedback, onCancel, title } =
-    props;
+  const {
+    className,
+    onAccept,
+    feedbackTitle,
+    hasFeedback,
+    onCancel,
+    title,
+    rate = 0,
+  } = props;
   const { t } = useTranslation("article");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [starsCount, setStarsCount] = useState(0);
+  const [starsCount, setStarsCount] = useState(rate);
   const [feedback, setFeedback] = useState("");
   const isMobileWithTouch = useDeviceDetection();
 
@@ -65,10 +71,14 @@ export const RatingCard = memo(function RatingCard(props: RatingCardProps) {
   );
 
   return (
-    <Card className={classNames(cls.RatingCard, [className], {})}>
+    <Card className={className} max>
       <VStack align="center" gap="8">
-        <Text title={title} />
-        <StarRating size={40} onSelect={onSelectStars} />
+        <Text title={starsCount ? t("Thanks for your feedback!") :title} />
+        <StarRating
+          selectedStars={starsCount}
+          size={40}
+          onSelect={onSelectStars}
+        />
       </VStack>
       {isMobileWithTouch ? (
         <Drawer isOpen={isModalOpen} lazy onClose={cancelHandle}>

@@ -1,9 +1,8 @@
-import { classNames } from "shared/lib/classNames/classNames";
-import { Text, TextSize } from "shared/ui/Text/Text";
 import { HTMLAttributeAnchorTarget, memo } from "react";
 import { useTranslation } from "react-i18next";
-import { ArticleView } from "../..";
-
+import { classNames } from "shared/lib/classNames/classNames";
+import { Text, TextSize } from "shared/ui/Text/Text";
+import { ArticleView } from "../../model/consts/consts";
 import { Article } from "../../model/types/article";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { ArticleListItemSkeleton } from "../ArticleListItem/ArticleListItemSkeleton";
@@ -20,7 +19,7 @@ interface ArticleListProps {
 const getSkeletons = (view: ArticleView) =>
   new Array(view === ArticleView.SMALL ? 9 : 3)
     .fill(0)
-    .map((item, index) => (
+    .map((_, index) => (
       <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
     ));
 

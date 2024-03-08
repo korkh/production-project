@@ -2,25 +2,17 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Theme } from "app/providers/ThemeProvider";
 import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import PageFilters from "./PageFilters";
+import ArticleRating from "./ArticleRating";
 
 const meta = {
-  title: "features/PageFilters",
-  component: PageFilters,
+  title: "pages/ArticleRating",
+  component: ArticleRating,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
-  args: {},
+  args: { articleId: "1" },
   argTypes: {},
-} satisfies Meta<typeof PageFilters>;
-
-export default meta;
-
-type Story = StoryObj<typeof meta>;
-
-export const Primary: Story = {
-  args: {},
   decorators: [
     (Story) => (
       <StoreDecorator state={{}}>
@@ -28,17 +20,23 @@ export const Primary: Story = {
       </StoreDecorator>
     ),
   ],
+} satisfies Meta<typeof ArticleRating>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Primary: Story = {
+  args: {},
 };
 
 export const Dark: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <StoreDecorator state={{}}>
-        <ThemeDecorator theme={Theme.DARK}>
-          <Story />
-        </ThemeDecorator>
-      </StoreDecorator>
+      <ThemeDecorator theme={Theme.DARK}>
+        <Story />
+      </ThemeDecorator>
     ),
   ],
 };

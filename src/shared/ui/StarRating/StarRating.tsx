@@ -15,7 +15,7 @@ const stars = [1, 2, 3, 4, 5];
 
 export const StarRating = memo(function StarRating(props: StarRatingProps) {
   const { className, size = 30, selectedStars = 0, onSelect } = props;
-  const [currentStarsCount, setCurrentStarsCount] = useState(0);
+  const [currentStarsCount, setCurrentStarsCount] = useState(selectedStars);
   const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
 
   /**   Due to we are using stars.map((starNumber) to iterate through array of stars so it's impossible without closure to set number of star.
@@ -56,6 +56,9 @@ export const StarRating = memo(function StarRating(props: StarRatingProps) {
           key={starNumber}
           width={size}
           height={size}
+          onTouchStart={onHover(starNumber)}
+          onTouchEnd={onLeave}
+          onFocus={onHover(starNumber)}
           onMouseLeave={onLeave}
           onMouseEnter={onHover(starNumber)}
           onClick={onClick(starNumber)}

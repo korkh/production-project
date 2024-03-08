@@ -1,11 +1,12 @@
 import { ArticleDetails } from "entities/Article";
+import { ArticleRating } from "features/articleRating";
 import { ArticleRecommendationsList } from "features/ArticleRecommendationsList";
 import { memo } from "react";
 import { useParams } from "react-router-dom";
 import { classNames } from "shared/lib/classNames/classNames";
 import {
   DynamicModuleLoader,
-  ReducersList,
+  ReducersList
 } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { VStack } from "shared/ui/Stack";
 import { Page } from "widgets/Page/Page";
@@ -24,7 +25,12 @@ const reducers: ReducersList = {
 
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const { className } = props;
+  // const { t } = useTranslation("article");
   const { id } = useParams<{ id: string }>();
+
+  if (!id) {
+    return null;
+  }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
@@ -32,6 +38,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
         <VStack gap="16" max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
+          <ArticleRating articleId={id} />
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
