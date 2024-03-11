@@ -100,7 +100,7 @@
     ],
     "react-hooks/rules-of-hooks": "error", // checks rules for hooks
     "react-hooks/exhaustive-deps": "error", // checks effect dependencies
-    "fsd-by-korkh/path-checker": "error"
+    "fsd-by-korkh/path-checker": ["error", { "alias": "@" }]
   },
   "settings": {
     "react": {
