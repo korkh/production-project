@@ -1,4 +1,4 @@
-import { Theme } from "@/app/providers/ThemeProvider";
+import { Theme } from "@/shared/const/Theme";
 import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import type { Meta, StoryObj } from "@storybook/react";
@@ -41,7 +41,7 @@ export const Primary: Story = {
         method: "GET",
         status: 200,
         mode: "no-cors",
-        response: [{rate: 4}],
+        response: [{ rate: 4 }],
       },
     ],
   },

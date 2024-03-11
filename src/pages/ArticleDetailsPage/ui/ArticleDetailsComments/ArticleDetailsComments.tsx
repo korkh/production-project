@@ -7,11 +7,11 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { VStack } from "@/shared/ui/Stack";
 import { Text, TextSize } from "@/shared/ui/Text/Text";
-import CommentCardLoader from "@/widgets/CommentCardLoader/CommentCardLoader";
 import { getArticleCommentsIsLoading } from "../../model/selectors/comments";
 import { addCommentForArticle } from "../../model/services/addCommentForArticle/addCommentForArticle";
 import { fetchCommentsByArticleId } from "../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { getArticleComments } from "../../model/slices/articleDetailsCommentsSlice";
+import { CommentCardLoader } from "@/widgets/CommentCardLoader";
 
 interface ArticleDetailsCommentsProps {
   className?: string;

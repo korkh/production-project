@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "@/app/providers/ThemeProvider";
+import { Theme } from "@/shared/const/Theme";
 import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { RatingCard } from "./RatingCard";
@@ -11,7 +11,7 @@ const meta = {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
-  args: {title: "Your feedback"},
+  args: { title: "Your feedback" },
   argTypes: {},
   decorators: [
     (Story) => (

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "@/app/providers/ThemeProvider";
+import { Theme } from "@/shared/const/Theme";
 import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { ArticleDetailsPageHeader } from "./ArticleDetailsPageHeader";
@@ -42,7 +42,6 @@ export const Dark: Story = {
     ),
   ],
 };
-
 
 export const AuthUserHeader: Story = {
   args: {},

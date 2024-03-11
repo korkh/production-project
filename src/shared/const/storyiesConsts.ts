@@ -1,11 +1,12 @@
-import { ArticleType, ArticleBlockType } from "@/entities/Article";
-import {Notification} from "@/entities/Notification";
+import {
+  Article,
+  ArticleBlockType,
+  ArticleType,
+} from "./../../entities/Article/testing";
+import { Notification } from "./../../entities/Notification/testing";
+
 //** Folloving mocks are used for Stories */
 /* eslint-disable max-len */
-
-import { Article } from "@/entities/Article";
-
-
 
 export const NOTIFICATIONS: Notification[] = [
   {

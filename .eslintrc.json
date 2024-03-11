@@ -100,7 +100,22 @@
     ],
     "react-hooks/rules-of-hooks": "error", // checks rules for hooks
     "react-hooks/exhaustive-deps": "error", // checks effect dependencies
-    "fsd-by-korkh/path-checker": ["error", { "alias": "@" }]
+    "fsd-by-korkh/path-checker": ["error", { "alias": "@" }],
+    "fsd-by-korkh/public-api-imports": [
+      "error",
+      {
+        "alias": "@",
+        "testFilesPatterns": [
+          "**/*.test.*",
+          "**/*.stories.*",
+          "**/StoreDecorator.tsx"
+        ]
+      }
+    ],
+    "fsd-by-korkh/layer-imports": [
+      "error",
+      { "alias": "@", "ignoreImportPatterns": ["**/StoreProvider", "**/testing"] }
+    ]
   },
   "settings": {
     "react": {

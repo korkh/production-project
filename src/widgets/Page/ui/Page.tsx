@@ -6,9 +6,9 @@ import { getUIScrollByPath, uiActions } from "@/features/UI";
 import { useLocation } from "react-router-dom";
 import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { useSelector } from "react-redux";
-import { StateSchema } from "@/app/providers/StoreProvider";
 import cls from "./Page.module.scss";
 import { useThrottle } from "@/shared/lib/hooks/useTrottle/useThrottle";
+import { StateSchema } from "@/app/providers/StoreProvider";
 
 interface PageProps {
   className?: string;

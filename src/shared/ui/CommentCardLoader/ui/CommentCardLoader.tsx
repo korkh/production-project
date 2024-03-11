@@ -1,6 +1,7 @@
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Skeleton } from "@/shared/ui/Skeleton/Skeleton";
-import { HStack, VStack } from "@/shared/ui/Stack";
+import { Skeleton } from "../../Skeleton/Skeleton";
+import { HStack, VStack } from "../../Stack";
+
 import cls from "./CommentCardLoader.module.scss";
 
 interface Props {
