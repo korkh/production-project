@@ -1,7 +1,7 @@
 import { memo, useState } from "react";
 import cls from "./StarRating.module.scss";
-import StarIcon from "shared/assets/icons/star.svg";
-import { classNames } from "shared/lib/classNames/classNames";
+import StarIcon from "@/shared/assets/icons/star.svg";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import { Icon } from "../Icon/Icon";
 
 interface StarRatingProps {
@@ -56,9 +56,9 @@ export const StarRating = memo(function StarRating(props: StarRatingProps) {
           key={starNumber}
           width={size}
           height={size}
-          onTouchStart={onHover(starNumber)}
-          onTouchEnd={onLeave}
-          onFocus={onHover(starNumber)}
+          // onTouchStart={onHover(starNumber)}
+          // onTouchEnd={onLeave}
+          // onFocus={onHover(starNumber)}
           onMouseLeave={onLeave}
           onMouseEnter={onHover(starNumber)}
           onClick={onClick(starNumber)}

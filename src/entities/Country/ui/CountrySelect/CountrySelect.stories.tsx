@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "app/providers/ThemeProvider";
-import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Theme } from "@/app/providers/ThemeProvider";
+import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { CountrySelect } from "./CountrySelect";
 
 const meta = {
   title: "entities/Country/CountrySelect",
   component: CountrySelect,
   parameters: {
-    layout: "centered",
+    layout: "fulscreen",
   },
   tags: ["autodocs"],
   args: {},

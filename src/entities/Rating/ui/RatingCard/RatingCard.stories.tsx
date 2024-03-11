@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "app/providers/ThemeProvider";
-import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import RatingCard from "./RatingCard";
+import { Theme } from "@/app/providers/ThemeProvider";
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { RatingCard } from "./RatingCard";
 
 const meta = {
-  title: "features/RatingCard",
+  title: "entities/Rating/RatingCard",
   component: RatingCard,
   parameters: {
     layout: "fullscreen",
   },
   tags: ["autodocs"],
-  args: {},
+  args: {title: "Your feedback"},
   argTypes: {},
   decorators: [
     (Story) => (

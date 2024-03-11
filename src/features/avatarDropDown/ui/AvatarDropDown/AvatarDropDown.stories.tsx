@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "app/providers/ThemeProvider";
+import { Theme } from "@/app/providers/ThemeProvider";
 import AvatarDropDown from "./AvatarDropDown";
-import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 
 const meta = {
-  title: "pages/AvatarDropDown",
+  title: "features/AvatarDropDown",
   component: AvatarDropDown,
   parameters: {
     layout: "fullscreen",

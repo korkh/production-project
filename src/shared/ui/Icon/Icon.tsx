@@ -1,4 +1,4 @@
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import React, { memo } from "react";
 import cls from "./Icon.module.scss";
 
@@ -13,11 +13,9 @@ export const Icon = memo(function Icon(props: IconProps) {
 
   return (
     <Svg
-      className={classNames(
-        inverted ? cls.inverted : cls.Icon,
-        [className],
-        {}
-      )}
+      className={classNames(cls.Icon, [className], {
+        [cls.inverted]: inverted,
+      })}
       {...otherProps}
     />
   );

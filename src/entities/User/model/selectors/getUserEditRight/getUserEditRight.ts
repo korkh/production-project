@@ -1,6 +1,6 @@
 import { createDraftSafeSelector } from "@reduxjs/toolkit";
-import { StateSchema } from "app/providers/StoreProvider";
-import { getProfileData } from "features/editableProfileCard/model/selectors/getProfileData/getProfileData";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { getProfileData } from "@/features/editableProfileCard/model/selectors/getProfileData/getProfileData";
 
 import { useSelector } from "react-redux";
 import { getUserAuthData } from "../getUserAuthData/getUserAuthData";

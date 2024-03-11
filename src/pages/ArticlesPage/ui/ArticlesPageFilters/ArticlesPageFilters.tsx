@@ -1,4 +1,4 @@
-import { classNames } from "shared/lib/classNames/classNames";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./ArticlesPageFilters.module.scss";
 import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
@@ -8,15 +8,15 @@ import {
   ArticleViewSelector,
   ArticleSortField,
   ArticleType,
-} from "entities/Article";
+} from "@/entities/Article";
 
 import { useSelector } from "react-redux";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { SortOrder } from "shared/types";
-import { Card } from "shared/ui/Card/Card";
-import { Input } from "shared/ui/Input/Input";
-import { ArticleTypeTabs } from "entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs";
-import { useDebounce } from "shared/lib/hooks/useDebounce/useDebounce";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { SortOrder } from "@/shared/types";
+import { Card } from "@/shared/ui/Card/Card";
+import { Input } from "@/shared/ui/Input/Input";
+import { ArticleTypeTabs } from "@/entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs";
+import { useDebounce } from "@/shared/lib/hooks/useDebounce/useDebounce";
 import {
   getArticlesPageView,
   getArticlesPageSort,

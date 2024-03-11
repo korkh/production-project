@@ -1,5 +1,5 @@
-import { Button } from "shared/ui/Button/Button";
-import { PageError } from "widgets/PageError";
+import { Button } from "@/shared/ui/Button/Button";
+import { PageError } from "@/widgets/PageError";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 

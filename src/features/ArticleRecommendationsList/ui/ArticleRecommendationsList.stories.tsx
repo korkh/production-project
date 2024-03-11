@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "app/providers/ThemeProvider";
-import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
-import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { ARTICLES } from "shared/const/storyiesConsts";
+import { Theme } from "@/app/providers/ThemeProvider";
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { ARTICLES } from "@/shared/const/storyiesConsts";
+import withMock from "storybook-addon-mock";
 import { ArticleRecommendationsList } from "./ArticleRecommendationsList";
 
 const meta = {
@@ -23,6 +24,7 @@ const meta = {
   args: {},
   argTypes: {},
   decorators: [
+    withMock,
     (Story) => (
       <StoreDecorator state={{}}>
         <Story />

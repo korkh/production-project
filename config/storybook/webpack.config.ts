@@ -12,10 +12,21 @@ export default ({ config }: { config: webpack.Configuration }) => {
     locales: path.resolve(__dirname, "..", "public", "locales"), // for absolute path
     buildLocales: path.resolve(__dirname, "..", "build", "locales"), // for absolute path
   };
+
+  // if (config.devServer) {
+  //   config.devServer.proxy = {
+  //     "/article-ratings": {
+  //       target: "https://testapi.com",
+  //       changeOrigin: true,
+  //       secure: false,
+  //     },
+  //   };
+  // }
+
   if (config.resolve && config.resolve.extensions) {
     config.resolve.modules = [paths.src, "node_modules"];
     config.resolve.extensions.push(".ts", ".tsx");
-    config.resolve!.alias = { "@": paths.src };
+    config.resolve!.alias = { ...config.resolve.alias, "@": paths.src };
   }
 
   if (config.module && Array.isArray(config.module.rules)) {

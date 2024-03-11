@@ -1,8 +1,8 @@
-import { BugButton } from "app/providers/ErrorBoundary";
-import { RatingCard } from "entities/Rating";
+import { BugButton } from "@/app/providers/ErrorBoundary";
+import { RatingCard } from "@/entities/Rating";
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
-import { Page } from "widgets/Page/Page";
+import { Page } from "@/widgets/Page/Page";
 
 interface ErrorProps {
   errorInfo?: Error | null;

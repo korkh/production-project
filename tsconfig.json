@@ -16,13 +16,13 @@
     // Для абсолютного импорта
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"],
-      "app": ["./src/app/*"],
-      "entities": ["./src/entities/*"],
-      "features": ["./src/features/*"],
-      "shared": ["./src/shared/*"],
-      "pages": ["./src/pages/*"],
-      "widgets": ["./src/widgets/*"],
+      "@/*": ["./src/*"],
+      "@/app": ["./src/app/*"],
+      "@/entities": ["./src/entities/*"],
+      "@/features": ["./src/features/*"],
+      "@/shared": ["./src/shared/*"],
+      "@/pages": ["./src/pages/*"],
+      "@/widgets": ["./src/widgets/*"]
     },
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакета с помощью import (require() module.export) = common js

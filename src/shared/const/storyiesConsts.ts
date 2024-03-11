@@ -1,9 +1,9 @@
-import { ArticleType, ArticleBlockType } from "entities/Article";
-import {Notification} from "entities/Notification";
+import { ArticleType, ArticleBlockType } from "@/entities/Article";
+import {Notification} from "@/entities/Notification";
 //** Folloving mocks are used for Stories */
 /* eslint-disable max-len */
 
-import { Article } from "entities/Article";
+import { Article } from "@/entities/Article";
 
 
 

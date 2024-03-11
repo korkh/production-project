@@ -1,0 +1,1 @@
+export { <FTName % capitalize>Async as <FTName % capitalize> } from "./ui/<FTName % capitalize>/<FTName % capitalize>.async";
