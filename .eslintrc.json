@@ -23,6 +23,7 @@
     "react",
     "i18next",
     "react-hooks",
+    "unused-imports",
     "fsd-by-korkh"
   ],
   "rules": {
@@ -100,6 +101,7 @@
     ],
     "react-hooks/rules-of-hooks": "error", // checks rules for hooks
     "react-hooks/exhaustive-deps": "error", // checks effect dependencies
+    "unused-imports/no-unused-imports": "error",
     "fsd-by-korkh/path-checker": ["error", { "alias": "@" }],
     "fsd-by-korkh/public-api-imports": [
       "error",
@@ -114,7 +116,10 @@
     ],
     "fsd-by-korkh/layer-imports": [
       "error",
-      { "alias": "@", "ignoreImportPatterns": ["**/StoreProvider", "**/testing"] }
+      {
+        "alias": "@",
+        "ignoreImportPatterns": ["**/StoreProvider", "**/testing"]
+      }
     ]
   },
   "settings": {
