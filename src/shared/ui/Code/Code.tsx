@@ -4,7 +4,8 @@ import { memo, useCallback, useState } from "react";
 import CopyIcon from "@/shared/assets/icons/copy-20-20.svg";
 import DoneBtn from "@/shared/assets/icons/done-20-20.svg";
 import cls from "./Code.module.scss";
-import { Button, ButtonTheme } from "../Button/Button";
+import { Button } from "../Button/Button";
+import { ButtonTheme } from "../Button/consts/ButtonTheme";
 
 interface CodeProps {
   className?: string;
@@ -13,7 +14,7 @@ interface CodeProps {
 }
 
 export const Code = memo(function Code(props: CodeProps) {
-  const { className, text, copied=false } = props;
+  const { className, text, copied = false } = props;
   const [done, setCopied] = useState(copied);
 
   const onCopy = useCallback(() => {

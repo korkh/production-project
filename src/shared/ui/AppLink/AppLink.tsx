@@ -2,12 +2,7 @@ import { forwardRef } from "react";
 import { Link, LinkProps } from "react-router-dom";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./AppLink.module.scss";
-
-export enum AppLinkTheme {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  RED = "red",
-}
+import { AppLinkTheme } from "./consts/AppLinkTheme";
 
 interface AppLinkProps extends LinkProps {
   className?: string;
@@ -39,4 +34,3 @@ const AppLink = forwardRef<HTMLAnchorElement, AppLinkProps>(function AppLink(
 });
 
 export { AppLink };
-

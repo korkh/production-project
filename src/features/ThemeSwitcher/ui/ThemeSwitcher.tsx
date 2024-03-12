@@ -7,7 +7,7 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 
 import { Theme } from "@/shared/const/Theme";
 import { useTheme } from "@/shared/lib/hooks/useTheme/useTheme";
-import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
+import { Button, ButtonTheme } from "@/shared/ui/Button";
 
 interface ThemeSwitcherProps {
   className?: string;

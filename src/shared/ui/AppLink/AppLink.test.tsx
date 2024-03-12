@@ -1,15 +1,14 @@
-import {
-  fireEvent, getByText, render, screen,
-} from "@testing-library/react";
+import { fireEvent, getByText, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { AppLink, AppLinkTheme } from "./AppLink";
+import { AppLink } from "./AppLink";
+import { AppLinkTheme } from "./consts/AppLinkTheme";
 
 describe("AppLink", () => {
   test("AppLink render", () => {
     render(
       <MemoryRouter>
         <AppLink to="/example">Test</AppLink>
-      </MemoryRouter>,
+      </MemoryRouter>
     );
     const link = screen.getByText("Test");
     expect(link).toBeInTheDocument();
@@ -21,7 +20,7 @@ describe("AppLink", () => {
         <AppLink to="/" theme={AppLinkTheme.PRIMARY} className="customClass">
           Test
         </AppLink>
-      </MemoryRouter>,
+      </MemoryRouter>
     );
     const link = screen.getByText("Test");
     expect(link).toHaveClass("primary");
@@ -32,7 +31,7 @@ describe("AppLink", () => {
     const { container } = render(
       <MemoryRouter>
         <AppLink to="/example">Test</AppLink>
-      </MemoryRouter>,
+      </MemoryRouter>
     );
     const link = getByText(container, "Test");
     expect(link).toBeInTheDocument();
