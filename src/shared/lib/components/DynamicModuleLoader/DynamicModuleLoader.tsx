@@ -1,12 +1,12 @@
+import { Reducer } from "@reduxjs/toolkit";
+import { PropsWithChildren, useEffect } from "react";
+import { useDispatch, useStore } from "react-redux";
+
 import {
   ReduxStoreWithManager,
   StateSchema,
   StateSchemaKey,
 } from "@/app/providers/StoreProvider";
-import { Reducer } from "@reduxjs/toolkit";
-
-import { PropsWithChildren, useEffect } from "react";
-import { useDispatch, useStore } from "react-redux";
 
 export type ReducersList = {
   [name in StateSchemaKey]?: Reducer<NonNullable<StateSchema[name]>>; //ensuring that the type associated with the key [name] in the StateSchema object is not null or undefined.

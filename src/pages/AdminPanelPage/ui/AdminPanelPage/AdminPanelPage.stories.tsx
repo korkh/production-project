@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import AdminPanelPage from "./AdminPanelPage";
 
 const meta = {

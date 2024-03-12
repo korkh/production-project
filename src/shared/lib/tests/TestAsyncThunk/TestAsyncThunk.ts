@@ -1,6 +1,7 @@
 import { AnyAction, AsyncThunkAction, ThunkDispatch } from "@reduxjs/toolkit";
-import { StateSchema } from "@/app/providers/StoreProvider";
 import axios, { AxiosStatic } from "axios";
+
+import { StateSchema } from "@/app/providers/StoreProvider";
 
 /**
  * Following type represents function accepting arg and returns asyncThunkAction

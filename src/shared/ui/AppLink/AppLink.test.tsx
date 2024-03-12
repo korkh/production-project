@@ -1,5 +1,6 @@
 import { fireEvent, getByText, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+
 import { AppLink } from "./AppLink";
 import { AppLinkTheme } from "./consts/AppLinkTheme";
 

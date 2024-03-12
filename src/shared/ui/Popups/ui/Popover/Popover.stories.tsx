@@ -1,9 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "@/shared/const/Theme";
+
+import { Button } from "../../../Button/Button";
+
+import { Popover } from "./Popover";
+
 import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Button } from "../../../Button/Button";
-import { Popover } from "./Popover";
+import { Theme } from "@/shared/const/Theme";
 
 const meta = {
   title: "shared/Popups/Popover",

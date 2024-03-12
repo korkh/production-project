@@ -1,9 +1,11 @@
-import { Country } from "@/entities/Country";
-import { Currency } from "@/entities/Currency";
-import { profileActions, profileReducer } from "./profileSlice";
+import { ValidateProfileError } from "../consts/ValidateProfileError";
 import { updateProfileData } from "../services/updateProfileData/updateProfileData";
 import { ProfileSchema } from "../types/EditableProfileCard";
-import { ValidateProfileError } from "../consts/ValidateProfileError";
+
+import { profileActions, profileReducer } from "./profileSlice";
+
+import { Country } from "@/entities/Country";
+import { Currency } from "@/entities/Currency";
 
 const data = {
   username: "admin",

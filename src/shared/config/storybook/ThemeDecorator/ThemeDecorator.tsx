@@ -1,7 +1,8 @@
+import React, { FC } from "react";
+
 // eslint-disable-next-line fsd-by-korkh/layer-imports
 import { ThemeProvider } from "@/app/providers/ThemeProvider";
 import { Theme } from "@/shared/const/Theme";
-import React, { FC } from "react";
 
 interface Props {
   children?: React.ReactNode;

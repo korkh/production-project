@@ -1,10 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "@/shared/const/Theme";
+
+import { Button } from "../../../Button/Button";
+
+import { Dropdown } from "./Dropdown";
+
 import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Theme } from "@/shared/const/Theme";
 import { LIST_ITEMS } from "@/shared/const/storyiesConsts";
-import { Button } from "../../../Button/Button";
-import { Dropdown } from "./Dropdown";
+
+
 
 const meta = {
   title: "shared/Popups/Dropdown",

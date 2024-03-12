@@ -1,8 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "@/shared/const/Theme";
+
+import CommentCardLoader from "./CommentCardLoader";
+
 import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import CommentCardLoader from "./CommentCardLoader";
+import { Theme } from "@/shared/const/Theme";
+
 
 const meta = {
   title: "widgets/CommentCardLoader",

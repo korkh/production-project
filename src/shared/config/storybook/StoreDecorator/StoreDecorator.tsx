@@ -1,12 +1,12 @@
-import { StateSchema, StoreProvider } from "@/app/providers/StoreProvider";
 import React, { ReactNode } from "react";
-import { ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
+
+import { StateSchema, StoreProvider } from "@/app/providers/StoreProvider";
 import { articleDetailsReducer } from "@/entities/Article/testing";
+import { loginReducer } from "@/features/AuthByUsername/testing";
 import { addCommentFormReducer } from "@/features/addCommentForm/testing";
 import { profileReducer } from "@/features/editableProfileCard/testing";
-
-import { loginReducer } from "@/features/AuthByUsername/testing";
 import { articleDetailsPageReducer } from "@/pages/ArticleDetailsPage/testing";
+import { ReducersList } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 
 interface StoreDecoratorProps {
   state: DeepPartial<StateSchema>;

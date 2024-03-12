@@ -1,8 +1,10 @@
-import { Theme } from "@/shared/const/Theme";
-import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { Icon } from "./Icon";
+
 import ProfileIcon from "@/shared/assets/icons/profile-20-20.svg";
+import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Theme } from "@/shared/const/Theme";
 
 const meta = {
   title: "shared/Icon",

@@ -1,10 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "@/shared/const/Theme";
+import withMock from "storybook-addon-mock";
+
+import { ArticleRecommendationsList } from "./ArticleRecommendationsList";
+
 import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { Theme } from "@/shared/const/Theme";
 import { ARTICLES } from "@/shared/const/storyiesConsts";
-import withMock from "storybook-addon-mock";
-import { ArticleRecommendationsList } from "./ArticleRecommendationsList";
+
+
 
 const meta = {
   title: "features/ArticleRecommendationsList",

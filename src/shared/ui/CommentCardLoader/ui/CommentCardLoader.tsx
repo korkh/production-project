@@ -1,6 +1,7 @@
-import { classNames } from "@/shared/lib/classNames/classNames";
 import { Skeleton } from "../../Skeleton/Skeleton";
 import { HStack, VStack } from "../../Stack";
+
+import { classNames } from "@/shared/lib/classNames/classNames";
 
 import cls from "./CommentCardLoader.module.scss";
 

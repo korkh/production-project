@@ -1,8 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "@/shared/const/Theme";
+
+import { ArticleDetailsPageHeader } from "./ArticleDetailsPageHeader";
+
 import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { ArticleDetailsPageHeader } from "./ArticleDetailsPageHeader";
+import { Theme } from "@/shared/const/Theme";
+
 
 const meta = {
   title: "pages/ArticleDetailsPage/ArticleDetailsPageHeader",

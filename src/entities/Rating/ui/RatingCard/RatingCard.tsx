@@ -1,5 +1,6 @@
 import { memo, useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
+
 import { useDeviceDetection } from "@/shared/lib/hooks/useDeviceDetection/useDeviceDetection";
 import { Button, ButtonSize, ButtonTheme } from "@/shared/ui/Button";
 import { Card } from "@/shared/ui/Card";

@@ -1,16 +1,18 @@
-import { CommentList } from "@/entities/Comment";
-import { AddCommentForm } from "@/features/addCommentForm";
 import { memo, Suspense, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
-import { VStack } from "@/shared/ui/Stack";
-import { Text, TextSize } from "@/shared/ui/Text";
+
 import { getArticleCommentsIsLoading } from "../../model/selectors/comments";
 import { addCommentForArticle } from "../../model/services/addCommentForArticle/addCommentForArticle";
 import { fetchCommentsByArticleId } from "../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { getArticleComments } from "../../model/slices/articleDetailsCommentsSlice";
+
+import { CommentList } from "@/entities/Comment";
+import { AddCommentForm } from "@/features/addCommentForm";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { VStack } from "@/shared/ui/Stack";
+import { Text, TextSize } from "@/shared/ui/Text";
 import { CommentCardLoader } from "@/widgets/CommentCardLoader";
 
 interface ArticleDetailsCommentsProps {

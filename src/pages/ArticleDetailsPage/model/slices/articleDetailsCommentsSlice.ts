@@ -4,10 +4,11 @@ import {
   PayloadAction,
 } from "@reduxjs/toolkit";
 
-import { StateSchema } from "@/app/providers/StoreProvider";
-import { IComment } from "@/entities/Comment";
 import { fetchCommentsByArticleId } from "../services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { ArticleDetailsCommentsSchema } from "../types/ArticleDetailsCommentsSchema";
+
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { IComment } from "@/entities/Comment";
 
 // data normalization
 const commentsAdapter = createEntityAdapter<IComment>({
