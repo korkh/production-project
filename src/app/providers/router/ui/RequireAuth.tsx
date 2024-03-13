@@ -1,9 +1,8 @@
-import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { Navigate, useLocation } from "react-router-dom";
-
+import { useMemo } from "react";
 import { getUserAuthData, getUserRoles, UserRole } from "@/entities/User";
-import { RoutePath } from "@/shared/const/router";
+import { getRouteForbidden, getRouteMain } from "@/shared/const/router";
 
 interface RequireAuthProps {
   children: JSX.Element;
@@ -11,25 +10,28 @@ interface RequireAuthProps {
 }
 
 export function RequireAuth({ children, roles }: RequireAuthProps) {
-  const isAuth = useSelector(getUserAuthData);
+  const auth = useSelector(getUserAuthData);
   const location = useLocation();
   const userRoles = useSelector(getUserRoles);
 
-  const isAccessGranted = useMemo(() => {
+  const hasRequiredRoles = useMemo(() => {
     if (!roles) {
       return true;
     }
-    return roles.some((requiredRole) => userRoles?.includes(requiredRole));
+
+    return roles.some((requiredRole) => {
+      const hasRole = userRoles?.includes(requiredRole);
+      return hasRole;
+    });
   }, [roles, userRoles]);
 
-  //better to hold first isAuth it will redirect to main page after logout otherwise will be redirection to forbidden page
-  if (!isAuth) {
-    return <Navigate to={RoutePath.main} state={{ from: location }} replace />;
+  if (!auth) {
+    return <Navigate to={getRouteMain()} state={{ from: location }} replace />;
   }
 
-  if (!isAccessGranted) {
+  if (!hasRequiredRoles) {
     return (
-      <Navigate to={RoutePath.forbidden} state={{ from: location }} replace />
+      <Navigate to={getRouteForbidden()} state={{ from: location }} replace />
     );
   }
 

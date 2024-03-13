@@ -1,7 +1,7 @@
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ArticleView } from "../../model/consts/consts";
+import { ArticleView } from "../../../entities/Article/model/consts/consts";
 
 import { ArticleViewSelector } from "./ArticleViewSelector";
 

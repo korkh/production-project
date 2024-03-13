@@ -8,7 +8,7 @@ import {
   isUserManager,
   userActions,
 } from "@/entities/User";
-import { RoutePath } from "@/shared/const/router";
+import { getRouteAdmin, getRouteProfile } from "@/shared/const/router";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { Avatar } from "@/shared/ui/Avatar";
 import { Dropdown } from "@/shared/ui/Popups";
@@ -43,11 +43,11 @@ const AvatarDropdown = memo(function AvatarDropDown(
       className={classNames("", [className], {})}
       items={[
         ...(isAdminPanelAvailable
-          ? [{ content: t("Admin panel"), href: RoutePath.admin_panel }]
+          ? [{ content: t("Admin panel"), href: getRouteAdmin() }]
           : []),
         {
           content: t("Profile"),
-          href: RoutePath.profile + authData.id,
+          href: getRouteProfile(authData.id),
         },
         {
           content: t("Sign out"),

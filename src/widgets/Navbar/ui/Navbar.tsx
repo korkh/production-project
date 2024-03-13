@@ -6,7 +6,6 @@ import { getUserAuthData } from "@/entities/User";
 import { LoginModal } from "@/features/AuthByUsername";
 import { AvatarDropdown } from "@/features/avatarDropDown";
 import { NotificationButton } from "@/features/notificationButton";
-import { RoutePath } from "@/shared/const/router";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { AppLink, AppLinkTheme } from "@/shared/ui/AppLink";
 import { Button, ButtonTheme } from "@/shared/ui/Button";
@@ -14,6 +13,7 @@ import { HStack } from "@/shared/ui/Stack";
 import { Text, TextTheme } from "@/shared/ui/Text";
 
 import cls from "./Navbar.module.scss";
+import { getRouteArticleCreate } from "@/shared/const/router";
 
 interface NavbarProps {
   className?: string;
@@ -41,7 +41,7 @@ export const Navbar = memo(function Navbar({ className }: NavbarProps) {
           theme={TextTheme.INVERTED}
         />
         <AppLink
-          to={RoutePath.article_create}
+          to={getRouteArticleCreate()}
           theme={AppLinkTheme.SECONDARY}
           className={cls.createBtn}
         >
