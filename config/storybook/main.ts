@@ -4,10 +4,16 @@ const config: StorybookConfig = {
   stories: ["../../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
+    {
+      name: "@storybook/addon-essentials",
+      options: {
+        backgrounds: false,
+      },
+    },
     "@storybook/addon-interactions",
     "@storybook/addon-docs",
     "storybook-addon-mock",
+    "storybook-addon-themes",
   ],
   framework: {
     name: "@storybook/react-webpack5",
