@@ -1,12 +1,15 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { promisify } = require("util");
-const { readdir, writeFile } = require("fs");
-const { join: joinPath, relative } = require("path");
+import { promisify } from "util";
+import { readdir, writeFile } from "fs";
+
+import { fileURLToPath } from "url";
+import { join as joinPath, dirname, relative } from "path";
 
 const asyncReaddir = promisify(readdir);
 const writeFileAsync = promisify(writeFile);
 
-// eslint-disable-next-line no-undef
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const lokiDir = joinPath(__dirname, "..", ".loki");
 const actualDir = joinPath(lokiDir, "current");
 const expectedDir = joinPath(lokiDir, "reference");

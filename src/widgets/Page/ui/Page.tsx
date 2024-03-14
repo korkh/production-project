@@ -12,7 +12,6 @@ import { useThrottle } from "@/shared/lib/hooks/useTrottle/useThrottle";
 
 import cls from "./Page.module.scss";
 
-
 interface PageProps {
   className?: string;
   children: ReactNode;
