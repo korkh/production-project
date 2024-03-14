@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { bindActionCreators, createSlice } from "@reduxjs/toolkit";
 import { SliceCaseReducers, CreateSliceOptions } from "@reduxjs/toolkit/dist";
 import { useDispatch } from "react-redux";
@@ -13,9 +14,10 @@ export function buildSlice<
   const useActions = (): typeof slice.actions => {
     const dispatch = useDispatch();
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    return useMemo(() => bindActionCreators(slice.actions, dispatch),
+    return useMemo(
+      // @ts-ignore
+      () => bindActionCreators(slice.actions, dispatch),
       [dispatch]
     );
   };
