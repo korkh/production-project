@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Theme } from "@/app/providers/ThemeProvider";
-import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import {[FTName]} from "./[FTName]";
+import { Theme } from "app/providers/ThemeProvider";
+import StoreDecorator from "shared/config/storybook/StoreDecorator/StoreDecorator";
+import ThemeDecorator from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { AppImage } from "./AppImage";
 
 const meta = {
-  title: "shared/<FTName>",
-  component: <FTName>,
+  title: "shared/AppImage",
+  component: AppImage,
   parameters: {
     layout: "fullscreen",
   },
@@ -15,14 +15,12 @@ const meta = {
   argTypes: {},
   decorators: [
     (Story) => (
-      <StoreDecorator
-        state={{}}
-      >
+      <StoreDecorator state={{}}>
         <Story />
       </StoreDecorator>
     ),
   ],
-} satisfies Meta<typeof <FTName>>;
+} satisfies Meta<typeof AppImage>;
 
 export default meta;
 
