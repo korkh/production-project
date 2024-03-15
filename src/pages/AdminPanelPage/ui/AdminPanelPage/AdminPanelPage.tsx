@@ -14,7 +14,10 @@ const AdminPanelPage = (props: AdminPanelPageProps) => {
   const { t } = useTranslation("admin");
 
   return (
-    <Page className={classNames(cls.adminPanelPage, [className], {})}>
+    <Page
+      data-testid="AdminPanelPage"
+      className={classNames(cls.adminPanelPage, [className], {})}
+    >
       {t("Admin Page")}
     </Page>
   );

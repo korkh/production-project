@@ -14,7 +14,10 @@ const ForbiddenPage = (props: ForbiddenPageProps) => {
   const { t } = useTranslation("translation");
 
   return (
-    <Page className={classNames(cls.forbiddenPage, [className], {})}>
+    <Page
+      data-testid="ForbiddenPage"
+      className={classNames(cls.forbiddenPage, [className], {})}
+    >
       {t("You have no access to the following source")}!
     </Page>
   );
