@@ -1,3 +1,4 @@
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import { action } from "@storybook/addon-actions";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -7,11 +8,18 @@ const meta = {
   title: "shared/Tabs",
   component: Tabs,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Tabs>;
 
 export default meta;

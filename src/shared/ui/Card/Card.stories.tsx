@@ -1,3 +1,4 @@
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Text } from "../Text/Text";
@@ -8,11 +9,18 @@ const meta = {
   title: "shared/Card",
   component: Card,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: { children: ">" },
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Card>;
 
 export default meta;

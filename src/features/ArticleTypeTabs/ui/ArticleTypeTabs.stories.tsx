@@ -7,6 +7,7 @@ import { ArticleTypeTabs } from "./ArticleTypeTabs";
 
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/shared/const/Theme";
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const meta = {
   title: "entities/Article/ArticleTypeTabs",
@@ -20,6 +21,13 @@ const meta = {
     onChangeType: action("onChangeType"),
   },
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof ArticleTypeTabs>;
 
 export default meta;

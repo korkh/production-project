@@ -4,12 +4,13 @@ import { Input } from "./Input";
 
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/shared/const/Theme";
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const meta = {
   title: "shared/Input",
   component: Input,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: { placeholder: "Type text", value: "123123" },
@@ -20,6 +21,13 @@ const meta = {
     autofocus: { control: "boolean" },
     className: { control: "text" },
   },
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Input>;
 
 export default meta;

@@ -135,7 +135,8 @@
     "react-i18next": "^13.5.0",
     "react-redux": "^7.2.9",
     "react-router-dom": "^6.2.1",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "whatwg-fetch": "^3.6.20"
   },
   "loki": {
     "configurations": {

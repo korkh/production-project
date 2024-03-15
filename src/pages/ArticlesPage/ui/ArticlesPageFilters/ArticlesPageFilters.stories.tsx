@@ -11,11 +11,18 @@ const meta = {
   title: "pages/ArticlesPage/ArticlesPageFilters",
   component: ArticlesPageFilters,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof ArticlesPageFilters>;
 
 export default meta;

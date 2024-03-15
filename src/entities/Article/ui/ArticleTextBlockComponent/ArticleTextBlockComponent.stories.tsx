@@ -1,3 +1,4 @@
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { ArticleBlockType } from "../../model/consts/consts";
@@ -13,6 +14,13 @@ const meta = {
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof ArticleTextBlockComponent>;
 
 export default meta;

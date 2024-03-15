@@ -4,6 +4,7 @@ import { CountrySelect } from "./CountrySelect";
 
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/shared/const/Theme";
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const meta = {
   title: "entities/Country/CountrySelect",
@@ -14,6 +15,13 @@ const meta = {
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof CountrySelect>;
 
 export default meta;

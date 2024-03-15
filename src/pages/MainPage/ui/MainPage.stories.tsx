@@ -11,7 +11,7 @@ const meta = {
   title: "pages/MainPage",
   component: MainPage,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},

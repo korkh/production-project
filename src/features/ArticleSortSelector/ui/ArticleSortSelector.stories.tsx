@@ -7,6 +7,7 @@ import { ArticleSortSelector } from "./ArticleSortSelector";
 
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/shared/const/Theme";
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const meta = {
   title: "entities/Article/ArticleSortSelector",
@@ -22,6 +23,13 @@ const meta = {
     onChangeSort: () => action("onChangeSort"),
   },
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof ArticleSortSelector>;
 
 export default meta;

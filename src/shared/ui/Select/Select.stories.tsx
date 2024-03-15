@@ -4,16 +4,24 @@ import { Select } from "./Select";
 
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/shared/const/Theme";
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const meta = {
   title: "shared/Select",
   component: Select,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Select>;
 
 export default meta;

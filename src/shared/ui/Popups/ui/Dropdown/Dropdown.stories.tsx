@@ -23,6 +23,13 @@ const meta = {
     trigger: <Button>Open</Button>,
   },
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Dropdown>;
 
 export default meta;

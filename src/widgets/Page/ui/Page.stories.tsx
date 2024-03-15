@@ -13,6 +13,13 @@ const meta = {
   tags: ["autodocs"],
   args: { children: ">" },
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Page>;
 
 export default meta;

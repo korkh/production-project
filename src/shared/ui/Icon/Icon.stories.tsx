@@ -5,6 +5,7 @@ import { Icon } from "./Icon";
 import ProfileIcon from "@/shared/assets/icons/profile-20-20.svg";
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/shared/const/Theme";
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const meta = {
   title: "shared/Icon",
@@ -15,6 +16,13 @@ const meta = {
   tags: ["autodocs"],
   args: { Svg: ProfileIcon },
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Icon>;
 
 export default meta;

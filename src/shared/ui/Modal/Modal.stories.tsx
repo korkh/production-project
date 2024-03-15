@@ -4,6 +4,7 @@ import { Modal } from "./Modal";
 
 import ThemeDecorator from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/shared/const/Theme";
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const meta = {
   title: "shared/Modal",
@@ -14,6 +15,13 @@ const meta = {
   tags: ["autodocs"],
   args: { isOpen: true },
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Modal>;
 
 export default meta;

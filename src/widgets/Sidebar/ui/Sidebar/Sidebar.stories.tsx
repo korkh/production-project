@@ -10,11 +10,18 @@ const meta = {
   title: "widgets/Sidebar/Sidebar",
   component: Sidebar,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Sidebar>;
 
 export default meta;

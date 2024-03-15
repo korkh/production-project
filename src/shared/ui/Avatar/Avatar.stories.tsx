@@ -1,3 +1,4 @@
+import StoreDecorator from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Avatar } from "./Avatar";
@@ -7,11 +8,18 @@ const meta = {
   title: "shared/Avatar",
   component: Avatar,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
   tags: ["autodocs"],
   args: {},
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <StoreDecorator state={{}}>
+        <Story />
+      </StoreDecorator>
+    ),
+  ],
 } satisfies Meta<typeof Avatar>;
 
 export default meta;
