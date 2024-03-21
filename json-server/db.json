@@ -42,7 +42,9 @@
       "views": 345,
       "createdAt": "14.01.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -112,7 +114,9 @@
       "views": 230,
       "createdAt": "21.05.2020",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -151,7 +155,9 @@
       "views": 420,
       "createdAt": "10.12.2019",
       "userId": "3",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -189,7 +195,9 @@
       "views": 150,
       "createdAt": "05.07.2023",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -224,7 +232,9 @@
       "views": 550,
       "createdAt": "18.09.2022",
       "userId": "2",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -260,7 +270,9 @@
       "views": 550,
       "createdAt": "07.12.2022",
       "userId": "3",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -295,7 +307,9 @@
       "views": 430,
       "createdAt": "15.09.2023",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -324,7 +338,9 @@
       "views": 720,
       "createdAt": "29.11.2023",
       "userId": "2",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -359,7 +375,9 @@
       "views": 310,
       "createdAt": "02.08.2023",
       "userId": "3",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -388,7 +406,9 @@
       "views": 420,
       "createdAt": "18.04.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -416,7 +436,9 @@
       "views": 380,
       "createdAt": "10.10.2022",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -444,7 +466,9 @@
       "views": 610,
       "createdAt": "05.06.2024",
       "userId": "3",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -472,7 +496,9 @@
       "views": 480,
       "createdAt": "12.03.2023",
       "userId": "1",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -500,7 +526,9 @@
       "views": 380,
       "createdAt": "25.08.2024",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -528,7 +556,9 @@
       "views": 520,
       "createdAt": "17.11.2023",
       "userId": "3",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -556,7 +586,9 @@
       "views": 610,
       "createdAt": "29.07.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -584,7 +616,9 @@
       "views": 420,
       "createdAt": "14.02.2024",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -612,7 +646,9 @@
       "views": 550,
       "createdAt": "07.06.2023",
       "userId": "3",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -640,7 +676,9 @@
       "views": 510,
       "createdAt": "19.09.2023",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -668,7 +706,9 @@
       "views": 440,
       "createdAt": "23.04.2024",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -696,7 +736,9 @@
       "views": 590,
       "createdAt": "11.12.2023",
       "userId": "3",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -724,7 +766,9 @@
       "views": 450,
       "createdAt": "05.10.2024",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -752,7 +796,9 @@
       "views": 580,
       "createdAt": "28.02.2023",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -852,22 +898,37 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://th.bing.com/th/id/R.f7eda381cc37bb2ca8128da457efac66?rik=qUMeA6GL4Yw7bg&riu=http%3a%2f%2faux4.iconspalace.com%2fuploads%2f9341264991688564557.png&ehk=IurLG1gXxD2koP6dXLbUg0RIuf%2fgs8eU09MC%2bzH4mw0%3d&risl=&pid=ImgRaw&r=0"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://th.bing.com/th/id/OIP.2dkkfi3yqJkXIhgG-J5wnwHaHa?rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
     }
   ],
   "profile": [
@@ -892,6 +953,28 @@
       "city": "Oslo",
       "username": "user",
       "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "3",
+      "firstName": "Tor",
+      "lastName": "Borinor",
+      "age": 44,
+      "currency": "NOK",
+      "country": "Norway",
+      "city": "Oslo",
+      "username": "manager",
+      "avatar": "https://th.bing.com/th/id/OIP.2dkkfi3yqJkXIhgG-J5wnwHaHa?rs=1&pid=ImgDetMain"
+    },
+    {
+      "id": "4",
+      "firstName": "test",
+      "lastName": "user",
+      "age": 465,
+      "currency": "EUR",
+      "country": "Poland",
+      "city": "TestCity",
+      "username": "testuser",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
   "article-ratings": [
@@ -915,13 +998,6 @@
       "feedBack": "Good article",
       "userId": "2",
       "articleId": "2"
-    },
-    {
-      "userId": "1",
-      "articleId": "27",
-      "rate": 3,
-      "feedback": "asdasd",
-      "id": "37DI7i5"
     },
     {
       "userId": "1",

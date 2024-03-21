@@ -47,6 +47,7 @@ export const ArticleListItem = memo(function ArticleListItem(
 
     return (
       <div
+        data-testid="ArticleListItem"
         className={classNames(cls.ArticleListItem, [className, cls[view]], {})}
       >
         <Card className={cls.card}>
@@ -82,6 +83,7 @@ export const ArticleListItem = memo(function ArticleListItem(
 
   return (
     <AppLink
+      data-testid="ArticleListItem"
       target={target}
       to={getRouteArticleDetails(article.id)}
       className={classNames(cls.ArticleListItem, [className, cls[view]], {})}

@@ -15,6 +15,7 @@ const CommentCardLoader = ({ className }: Props) => {
       gap="8"
       max
       className={classNames(cls.commentCard, [className, cls.loading], {})}
+      data-testid="CommentCard.Loading"
     >
       <HStack align="center">
         <Skeleton width={30} height={30} border="50%" />

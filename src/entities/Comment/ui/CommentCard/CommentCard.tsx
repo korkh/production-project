@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 
 import { IComment } from "../../model/types/Comment";
 import { classNames } from "@/shared/lib/classNames/classNames";
@@ -20,12 +20,21 @@ interface CommentCardProps {
 export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
   const { className, comment, isLoading } = props;
 
+  const [commentLoaded, setCommentLoaded] = useState(false); // State to track if articles are loaded
+
+  // Effect to run when articles are loaded
+  useEffect(() => {
+    if (comment) {
+      setCommentLoaded(true);
+    }
+  }, [comment]);
+
   // Loading skeleton
   if (isLoading) {
     return <CommentCardLoader />;
   }
 
-  if (!comment) {
+  if (!comment || !commentLoaded) {
     return null;
   }
 
@@ -34,6 +43,7 @@ export const CommentCard = memo(function CommentCard(props: CommentCardProps) {
       gap="8"
       max
       className={classNames(cls.commentCard, [className], {})}
+      data-testid="CommentCard.Content"
     >
       <AppLink to={getRouteProfile(comment?.user.id)} className={cls.header}>
         {comment?.user.avatar ? (

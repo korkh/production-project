@@ -1,11 +1,12 @@
-const fs = require("fs");
-const jsonServer = require("json-server");
-const path = require("path");
+import fs from "fs";
+import jsonServer from "json-server";
+import { fileURLToPath } from "url";
+import { join as joinPath, dirname } from "path";
 
 const server = jsonServer.create();
-
-// eslint-disable-next-line no-undef
-const router = jsonServer.router(path.resolve(__dirname, "db.json"));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const router = jsonServer.router(joinPath(__dirname, "db.json"));
 
 server.use(jsonServer.defaults({}));
 server.use(jsonServer.bodyParser);
@@ -24,7 +25,7 @@ server.post("/login", (req, res) => {
     const { username, password } = req.body;
     const db = JSON.parse(
       // eslint-disable-next-line no-undef
-      fs.readFileSync(path.resolve(__dirname, "db.json"), "UTF-8")
+      fs.readFileSync(joinPath(__dirname, "db.json"), "UTF-8")
     );
     const { users = [] } = db;
 

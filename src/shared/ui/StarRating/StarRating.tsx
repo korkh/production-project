@@ -7,7 +7,6 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 
 import cls from "./StarRating.module.scss";
 
-
 interface StarRatingProps {
   className?: string;
   onSelect?: (starsCount: number) => void;
@@ -48,7 +47,10 @@ export const StarRating = memo(function StarRating(props: StarRatingProps) {
   };
 
   return (
-    <div className={classNames(cls.StarRating, [className], {})}>
+    <div
+      className={classNames(cls.StarRating, [className], {})}
+      data-testid="StarRating"
+    >
       {stars.map((starNumber) => (
         <Icon
           className={classNames(
@@ -66,6 +68,8 @@ export const StarRating = memo(function StarRating(props: StarRatingProps) {
           onMouseLeave={onLeave}
           onMouseEnter={onHover(starNumber)}
           onClick={onClick(starNumber)}
+          data-testid={`StarRating.${starNumber}`}
+          data-selected={currentStarsCount >= starNumber}
         />
       ))}
     </div>

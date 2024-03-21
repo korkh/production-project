@@ -1,28 +1,22 @@
-import { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
+import { memo, useCallback } from "react";
 import { useSelector } from "react-redux";
-
-import {
-  getAddCommentFormError,
-  getAddCommentFormText,
-} from "../model/selectors/addCommentFormSelectors";
-import {
-  addCommentFormActions,
-  addCommentFormReducer,
-} from "../model/slice/addCommentFormSlice";
-
 import { classNames } from "@/shared/lib/classNames/classNames";
+import { Input } from "@/shared/ui/Input";
+import { Button, ButtonTheme } from "@/shared/ui/Button";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import {
   DynamicModuleLoader,
   ReducersList,
 } from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { Button, ButtonTheme } from "@/shared/ui/Button";
-import { Input } from "@/shared/ui/Input";
 import { HStack } from "@/shared/ui/Stack";
 
 import cls from "./AddCommentForm.module.scss";
-
+import {
+  addCommentFormActions,
+  addCommentFormReducer,
+} from "../model/slice/addCommentFormSlice";
+import { getAddCommentFormText } from "../model/selectors/addCommentFormSelectors";
 
 export interface AddCommentFormProps {
   className?: string;
@@ -39,7 +33,6 @@ const AddCommentForm = memo(function AddCommentForm(
   const { className, onSendComment } = props;
   const { t } = useTranslation("article");
   const text = useSelector(getAddCommentFormText);
-  const error = useSelector(getAddCommentFormError);
   const dispatch = useAppDispatch();
 
   const onCommentTextChange = useCallback(
@@ -57,18 +50,23 @@ const AddCommentForm = memo(function AddCommentForm(
   return (
     <DynamicModuleLoader reducers={reducers}>
       <HStack
+        data-testid="AddCommentForm"
         justify="between"
         max
-        className={classNames(cls.addCommentForm, [className], {})}
+        className={classNames(cls.AddCommentForm, [className], {})}
       >
-        {error && <span className={cls.error}>{error}</span>}
         <Input
           className={cls.input}
           placeholder={t("New comment")}
           value={text}
+          data-testid="AddCommentForm.Input"
           onChange={onCommentTextChange}
         />
-        <Button theme={ButtonTheme.OUTLINE} onClick={onSendHandler}>
+        <Button
+          data-testid="AddCommentForm.Button"
+          theme={ButtonTheme.OUTLINE}
+          onClick={onSendHandler}
+        >
           {t("Send")}
         </Button>
       </HStack>

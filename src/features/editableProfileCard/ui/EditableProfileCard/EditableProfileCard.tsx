@@ -142,6 +142,7 @@ export const EditableProfileCard = memo(function EditableProfileCard(
           ))}
         <ProfileCard
           data={formData}
+          data-testid="ProfileCard"
           isLoading={isLoading}
           error={error}
           readonly={readonly}

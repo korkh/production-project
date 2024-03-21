@@ -44,6 +44,7 @@ export interface FlexProps {
   max?: boolean;
   width?: (string | number) | "fit-content";
   component?: keyof HTMLElementTagNameMap;
+  "data-testid"?: string;
 }
 
 export const Flex = (props: FlexProps) => {
@@ -57,6 +58,7 @@ export const Flex = (props: FlexProps) => {
     max,
     width,
     component = "div",
+    "data-testid": testId,
   } = props;
 
   const ComponentWrapper = component;
@@ -75,6 +77,7 @@ export const Flex = (props: FlexProps) => {
 
   return (
     <ComponentWrapper
+      data-testid={testId}
       style={{ width }}
       className={classNames(cls.flex, classes, mods)}
     >

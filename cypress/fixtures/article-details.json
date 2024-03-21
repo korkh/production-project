@@ -1,0 +1,39 @@
+{
+  "id": "9",
+  "title": "The Future of Space Exploration",
+  "subtitle": "Exploring new frontiers beyond Earth",
+  "img": "https://th.bing.com/th/id/R.e5504daec5e23540113bfde6b1d4d0ff?rik=FjX3yf2CfPRTZg&riu=http%3a%2f%2fwww.spaceopedia.com%2fwp-content%2fuploads%2f2017%2f07%2fFuture-of-Exploration.jpg&ehk=IuZ3x6mgABbXzsGuDCPmaCNHa5YDG%2b%2fc30P%2b8tP3ZtM%3d&risl=&pid=ImgRaw&r=0",
+  "views": 610,
+  "createdAt": "05.06.2024",
+  "userId": "3",
+  "type": [
+    "SCIENCE"
+  ],
+  "blocks": [
+    {
+      "id": "1",
+      "type": "TEXT",
+      "title": "The Age of Space Exploration",
+      "paragraphs": [
+        "Since the dawn of the space age, humanity has made remarkable strides in exploring the cosmos, from landing on the moon to sending probes to distant planets. With advances in space technology and international collaboration, the future of space exploration holds exciting possibilities for discovering new worlds, understanding the universe, and expanding human presence beyond Earth."
+      ]
+    },
+    {
+      "id": "2",
+      "type": "TEXT",
+      "title": "Key Technologies and Missions",
+      "paragraphs": [
+        "Space exploration relies on a variety of technologies, including rockets, satellites, rovers, and space telescopes. Future missions aim to explore Mars, establish lunar colonies, mine asteroids, and search for signs of extraterrestrial life. These endeavors hold promise for advancing scientific knowledge, inspiring future generations, and shaping the destiny of humanity."
+      ]
+    }
+  ],
+  "user": {
+    "id": "3",
+    "username": "manager",
+    "password": "123",
+    "roles": [
+      "MANAGER"
+    ],
+    "avatar": "https://th.bing.com/th/id/OIP.2dkkfi3yqJkXIhgG-J5wnwHaHa?rs=1&pid=ImgDetMain"
+  }
+}

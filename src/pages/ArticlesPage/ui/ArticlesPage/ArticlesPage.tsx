@@ -16,7 +16,6 @@ import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { Page } from "@/widgets/Page";
 
-
 import cls from "./ArticlesPage.module.scss";
 
 interface ArticlesPageProps {
@@ -27,7 +26,7 @@ const reducers: ReducersList = {
   articlesPage: articlesPageReducer,
 };
 
-const ArticlesPage = (props: ArticlesPageProps) => {
+const ArticlesPage = memo(function ArticlesPage(props: ArticlesPageProps) {
   const { className } = props;
   const dispatch = useAppDispatch();
   const [searchParams] = useSearchParams();
@@ -43,6 +42,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
+        data-testid="ArticlesPage"
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.ArticlesPage, [className], {})}
       >
@@ -51,6 +51,6 @@ const ArticlesPage = (props: ArticlesPageProps) => {
       </Page>
     </DynamicModuleLoader>
   );
-};
+});
 
-export default memo(ArticlesPage);
+export default ArticlesPage;

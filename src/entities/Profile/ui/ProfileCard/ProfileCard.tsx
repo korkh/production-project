@@ -52,7 +52,7 @@ export function ProfileCard(props: ProfileCardProps) {
       <HStack
         justify="center"
         max
-        className={classNames(cls.profileCard, [className], {
+        className={classNames(cls.ProfileCard, [className], {
           [cls.loading]: true,
         })}
       >

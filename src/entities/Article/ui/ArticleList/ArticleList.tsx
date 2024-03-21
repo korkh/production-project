@@ -36,7 +36,7 @@ export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
   } = props;
   const { t } = useTranslation("article");
 
-  if (!isLoading && !articles.length) {
+  if ((!isLoading && !articles.length)) {
     return (
       <div className={classNames(cls.ArticleList, [className, cls[view]], {})}>
         <Text size={TextSize.L} title={t("Articles not found")} />
@@ -45,7 +45,10 @@ export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
   }
 
   return (
-    <div className={classNames(cls.ArticleList, [className, cls[view]], {})}>
+    <div
+      className={classNames(cls.ArticleList, [className, cls[view]], {})}
+      data-testid="ArticleList"
+    >
       {articles.map((item) => (
         <ArticleListItem
           article={item}

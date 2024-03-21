@@ -1,0 +1,150 @@
+[
+  {
+    "id": "6",
+    "title": "The Role of Blockchain in Supply Chain Management",
+    "subtitle": "Harnessing blockchain technology for enhanced traceability and transparency",
+    "img": "https://th.bing.com/th/id/R.0edaa517e739f7893f9d1be9c1269ac5?rik=3sJopa1YTvuNIQ&pid=ImgRaw&r=0",
+    "views": 310,
+    "createdAt": "02.08.2023",
+    "userId": "3",
+    "type": ["IT"],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "title": "Introduction to Blockchain",
+        "paragraphs": [
+          "Blockchain is a distributed ledger technology that enables secure and transparent recording of transactions across multiple parties in a decentralized network. It offers immutable records, cryptographic security, and consensus mechanisms, making it ideal for applications requiring trust and transparency.",
+          "In the context of supply chain management, blockchain can revolutionize the way goods are tracked, verified, and authenticated throughout the entire supply chain, from production to distribution."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "Benefits of Blockchain in Supply Chain",
+        "paragraphs": [
+          "Blockchain technology can address various challenges in supply chain management, including counterfeit products, inefficient processes, and lack of transparency. By providing a tamper-proof record of transactions, blockchain enhances traceability, reduces fraud, and improves overall efficiency."
+        ]
+      }
+    ],
+    "user": {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
+      "avatar": "https://th.bing.com/th/id/OIP.2dkkfi3yqJkXIhgG-J5wnwHaHa?rs=1&pid=ImgDetMain"
+    }
+  },
+  {
+    "id": "9",
+    "title": "The Future of Space Exploration",
+    "subtitle": "Exploring new frontiers beyond Earth",
+    "img": "https://th.bing.com/th/id/R.e5504daec5e23540113bfde6b1d4d0ff?rik=FjX3yf2CfPRTZg&riu=http%3a%2f%2fwww.spaceopedia.com%2fwp-content%2fuploads%2f2017%2f07%2fFuture-of-Exploration.jpg&ehk=IuZ3x6mgABbXzsGuDCPmaCNHa5YDG%2b%2fc30P%2b8tP3ZtM%3d&risl=&pid=ImgRaw&r=0",
+    "views": 610,
+    "createdAt": "05.06.2024",
+    "userId": "3",
+    "type": ["SCIENCE"],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "title": "The Age of Space Exploration",
+        "paragraphs": [
+          "Since the dawn of the space age, humanity has made remarkable strides in exploring the cosmos, from landing on the moon to sending probes to distant planets. With advances in space technology and international collaboration, the future of space exploration holds exciting possibilities for discovering new worlds, understanding the universe, and expanding human presence beyond Earth."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "Key Technologies and Missions",
+        "paragraphs": [
+          "Space exploration relies on a variety of technologies, including rockets, satellites, rovers, and space telescopes. Future missions aim to explore Mars, establish lunar colonies, mine asteroids, and search for signs of extraterrestrial life. These endeavors hold promise for advancing scientific knowledge, inspiring future generations, and shaping the destiny of humanity."
+        ]
+      }
+    ],
+    "user": {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
+      "avatar": "https://th.bing.com/th/id/OIP.2dkkfi3yqJkXIhgG-J5wnwHaHa?rs=1&pid=ImgDetMain"
+    }
+  },
+  {
+    "id": "4",
+    "title": "The Future of Quantum Computing",
+    "subtitle": "Exploring the potential of quantum computing",
+    "img": "https://th.bing.com/th/id/R.355dd248c0d438feb9d627f0d58fcc29?rik=G%2fdMG7WaLtguEA&pid=ImgRaw&r=0",
+    "views": 150,
+    "createdAt": "05.07.2023",
+    "userId": "1",
+    "type": ["SCIENCE"],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "title": "Understanding Quantum Computing",
+        "paragraphs": [
+          "Quantum computing is a cutting-edge field that leverages the principles of quantum mechanics to perform computations at an unprecedented speed and scale.",
+          "Unlike classical computers, which use bits to represent information as either 0 or 1, quantum computers use qubits, which can exist in multiple states simultaneously thanks to quantum superposition and entanglement."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "CODE",
+        "code": "quantum_circuit.measure(qubit, classical_bit)",
+        "language": "qiskit"
+      },
+      {
+        "id": "3",
+        "type": "TEXT",
+        "title": "Challenges and Opportunities",
+        "paragraphs": [
+          "While quantum computing holds immense promise for solving complex problems in areas like cryptography, optimization, and drug discovery, it also poses significant challenges related to error correction, scalability, and decoherence."
+        ]
+      }
+    ],
+    "user": {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "roles": ["ADMIN"],
+      "avatar": "https://th.bing.com/th/id/R.f7eda381cc37bb2ca8128da457efac66?rik=qUMeA6GL4Yw7bg&riu=http%3a%2f%2faux4.iconspalace.com%2fuploads%2f9341264991688564557.png&ehk=IurLG1gXxD2koP6dXLbUg0RIuf%2fgs8eU09MC%2bzH4mw0%3d&risl=&pid=ImgRaw&r=0"
+    }
+  },
+  {
+    "id": "19",
+    "title": "The Impact of Biotechnology on Agriculture",
+    "subtitle": "Enhancing crop productivity and sustainability with biotech solutions",
+    "img": "https://4-hontario.ca/wp-content/uploads/2020/09/Intro-to-Agricultural-Biotechnology_Main-Image-2048x1364.jpeg",
+    "views": 450,
+    "createdAt": "05.10.2024",
+    "userId": "1",
+    "type": ["SCIENCE"],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "title": "Introduction to Agricultural Biotechnology",
+        "paragraphs": [
+          "Agricultural biotechnology encompasses genetic engineering, molecular breeding, and other biotech tools to improve crop traits, enhance resilience to pests and diseases, and increase agricultural productivity. Biotech solutions offer sustainable and environmentally friendly alternatives to conventional farming practices, contributing to food security and rural development."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "Benefits of Biotechnology in Agriculture",
+        "paragraphs": [
+          "Biotechnology innovations have led to the development of genetically modified (GM) crops, biopesticides, and precision farming techniques, among others. These technologies enable farmers to optimize resource use, reduce environmental impact, and produce higher yields, ensuring a more resilient and prosperous agricultural sector."
+        ]
+      }
+    ],
+    "user": {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "roles": ["ADMIN"],
+      "avatar": "https://th.bing.com/th/id/R.f7eda381cc37bb2ca8128da457efac66?rik=qUMeA6GL4Yw7bg&riu=http%3a%2f%2faux4.iconspalace.com%2fuploads%2f9341264991688564557.png&ehk=IurLG1gXxD2koP6dXLbUg0RIuf%2fgs8eU09MC%2bzH4mw0%3d&risl=&pid=ImgRaw&r=0"
+    }
+  }
+]
