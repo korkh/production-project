@@ -1,3 +1,5 @@
+export {};
+
 let profileId = "";
 
 describe("User opens profile page", () => {

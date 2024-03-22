@@ -1,3 +1,4 @@
+export {};
 let currentArticleId = "";
 // let commentId = "";
 describe("Пользователь заходит на страницу статьи", () => {
