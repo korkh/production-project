@@ -1,5 +1,4 @@
-
-import { memo, PropsWithChildren, ReactNode } from "react";
+import { memo, PropsWithChildren, ReactNode, useCallback } from "react";
 
 import DarkIcon from "@/shared/assets/icons/theme-dark.svg";
 import GreenIcon from "@/shared/assets/icons/theme-green.svg";
@@ -8,6 +7,8 @@ import { Theme } from "@/shared/const/Theme";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { useTheme } from "@/shared/lib/hooks/useTheme/useTheme";
 import { Button, ButtonTheme } from "@/shared/ui/Button";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { saveJsonSettings } from "@/entities/User";
 
 interface ThemeSwitcherProps {
   className?: string;
@@ -30,11 +31,20 @@ export const ThemeSwitcher = memo(function ThemeSwitcher(
 ) {
   const { className, ...otherProps } = props;
   const { theme, toggleTheme } = useTheme();
+
+  const dispatch = useAppDispatch();
+
+  const onToggleHandler = useCallback(() => {
+    toggleTheme((newTheme) => {
+      dispatch(saveJsonSettings({ theme: newTheme }));
+    });
+  }, [dispatch, toggleTheme]);
+
   return (
     <Button
       theme={ButtonTheme.CLEAR}
       className={classNames("", [className], {})}
-      onClick={toggleTheme}
+      onClick={onToggleHandler}
       {...otherProps}
     >
       {iconType[theme]}

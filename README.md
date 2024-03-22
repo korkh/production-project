@@ -141,6 +141,35 @@ For asynchronous connection of reducers (to avoid pulling them into the main bun
 
 ---
 
+### Feature-flags handling
+
+Using feature flags is only allowed through the toggleFeatures helper function.
+
+It takes an object with the following options:
+
+```
+{
+   name: the name of the feature flag,
+   on: function to be executed after the feature is turned on,
+   off: function to be executed after the feature is turned off
+}
+
+```
+
+For automatic feature removal, use the removeFeature.ts script, which takes 2 arguments:
+
+1. The name of the feature flag to be removed
+2. The state (on\off)
+
+Here is example:
+
+```
+ts-node .\scripts\refactoring\removeFeature.ts isCounterEnabled off
+
+```
+
+---
+
 ## Entities
 
 - [Article](/src/entities/Article/README.md)

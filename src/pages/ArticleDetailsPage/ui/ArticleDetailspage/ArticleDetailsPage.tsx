@@ -37,6 +37,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   //usage of feature flags
   const isArticleRatingEnabled = getFeatureFlag("isArticleRatingEnabled");
   const isCounterEnabled = getFeatureFlag("isCounterEnabled");
+
   if (!id) {
     return null;
   }
