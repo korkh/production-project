@@ -1,24 +1,16 @@
 .BIG {
-  .views {
-    margin-left: auto;
-  }
+  .views { margin-left: auto; }
 
   .header {
     display: flex;
     align-items: center;
   }
 
-  .username {
-    margin-left: 8px;
-  }
+  .username { margin-left: 8px; }
 
-  .date {
-    margin-left: auto;
-  }
+  .date { margin-left: auto; }
 
-  .title {
-    margin-top: 8px;
-  }
+  .title { margin-top: 8px; }
 
   .img {
     width: 100%;
@@ -55,9 +47,7 @@
     opacity: 0.8;
     transform: scale(1.01);
 
-    .date {
-      display: block;
-    }
+    .date { display: block; }
   }
 
   .imageWrapper {
@@ -90,9 +80,7 @@
     margin-right: 8px;
   }
 
-  .title {
-    margin-top: 8px;
-  }
+  .title { margin-top: 8px; }
 
   .title p {
     width: 200px;

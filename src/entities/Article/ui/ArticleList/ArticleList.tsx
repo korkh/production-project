@@ -7,7 +7,7 @@ import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { ArticleListItemSkeleton } from "../ArticleListItem/ArticleListItemSkeleton";
 
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Text, TextSize } from "@/shared/ui/Text";
+import { Text, TextSize } from "@/shared/ui/deprecated/Text";
 
 import cls from "./ArticleList.module.scss";
 
@@ -36,7 +36,7 @@ export const ArticleList = memo(function ArticleList(props: ArticleListProps) {
   } = props;
   const { t } = useTranslation("article");
 
-  if ((!isLoading && !articles.length)) {
+  if (!isLoading && !articles.length) {
     return (
       <div className={classNames(cls.ArticleList, [className, cls[view]], {})}>
         <Text size={TextSize.L} title={t("Articles not found")} />

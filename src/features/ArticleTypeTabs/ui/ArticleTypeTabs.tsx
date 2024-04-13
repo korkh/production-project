@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { ArticleType } from "../../../entities/Article/model/consts/consts";
 
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Tabs, TabItem } from "@/shared/ui/Tabs";
+import { Tabs, TabItem } from "@/shared/ui/deprecated/Tabs";
 
 interface ArticleTypeTabsProps {
   className?: string;

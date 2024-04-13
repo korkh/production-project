@@ -17,6 +17,7 @@ import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitial
 import { Page } from "@/widgets/Page";
 
 import cls from "./ArticlesPage.module.scss";
+import { ArticlePageGreeting } from "@/features/ArticlePageGreeting";
 
 interface ArticlesPageProps {
   className?: string;
@@ -48,6 +49,7 @@ const ArticlesPage = memo(function ArticlesPage(props: ArticlesPageProps) {
       >
         <PageFilters />
         <ArticleInfiniteList className={cls.list} />
+        <ArticlePageGreeting />
       </Page>
     </DynamicModuleLoader>
   );

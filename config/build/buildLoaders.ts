@@ -9,11 +9,28 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
   const svgLoader = {
     test: /\.svg$/,
-    use: ["@svgr/webpack"],
+    use: [
+      {
+        loader: "@svgr/webpack",
+        options: {
+          icon: true,
+          svgoConfig: {
+            plugins: [
+              {
+                name: "convertColors",
+                params: {
+                  currentColor: true,
+                },
+              },
+            ],
+          },
+        },
+      },
+    ],
   };
 
-  const codeBabelLoader = buildBabelLoader({ ...options, isTSX: false }); 
-  const tsxCodeBabelLoader = buildBabelLoader({ ...options, isTSX: true }); //now babel loader responsible for TSX compilation 
+  const codeBabelLoader = buildBabelLoader({ ...options, isTSX: false });
+  const tsxCodeBabelLoader = buildBabelLoader({ ...options, isTSX: true }); //now babel loader responsible for TSX compilation
 
   // Если не используем тайпскрипт - нужен babel-loader
   // const typescriptLoader = {

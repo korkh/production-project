@@ -18,6 +18,7 @@ const userApi = rtkApi.injectEndpoints({
         },
       }),
     }),
+    //normally we should keep token inside localStorage but not user's id
     getUserDataById: build.query<User, string>({
       query: (userId) => ({
         url: `/users/${userId}`,

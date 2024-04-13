@@ -4,9 +4,9 @@ import { NotificationList } from "@/entities/Notification";
 import NotificationIcon from "@/shared/assets/icons/notification-20-20.svg";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { useDeviceDetection } from "@/shared/lib/hooks/useDeviceDetection/useDeviceDetection";
-import { Drawer } from "@/shared/ui/Drawer";
-import { Icon } from "@/shared/ui/Icon";
-import { Popover } from "@/shared/ui/Popups";
+import { Drawer } from "@/shared/ui/deprecated/Drawer";
+import { Icon } from "@/shared/ui/deprecated/Icon";
+import { Popover } from "@/shared/ui/deprecated/Popups";
 
 import cls from "./NotificationButton.module.scss";
 
@@ -32,7 +32,7 @@ export const NotificationButton = memo(function NotificationButton(
 
   const trigger = (
     <span onClick={onOpenDrawer} className={cls.button}>
-      <Icon Svg={NotificationIcon} inverted />
+      <Icon Svg={NotificationIcon} width={18} height={18} inverted />
     </span>
   );
 

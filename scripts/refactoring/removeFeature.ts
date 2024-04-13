@@ -48,6 +48,7 @@ function isToggleFunction(node: Node) {
   return isToggleFeatures;
 }
 
+//Checking that selfClosing component is our toggle component
 function isToggleComponent(node: Node) {
   const identifier = node.getFirstDescendantByKind(SyntaxKind.Identifier);
 

@@ -13,13 +13,9 @@
   max-width: 90%;
   text-align: center;
 
-  @media (max-width: 800px) {
-    width: 400px;
-  }
+  @media (max-width: 800px) { width: 400px; }
 
-  @media (max-width: 600px) {
-    width: 300px;
-  }
+  @media (max-width: 600px) { width: 300px; }
 }
 
 .btnBack {

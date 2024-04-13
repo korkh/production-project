@@ -7,7 +7,7 @@ interface <FTName % capitalize>Props {
   className?: string;
 }
 
-const <FTName % capitalize> = memo(function <FTName % capitalize>(props: <FTName % capitalize>Props) {
+const <FTName % capitalize> = (props: <FTName % capitalize>Props) => {
 	const { className } = props;
 	const { t } = useTranslation();
 		return (
@@ -17,6 +17,6 @@ const <FTName % capitalize> = memo(function <FTName % capitalize>(props: <FTName
 			{t("<FTName % capitalize>")}
 			</div>			    
 		);
-});
+};
 
-export default <FTName % capitalize>;
+export default memo(<FTName % capitalize>);

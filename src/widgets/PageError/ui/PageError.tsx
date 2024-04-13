@@ -4,7 +4,7 @@ import { NavigateFunction } from "react-router";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Button } from "@/shared/ui/Button";
+import { Button } from "@/shared/ui/deprecated/Button";
 
 import cls from "./PageError.module.scss";
 

@@ -16,19 +16,22 @@
   min-height: 100vh;
 }
 
-// for App.tsx
-.content-page {
-  display: flex;
+.app_redesigned {
+  background: var(--bg-redesigned);
+  min-height: 100vh;
+  font: var(--font-m-redesigned);
+  color: var(--text-redesigned);
 }
+
+// for App.tsx
+.content-page { display: flex; }
 
 *::-webkit-scrollbar {
   width: 12px; /* ширина scrollbar */
   height: 8px;
 }
 
-*::-webkit-scrollbar-track {
-  background: var(--card-bg); /* цвет дорожки */
-}
+*::-webkit-scrollbar-track { background: var(--card-bg); /* цвет дорожки */ }
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--inverted-primary-color); /* цвет плашки */
