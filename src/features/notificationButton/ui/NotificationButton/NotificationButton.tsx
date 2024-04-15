@@ -1,56 +1,82 @@
 import { memo, useCallback, useState } from "react";
-
-import { NotificationList } from "@/entities/Notification";
-import NotificationIcon from "@/shared/assets/icons/notification-20-20.svg";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { useDeviceDetection } from "@/shared/lib/hooks/useDeviceDetection/useDeviceDetection";
+import {
+	Button as ButtonDeprecated,
+	ButtonTheme,
+} from "@/shared/ui/deprecated/Button";
+import { Icon as IconDeprecated } from "@/shared/ui/deprecated/Icon";
+import NotificationIconDeprecated from "@/shared/assets/icons/notification-20-20.svg";
+import NotificationIcon from "@/shared/assets/icons/notification.svg";
+import { NotificationList } from "@/entities/Notification";
+import { Popover as PopoverDeprecated } from "@/shared/ui/deprecated/Popups";
 import { Drawer } from "@/shared/ui/deprecated/Drawer";
-import { Icon } from "@/shared/ui/deprecated/Icon";
-import { Popover } from "@/shared/ui/deprecated/Popups";
-
 import cls from "./NotificationButton.module.scss";
+import { ToggleFeatures } from "@/shared/lib/features";
+import { Icon } from "@/shared/ui/redesigned/Icon";
+import { Popover } from "@/shared/ui/redesigned/Popups";
+import { useDeviceDetection } from "@/shared/lib/hooks/useDeviceDetection/useDeviceDetection";
 
 interface NotificationButtonProps {
-  className?: string;
+	className?: string;
 }
 
 export const NotificationButton = memo(function NotificationButton(
-  props: NotificationButtonProps
+	props: NotificationButtonProps
 ) {
-  const { className } = props;
+	const { className } = props;
 
-  const [isOpen, setIsOpen] = useState(false);
-  const isMobileWithTouch = useDeviceDetection();
+	const [isOpen, setIsOpen] = useState(false);
+	const isMobileWithTouch = useDeviceDetection();
 
-  const onOpenDrawer = useCallback(() => {
-    setIsOpen(true);
-  }, []);
+	const onOpenDrawer = useCallback(() => {
+		setIsOpen(true);
+	}, []);
 
-  const onCloseDrawer = useCallback(() => {
-    setIsOpen(false);
-  }, []);
+	const onCloseDrawer = useCallback(() => {
+		setIsOpen(false);
+	}, []);
 
-  const trigger = (
-    <span onClick={onOpenDrawer} className={cls.button}>
-      <Icon Svg={NotificationIcon} width={18} height={18} inverted />
-    </span>
-  );
+	const trigger = (
+		<ToggleFeatures
+			feature="isAppRedesigned"
+			on={<Icon Svg={NotificationIcon} clickable onClick={onOpenDrawer} />}
+			off={
+				<ButtonDeprecated onClick={onOpenDrawer} theme={ButtonTheme.CLEAR}>
+					<IconDeprecated Svg={NotificationIconDeprecated} inverted />
+				</ButtonDeprecated>
+			}
+		/>
+	);
 
-  return isMobileWithTouch ? (
-    <>
-      {trigger}
-      {/* animation libraries only for mobiles */}
-      <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-        <NotificationList />
-      </Drawer>
-    </>
-  ) : (
-    <Popover
-      className={classNames(cls.NotificationButton, [className], {})}
-      direction="bottom left"
-      trigger={trigger}
-    >
-      <NotificationList className={cls.notifications} />
-    </Popover>
-  );
+	return isMobileWithTouch ? (
+		<>
+			{trigger}
+			{/* animation libraries only for mobiles */}
+			<Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+				<NotificationList />
+			</Drawer>
+		</>
+	) : (
+		<ToggleFeatures
+			feature="isAppRedesigned"
+			on={
+				<Popover
+					className={classNames(cls.NotificationButton, [className], {})}
+					direction="bottom left"
+					trigger={trigger}
+				>
+					<NotificationList className={cls.notifications} />
+				</Popover>
+			}
+			off={
+				<PopoverDeprecated
+					className={classNames(cls.NotificationButton, [className], {})}
+					direction="bottom left"
+					trigger={trigger}
+				>
+					<NotificationList className={cls.notifications} />
+				</PopoverDeprecated>
+			}
+		/>
+	);
 });

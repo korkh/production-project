@@ -1,43 +1,49 @@
 import { memo } from "react";
-
-import { Notification } from "../../model/types/notification";
-
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Card, CardTheme } from "@/shared/ui/deprecated/Card";
-import { Text, TextSize } from "@/shared/ui/deprecated/Text";
-
+import { Card as CardDeprecated, CardTheme } from "@/shared/ui/deprecated/Card";
+import { Text as TextDeprecated } from "@/shared/ui/deprecated/Text";
+import { Text } from "@/shared/ui/redesigned/Text";
 import cls from "./NotificationItem.module.scss";
-
+import { Notification } from "../../model/types/notification";
+import { ToggleFeatures } from "@/shared/lib/features";
+import { Card } from "@/shared/ui/redesigned/Card";
 
 interface NotificationItemProps {
-  className?: string;
-  item: Notification;
+	className?: string;
+	item: Notification;
 }
 
-const NotificationItem = memo(function NotificationItem(
-  props: NotificationItemProps
-) {
-  const { className, item } = props;
+export const NotificationItem = (props: NotificationItemProps) => {
+	const { className, item } = props;
 
-  const content = (
-    <Card
-      theme={CardTheme.OUTLINED}
-      className={classNames(cls.NotificationItem, [className], {})}
-    >
-      <Text title={item.title} size={TextSize.S} text={item.description} />
-    </Card>
-  );
+	const content = (
+		<ToggleFeatures
+			feature="isAppRedesigned"
+			on={
+				<Card className={classNames(cls.NotificationItem, [className], {})}>
+					<Text title={item.title} text={item.description} />
+				</Card>
+			}
+			off={
+				<CardDeprecated
+					theme={CardTheme.OUTLINED}
+					className={classNames(cls.NotificationItem, [className], {})}
+				>
+					<TextDeprecated title={item.title} text={item.description} />
+				</CardDeprecated>
+			}
+		/>
+	);
 
-  if (item.href) {
-    return (
-      // used <a> to make possible open in new tab
-      <a className={cls.link} target="_blank" href={item.href} rel="noreferrer">
-        {content}
-      </a>
-    );
-  }
+	if (item.href) {
+		return (
+			<a className={cls.link} target="_blank" href={item.href} rel="noreferrer">
+				{content}
+			</a>
+		);
+	}
 
-  return content;
-});
+	return content;
+};
 
-export default NotificationItem;
+export default memo(NotificationItem);
