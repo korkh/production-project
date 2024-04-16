@@ -1,57 +1,72 @@
-import { memo, useCallback, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-
-import { ArticleType } from "../../../entities/Article/model/consts/consts";
-
+import { memo, useCallback, useMemo } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { Tabs, TabItem } from "@/shared/ui/deprecated/Tabs";
+import { Tabs as TabsDeprecated } from "@/shared/ui/deprecated/Tabs";
+import { ArticleType } from "@/entities/Article";
+import { ToggleFeatures } from "@/shared/lib/features";
+import { Tabs, TabItem } from "@/shared/ui/redesigned/Tabs";
 
 interface ArticleTypeTabsProps {
-  className?: string;
-  value: ArticleType;
-  onChangeType: (newType: ArticleType) => void;
+	className?: string;
+	value: ArticleType;
+	onChangeType: (type: ArticleType) => void;
 }
 
 export const ArticleTypeTabs = memo(function ArticleTypeTabs(
-  props: ArticleTypeTabsProps
+	props: ArticleTypeTabsProps
 ) {
-  const { className, value, onChangeType } = props;
-  const { t } = useTranslation("article");
+	const { className, value, onChangeType } = props;
+	const { t } = useTranslation();
 
-  const typeTabs = useMemo<TabItem<ArticleType>[]>(
-    () => [
-      {
-        value: ArticleType.ALL,
-        content: t("All"),
-      },
-      {
-        value: ArticleType.IT,
-        content: t("IT"),
-      },
-      {
-        value: ArticleType.ECONOMICS,
-        content: t("Economics"),
-      },
-      {
-        value: ArticleType.SCIENCE,
-        content: t("Science"),
-      },
-    ],
-    [t]
-  );
+	const typeTabs = useMemo<TabItem[]>(
+		() => [
+			{
+				value: ArticleType.ALL,
+				content: t("All"),
+			},
+			{
+				value: ArticleType.IT,
+				content: t("IT"),
+			},
+			{
+				value: ArticleType.ECONOMICS,
+				content: t("Economics"),
+			},
+			{
+				value: ArticleType.SCIENCE,
+				content: t("Science"),
+			},
+		],
+		[t]
+	);
 
-  const onTabClick = useCallback(
-    (tab: TabItem<ArticleType>) => {
-      onChangeType(tab.value);
-    },
-    [onChangeType]
-  );
-  return (
-    <Tabs<ArticleType>
-      tabs={typeTabs}
-      value={value}
-      onTabClick={onTabClick}
-      className={classNames("", [className], {})}
-    />
-  );
+	const onTabClick = useCallback(
+		(tab: TabItem) => {
+			onChangeType(tab.value as ArticleType);
+		},
+		[onChangeType]
+	);
+
+	return (
+		<ToggleFeatures
+			feature="isAppRedesigned"
+			on={
+				<Tabs
+					direction="column"
+					tabs={typeTabs}
+					value={value}
+					onTabClick={onTabClick}
+					className={classNames("", [className], {})}
+				/>
+			}
+			off={
+				<TabsDeprecated
+					tabs={typeTabs}
+					value={value}
+					onTabClick={onTabClick}
+					className={classNames("", [className], {})}
+				/>
+			}
+		/>
+	);
 });
