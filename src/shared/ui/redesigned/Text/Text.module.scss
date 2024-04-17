@@ -67,3 +67,12 @@
     font: var(--font-l-redesigned);
   }
 }
+
+.bold {
+
+  /* stylelint-disable-next-line rule-empty-line-before */
+  .title,
+  .text {
+    font-weight: 700;
+  }
+}

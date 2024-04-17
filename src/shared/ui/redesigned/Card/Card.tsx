@@ -22,7 +22,7 @@ const mapPaddingToClass: Record<CardPadding, string> = {
 	"24": "gap_24",
 };
 
-export const Card = (props: CardProps) => {
+export const Card = memo(function Card(props: CardProps) {
 	const {
 		className,
 		children,
@@ -47,6 +47,4 @@ export const Card = (props: CardProps) => {
 			{children}
 		</div>
 	);
-};
-
-export default memo(Card);
+});

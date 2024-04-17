@@ -5,28 +5,28 @@ import { HStack } from "../Stack";
 import cls from "./AppLogo.module.scss";
 
 interface AppLogoProps {
-  className?: string;
-  size?: number;
+	className?: string;
+	size?: number;
 }
 
 export const AppLogo = memo(function AppLogo({
-  className,
-  size = 50,
+	className,
+	size = 50,
 }: AppLogoProps) {
-  return (
-    <HStack
-      max
-      justify="center"
-      className={classNames(cls.appLogoWrapper, [className], {})}
-    >
-      <div className={cls.gradientBig} />
-      <div className={cls.gradientSmall} />
-      <AppSvg
-        width={size}
-        height={size}
-        color="black"
-        className={cls.appLogo}
-      />
-    </HStack>
-  );
+	return (
+		<HStack
+			max
+			justify="center"
+			className={classNames(cls.appLogoWrapper, [className], {})}
+		>
+			<AppSvg
+				width={size}
+				height={size}
+				color="black"
+				className={cls.appLogo}
+			/>
+			<div className={cls.gradientBig} />
+			<div className={cls.gradientSmall} />
+		</HStack>
+	);
 });

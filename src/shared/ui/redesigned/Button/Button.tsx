@@ -69,9 +69,9 @@ export const Button = memo(function Button(props: ButtonProps) {
 			disabled={disabled}
 			{...otherProps}
 		>
-			{addonLeft && <div className={cls.addonLeft}>{addonLeft}</div>}
+			<div className={cls.addonLeft}>{addonLeft}</div>
 			{children}
-			{addonRight && <div className={cls.addonRight}>{addonRight}</div>}
+			<div className={cls.addonRight}>{addonRight}</div>
 		</button>
 	);
 });
