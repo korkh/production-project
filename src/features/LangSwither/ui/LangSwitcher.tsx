@@ -24,7 +24,7 @@ export function LangSwitcher({ className, short }: LangSwitcherProps) {
 		<ToggleFeatures
 			feature="isAppRedesigned"
 			on={
-				<Button variant="clear">
+				<Button variant="clear" onClick={toggle}>
 					{t(short ? "Short language" : "Language")}
 				</Button>
 			}

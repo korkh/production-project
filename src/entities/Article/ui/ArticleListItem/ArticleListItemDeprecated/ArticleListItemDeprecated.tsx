@@ -16,7 +16,7 @@ import { AppLink } from "@/shared/ui/deprecated/AppLink";
 import { getRouteArticleDetails } from "@/shared/const/router";
 import { Button, ButtonTheme } from "@/shared/ui/deprecated/Button";
 import { ArticleListItemProps } from "../ArticleListItem";
-import ArticleTextBlockComponent from "../../ArticleTextBlockComponent/ArticleTextBlockComponent";
+import { ArticleTextBlockComponent } from "../../ArticleTextBlockComponent/ArticleTextBlockComponent";
 import { ArticleView, ArticleBlockType } from "../../../model/consts/consts";
 
 export const ArticleListItemDeprecated = memo(

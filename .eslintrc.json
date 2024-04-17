@@ -92,7 +92,8 @@
 					"role",
 					"color",
 					"variant",
-					"size"
+					"size",
+					"wrap"
 				]
 			}
 		],

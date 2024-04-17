@@ -5,8 +5,8 @@ import { AnimationProvider, useAnimationLibs } from "@/shared/lib/components";
 import { useTheme } from "@/shared/lib/hooks/useTheme/useTheme";
 
 import cls from "./Drawer.module.scss";
-import { Portal } from "../../redesigned/Portal";
-import { Overlay } from "../../redesigned/Overlay";
+import { Portal } from "../Portal";
+import { Overlay } from "../Overlay";
 
 interface DrawerProps {
 	className?: string;
@@ -19,9 +19,6 @@ interface DrawerProps {
 //get height
 const height = window.innerHeight - 100;
 
-/**
- * @deprecated This component is deprecated. Please use the new components from the redesigned folder.
- */
 export const DrawerContent = memo(function DrawerContent(props: DrawerProps) {
 	const { Spring, Gesture } = useAnimationLibs();
 	const [{ y }, api] = Spring.useSpring(() => ({ y: height }));
@@ -85,7 +82,7 @@ export const DrawerContent = memo(function DrawerContent(props: DrawerProps) {
 	const display = y.to((py) => (py < height ? "block" : "none"));
 
 	return (
-		<Portal>
+		<Portal element={document.getElementById("app") ?? document.body}>
 			<div
 				className={classNames(cls.Drawer, [className, theme, "app_drawer"], {})} //app_drawer in index.scss
 			>

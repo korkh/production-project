@@ -4,7 +4,7 @@
   "About us": "About us",
   "Articles": "Articles",
   "Short language": "NO",
-  "Long language": "Norsk",
+  "Language": "Norsk",
   "Toggle": "Toggle",
   "Loading": {
     "": {
@@ -29,5 +29,9 @@
   "Forbidden Page": "Forbidden page",
   "You have no access to the following source": "You have no access to the following source",
   "Welcome on article page": "Welcome on article page",
-  "Here you can search and read articles": "Here you can search and read articles"
+  "Here you can search and read articles": "Here you can search and read articles",
+  "User settings": "User settings",
+  "Interface appearance": "Interface appearance",
+  "New": "New",
+  "Old": "Old"
 }

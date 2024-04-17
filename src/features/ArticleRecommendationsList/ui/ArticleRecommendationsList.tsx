@@ -1,49 +1,45 @@
-import { memo, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { memo } from "react";
+import { classNames } from "@/shared/lib/classNames/classNames";
+import { Text as TextDeprecated, TextSize } from "@/shared/ui/deprecated/Text";
+import { ArticleList } from "@/entities/Article";
+import { VStack } from "@/shared/ui/redesigned/Stack";
 
+import { ToggleFeatures } from "@/shared/lib/features";
+import { Text } from "@/shared/ui/redesigned/Text";
 import { useArticleRecommendationsList } from "../api/articleRecommendationsApi";
 
-import { ArticleList } from "@/entities/Article";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { VStack } from "@/shared/ui/deprecatedStack";
-import { Text, TextSize } from "@/shared/ui/deprecatedText";
-
 interface ArticleRecommendationsListProps {
-  className?: string;
+	className?: string;
 }
 
 export const ArticleRecommendationsList = memo(
-  function ArticleRecommendationsList(props: ArticleRecommendationsListProps) {
-    const { className } = props;
-    const { t } = useTranslation("article");
-    const {
-      isLoading,
-      data: articles,
-      error,
-    } = useArticleRecommendationsList(3); // 3 is _limit for upload only 3 articles as recommendations
+	function ArticleRecommendationsList(props: ArticleRecommendationsListProps) {
+		const { className } = props;
+		const { t } = useTranslation();
+		const {
+			isLoading,
+			data: articles,
+			error,
+		} = useArticleRecommendationsList(3);
 
-    const [articlesLoaded, setArticlesLoaded] = useState(false); // State to track if articles are loaded
+		if (isLoading || error || !articles) {
+			return null;
+		}
 
-    // Effect to run when articles are loaded
-    useEffect(() => {
-      if (articles) {
-        setArticlesLoaded(true);
-      }
-    }, [articles]);
-
-    if (isLoading || error || !articles || !articlesLoaded) {
-      return null;
-    }
-
-    return (
-      <VStack
-        data-testid="ArticleRecommendationsList"
-        gap="8"
-        className={classNames("", [className], {})}
-      >
-        <Text size={TextSize.L} title={t("Recommended")} />
-        <ArticleList articles={articles} target="_blank" />
-      </VStack>
-    );
-  }
+		return (
+			<VStack
+				data-testid="ArticleRecommendationsList"
+				gap="8"
+				className={classNames("", [className], {})}
+			>
+				<ToggleFeatures
+					feature="isAppRedesigned"
+					on={<Text size="l" title={t("Recommended")} />}
+					off={<TextDeprecated size={TextSize.L} title={t("Recommended")} />}
+				/>
+				<ArticleList articles={articles} target="_blank" />
+			</VStack>
+		);
+	}
 );

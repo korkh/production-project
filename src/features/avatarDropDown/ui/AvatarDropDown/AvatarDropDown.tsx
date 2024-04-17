@@ -46,6 +46,10 @@ export const AvatarDropdown = (props: AvatarDropdownProps) => {
 			href: getRouteProfile(authData.id),
 		},
 		{
+			content: t("Settings"),
+			href: getRouteProfile(authData.id),
+		},
+		{
 			content: t("Sign out"),
 			onClick: onLogout,
 		},

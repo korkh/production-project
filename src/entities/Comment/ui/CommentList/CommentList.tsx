@@ -1,44 +1,50 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
-
-import { IComment } from "../../model/types/Comment";
-import { CommentCard } from "../CommentCard/CommentCard";
-
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { VStack } from "@/shared/ui/Stack";
-import { Text } from "@/shared/ui/Text";
+import { Text as TextDeprecated } from "@/shared/ui/deprecated/Text";
+import { Text } from "@/shared/ui/redesigned/Text";
+import { VStack } from "@/shared/ui/redesigned/Stack";
+import { CommentCard } from "../CommentCard/CommentCard";
+import { IComment } from "../../model/types/comment";
+import { ToggleFeatures } from "@/shared/lib/features";
 
 interface CommentListProps {
-  className?: string;
-  comments?: IComment[];
-  isLoading?: boolean;
+	className?: string;
+	comments?: IComment[];
+	isLoading?: boolean;
 }
 
 export const CommentList = memo(function CommentList(props: CommentListProps) {
-  const { className, isLoading, comments } = props;
-  const { t } = useTranslation("article");
-  if (isLoading) {
-    return (
-      <VStack gap="16" max className={classNames("", [className], {})}>
-        <CommentCard isLoading comment={undefined} />
-        <CommentCard isLoading comment={undefined} />
-        <CommentCard isLoading comment={undefined} />
-      </VStack>
-    );
-  }
-  return (
-    <VStack gap="16" max className={classNames("", [className], {})}>
-      {comments?.length ? (
-        comments.map((comment) => (
-          <CommentCard
-            key={comment.id}
-            isLoading={isLoading}
-            comment={comment}
-          />
-        ))
-      ) : (
-        <Text text={t("No comments yet")} />
-      )}
-    </VStack>
-  );
+	const { className, isLoading, comments } = props;
+	const { t } = useTranslation();
+
+	if (isLoading) {
+		return (
+			<VStack gap="16" max className={classNames("", [className], {})}>
+				<CommentCard isLoading />
+				<CommentCard isLoading />
+				<CommentCard isLoading />
+			</VStack>
+		);
+	}
+
+	return (
+		<VStack gap="16" max className={classNames("", [className], {})}>
+			{comments?.length ? (
+				comments.map((comment) => (
+					<CommentCard
+						isLoading={isLoading}
+						comment={comment}
+						key={comment.id}
+					/>
+				))
+			) : (
+				<ToggleFeatures
+					feature="isAppRedesigned"
+					on={<Text text={t("No comments yet")} />}
+					off={<TextDeprecated text={t("No comments yet")} />}
+				/>
+			)}
+		</VStack>
+	);
 });

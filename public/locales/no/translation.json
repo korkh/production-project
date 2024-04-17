@@ -4,7 +4,7 @@
   "About us": "Om oss",
   "Articles": "Artikler",
   "Short language": "EN",
-  "Long language": "English",
+  "Language": "English",
   "Toggle": "Åpne",
   "Loading": {
     "": {
@@ -31,5 +31,9 @@
   "Forbidden Page": "Forbudt side",
   "You have no access to the following source": "Du har ikke tilgang til følgende kilder",
   "Welcome on article page": "Velkommen til artikkelsiden",
-  "Here you can search and read articles": "Her kan du søke og lese artikler"
+  "Here you can search and read articles": "Her kan du søke og lese artikler",
+  "User settings": "Brukerinnstillinger",
+  "Interface appearance": "Grensesnitt utseende",
+  "New": "Ny",
+  "Old": "Gammelt"
 }
