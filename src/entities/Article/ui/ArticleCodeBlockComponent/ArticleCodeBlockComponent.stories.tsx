@@ -3,24 +3,24 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { ArticleBlockType } from "../../model/consts/consts";
 
-import ArticleCodeBlockComponent from "./ArticleCodeBlockComponent";
+import { ArticleCodeBlockComponent } from "./ArticleCodeBlockComponent";
 
 const meta = {
-  title: "entities/Article/Blocks/ArticleCodeBlockComponent",
-  component: ArticleCodeBlockComponent,
-  parameters: {
-    layout: "fullscreen",
-  },
-  tags: ["autodocs"],
-  args: {},
-  argTypes: {},
-  decorators: [
-    (Story) => (
-      <StoreDecorator state={{}}>
-        <Story />
-      </StoreDecorator>
-    ),
-  ],
+	title: "entities/Article/Blocks/ArticleCodeBlockComponent",
+	component: ArticleCodeBlockComponent,
+	parameters: {
+		layout: "fullscreen",
+	},
+	tags: ["autodocs"],
+	args: {},
+	argTypes: {},
+	decorators: [
+		(Story) => (
+			<StoreDecorator state={{}}>
+				<Story />
+			</StoreDecorator>
+		),
+	],
 } satisfies Meta<typeof ArticleCodeBlockComponent>;
 
 export default meta;
@@ -28,11 +28,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {
-    block: {
-      id: "1",
-      type: ArticleBlockType.CODE,
-      code: "TESTING CODE HERE",
-    },
-  },
+	args: {
+		block: {
+			id: "1",
+			type: ArticleBlockType.CODE,
+			code: "TESTING CODE HERE",
+		},
+	},
 };

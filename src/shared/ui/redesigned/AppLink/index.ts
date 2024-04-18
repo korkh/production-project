@@ -1,4 +1,1 @@
-export type { AppLinkVariant } from "./../../deprecated/AppLink/AppLink";
-
-
-export {AppLink} from "./AppLink";
+export * from "./AppLink";

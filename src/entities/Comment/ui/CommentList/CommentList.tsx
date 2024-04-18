@@ -5,7 +5,7 @@ import { Text as TextDeprecated } from "@/shared/ui/deprecated/Text";
 import { Text } from "@/shared/ui/redesigned/Text";
 import { VStack } from "@/shared/ui/redesigned/Stack";
 import { CommentCard } from "../CommentCard/CommentCard";
-import { IComment } from "../../model/types/comment";
+import { IComment } from "../../model/types/Comment";
 import { ToggleFeatures } from "@/shared/lib/features";
 
 interface CommentListProps {
