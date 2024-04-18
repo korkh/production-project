@@ -66,7 +66,7 @@ export const Navbar = memo(function Navbar({ className }: NavbarProps) {
 							theme={AppLinkTheme.SECONDARY}
 							className={cls.createBtn}
 						>
-							{t("Создать статью")}
+							{t("Create article")}
 						</AppLink>
 						<HStack gap="16" className={cls.actions}>
 							<NotificationButton />
@@ -84,7 +84,7 @@ export const Navbar = memo(function Navbar({ className }: NavbarProps) {
 				feature="isAppRedesigned"
 				on={
 					<Button variant="clear" className={cls.links} onClick={onShowModal}>
-						{t("Войти")}
+						{t("Sign in")}
 					</Button>
 				}
 				off={
@@ -93,7 +93,7 @@ export const Navbar = memo(function Navbar({ className }: NavbarProps) {
 						className={cls.links}
 						onClick={onShowModal}
 					>
-						{t("Войти")}
+						{t("Sign in")}
 					</ButtonDeprecated>
 				}
 			/>

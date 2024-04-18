@@ -85,14 +85,14 @@ export const ProfileCardRedesigned = memo(function ProfileCardRedesigned(
 							label={t("Name")}
 							onChange={onChangeFirstname}
 							readonly={readonly}
-							data-testid="ProfileCard.firstname"
+							data-testid="ProfileCard.firstName"
 						/>
 						<Input
 							value={data?.lastName}
 							label={t("Lastname")}
 							onChange={onChangeLastname}
 							readonly={readonly}
-							data-testid="ProfileCard.lastname"
+							data-testid="ProfileCard.lastName"
 						/>
 						<Input
 							value={data?.age}

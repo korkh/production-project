@@ -1,5 +1,6 @@
+import FeaturesFlagsDecorator from "../../src//shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator";
+import ThemeDecorator from "../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import type { Preview } from "@storybook/react";
-
 import "../../src/app/styles/index.scss";
 import { I18nDecorator } from "../../src/shared/config/storybook/i18nDecorator/i18nDecorator";
 import RouterDecorator from "../../src/shared/config/storybook/RouterDecorator/RouterDecorator";
@@ -8,39 +9,41 @@ import { SuspenseDecorator } from "../../src/shared/config/storybook/SuspenseDec
 import { Theme } from "../../src/shared/const/Theme";
 
 const preview: Preview = {
-  parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
-    layout: "fullscreen",
-    themes: {
-      default: "light",
-      list: [
-        { name: "light", class: ["app", Theme.LIGHT], color: "#ffffff" },
-        { name: "dark", class: ["app", Theme.DARK], color: "#000000" },
-        { name: "orange", class: ["app", Theme.ORANGE], color: "#ffb005" },
-      ],
-    },
-  },
-  decorators: [
-    (Story) => (
-      <RouterDecorator>
-        <SuspenseDecorator>
-          {/* <ThemeDecorator theme={Theme.LIGHT}> */}
-          <I18nDecorator>
-            <StyleDecorator>
-              <Story />
-            </StyleDecorator>
-          </I18nDecorator>
-          {/* </ThemeDecorator> */}
-        </SuspenseDecorator>
-      </RouterDecorator>
-    ),
-  ],
+	parameters: {
+		actions: { argTypesRegex: "^on[A-Z].*" },
+		controls: {
+			matchers: {
+				color: /(background|color)$/i,
+				date: /Date$/i,
+			},
+		},
+		layout: "fullscreen",
+		themes: {
+			default: "light",
+			list: [
+				{ name: "light", class: ["app", Theme.LIGHT], color: "#ffffff" },
+				{ name: "dark", class: ["app", Theme.DARK], color: "#000000" },
+				{ name: "orange", class: ["app", Theme.ORANGE], color: "#ffb005" },
+			],
+		},
+	},
+	decorators: [
+		(Story) => (
+			<RouterDecorator>
+				<SuspenseDecorator>
+					<ThemeDecorator theme={Theme.LIGHT}>
+						<FeaturesFlagsDecorator features={{}}>
+							<I18nDecorator>
+								<StyleDecorator>
+									<Story />
+								</StyleDecorator>
+							</I18nDecorator>
+						</FeaturesFlagsDecorator>
+					</ThemeDecorator>
+				</SuspenseDecorator>
+			</RouterDecorator>
+		),
+	],
 };
 
 export default preview;

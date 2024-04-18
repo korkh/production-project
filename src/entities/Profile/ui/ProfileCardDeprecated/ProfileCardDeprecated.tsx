@@ -86,7 +86,7 @@ export const ProfileCardDeprecated = memo(function ProfileCardDepricated(
 				className={cls.input}
 				onChange={onChangeFirstname}
 				readonly={readonly}
-				data-testid="ProfileCard.firstname"
+				data-testid="ProfileCard.firstName"
 			/>
 			<InputDeprecated
 				value={data?.lastName}
@@ -94,7 +94,7 @@ export const ProfileCardDeprecated = memo(function ProfileCardDepricated(
 				className={cls.input}
 				onChange={onChangeLastname}
 				readonly={readonly}
-				data-testid="ProfileCard.lastname"
+				data-testid="ProfileCard.lastName"
 			/>
 			<InputDeprecated
 				value={data?.age}

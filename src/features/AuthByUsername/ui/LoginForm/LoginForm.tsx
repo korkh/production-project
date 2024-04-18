@@ -66,7 +66,7 @@ const LoginForm = memo(function LoginForm({
 		const result = await dispatch(loginByUsername({ username, password }));
 		if (result.meta.requestStatus === "fulfilled") {
 			onSuccess();
-			forceUpdate();
+			forceUpdate(); //if need can be used windows.location.reload()
 		}
 	}, [dispatch, username, password, onSuccess, forceUpdate]);
 
@@ -103,7 +103,7 @@ const LoginForm = memo(function LoginForm({
 							onClick={onLoginClick}
 							disabled={isLoading}
 						>
-							{t("Войти")}
+							{t("Sign in")}
 						</Button>
 					</VStack>
 				}
